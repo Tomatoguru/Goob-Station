@@ -50,3 +50,6 @@ JobGovernmentMan = G-Man
 JobConquest = Завойовник
 JobInspector = Аудитор Центрального Командування
 JobMercenaryCaptain = Капітан Найманців
+
+job-name-navy-officer = Морський офіцер
+job-name-navy-captain = Морський капітан
