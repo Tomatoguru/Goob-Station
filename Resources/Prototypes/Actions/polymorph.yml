@@ -16,6 +16,8 @@
   name: "Повернути назад"
   description: "Поверніться до початкової форми."
   components:
+  - type: ConfirmableAction
+    popup: revert-polymorph-action-popup
   - type: InstantAction
     event: !type:RevertPolymorphActionEvent
 

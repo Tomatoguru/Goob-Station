@@ -14,8 +14,8 @@
 - type: entity
   parent: [ ClothingModsuitStandard, BaseCentcommContraband ]
   id: ClothingModsuitResponsoryLeader
-  name: "блок керування лідерським скафандром швидкого реагування" # Goob edit
-  description: "Основний контролер для лідерського скафандра швидкого реагування." # Goob edit
+  name: "Лідерський блок керування модкостюмом \"Респонсорій"
+  description: "Головний контролер для лідерського модкостюма \"Респонсорій\"."
   components:
     - type: ClothingSpeedModifier
       walkModifier: 1
@@ -48,8 +48,8 @@
 - type: entity
   parent: ClothingModsuitGauntletsStandard
   id: ClothingModsuitGauntletsResponsoryLeader
-  name: "лідерські рукавиці від скафандру швидкого реагування" # Goob edit
-  description: "Пара рукавиць, створених для лідерського скафандра швидкого реагування." # Goob edit
+  name: "Лідерські рукавиці модкостюма \"Респонсорій"
+  description: "Пара рукавиць, створених для лідерського модкостюма \"Респонсорій\"."
   categories: [HideSpawnMenu]
   components:
     - type: Sprite
@@ -65,8 +65,8 @@
 - type: entity
   parent: [ClothingModsuitHelmetStandard, ShowSecurityIcons]
   id: ClothingModsuitHelmetResponsoryLeader
-  name: "лідерський шолом від скафандру швидкого реагування" # Goob edit
-  description: "Сучасний шолом, розроблений NanoTrasen для лідерського скафандра швидкого реагування. Має вбудований HUD." # Goob edit
+  name: "Лідерський шолом модкостюма \"Респонсорій"
+  description: "Сучасний шолом, розроблений Нанотрейзен для лідерського модкостюма \"Респонсорій\". Він має вбудований HUD."
   categories: [HideSpawnMenu]
   components:
     - type: Sprite
@@ -111,8 +111,8 @@
 - type: entity
   parent: ClothingModsuitChestplateStandard
   id: ClothingModsuitChestplateResponsoryLeader
-  name: "лідерський нагрудник від скафандру швидкого реагування" # Goob edit
-  description: "Сучасний нагрудник, розроблений NanoTrasen для лідерського скафандра швидкого реагування. Він включає силові сервоприводи для зменшення навантаження від обладнання." # Goob edit
+  name: "Нагрудник мод-костюма \"Лідер Респонсорі"
+  description: "Найсучасніший нагрудник, розроблений NanoTrasen для мод-костюма \"Лідер Респонсорі\". Він містить силові сервоприводи для зменшення навантаження від обладнання."
   categories: [HideSpawnMenu]
   components:
     - type: Sprite
@@ -153,8 +153,8 @@
 - type: entity
   parent: ClothingModsuitBootsStandard
   id: ClothingModsuitBootsResponsoryLeader
-  name: "лідерські черевики від скафандру швидкого реагування" # Goob edit
-  description: "Сучасна пара магнітних черевиків для лідерського скафандра швидкого реагування. Поки костюм живиться, вони не сповільнюватимуть власника." # Goob edit
+  name: "Чоботи мод-костюма \"Лідер Респонсорі"
+  description: "Найсучасніша пара магнітних черевиків для мод-костюма \"Лідер Респонсорі\". Поки костюм живиться, вони не будуть сповільнювати власника."
   categories: [HideSpawnMenu]
   components:
     - type: Appearance

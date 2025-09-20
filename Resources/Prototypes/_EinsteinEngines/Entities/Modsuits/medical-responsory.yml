@@ -14,8 +14,8 @@
 - type: entity
   parent: [ ClothingModsuitStandard, BaseCentcommContraband ]
   id: ClothingModsuitResponsoryMedical
-  name: "блок керування медичним скафандром швидкого реагування" # Goob edit
-  description: "Основний контролер для медичного скафандра швидкого реагування." # Goob edit
+  name: "Медичний блок керування модкостюмом \"Респонсорій"
+  description: "Головний контролер для медичного модкостюма \"Респонсорій\"."
   components:
     - type: Sprite
       sprite: _EinsteinEngines/Clothing/NanoTrasen/Modsuits/medical-responsory.rsi
@@ -45,8 +45,8 @@
 - type: entity
   parent: ClothingModsuitGauntletsStandard
   id: ClothingModsuitGauntletsResponsoryMedical
-  name: "медичні рукавиці від скафандру швидкого реагування" # Goob edit
-  description: "Пара рукавиць, створених для медичного скафандра швидкого реагування." # Goob edit
+  name: "Медичні рукавиці модкостюма \"Респонсорій"
+  description: "Пара рукавиць, створених для медичного скафандра \"Респонсорій\"."
   categories: [HideSpawnMenu]
   components:
     - type: Sprite
@@ -62,8 +62,8 @@
 - type: entity
   parent: [ClothingModsuitHelmetStandard, ShowSecurityIcons]
   id: ClothingModsuitHelmetResponsoryMedical
-  name: "медичний шолом від скафандру швидкого реагування" # Goob edit
-  description: "Сучасний шолом, розроблений NanoTrasen для медичного скафандра швидкого реагування. Має вбудований HUD." # Goob edit
+  name: "Медичний шолом модкостюма \"Респонсорій"
+  description: "Сучасний шолом, розроблений Нанотрейзен для медичного модкостюма \"Респонсорій\". Він має вбудований HUD."
   categories: [HideSpawnMenu]
   components:
     - type: Sprite
@@ -108,8 +108,8 @@
 - type: entity
   parent: ClothingModsuitChestplateStandard
   id: ClothingModsuitChestplateResponsoryMedical
-  name: "медичний нагрудник від скафандру швидкого реагування" # Goob edit
-  description: "Сучасний нагрудник, розроблений NanoTrasen для медичного скафандра швидкого реагування. Він включає силові сервоприводи для зменшення навантаження від обладнання." # Goob edit
+  name: "Медичний нагрудник модкостюма \"Респонсорій"
+  description: "Сучасний нагрудник, розроблений Нанотрейзен для медичного модкостюма \"Респонсорій\". Він містить сервоприводи для зменшення навантаження від обладнання."
   categories: [HideSpawnMenu]
   components:
     - type: Sprite
@@ -146,8 +146,8 @@
 - type: entity
   parent: ClothingModsuitBootsStandard
   id: ClothingModsuitBootsResponsoryMedical
-  name: "медичні черевики від скафандру швидкого реагування" # Goob edit
-  description: "Сучасна пара магнітних черевиків для медичного скафандра швидкого реагування." # Goob edit
+  name: "Медичні черевики модкостюма \"Респонсорій"
+  description: "Сучасна пара магнітних черевиків для медичного модкостюма \"Респонсорій\"."
   categories: [HideSpawnMenu]
   components:
     - type: Appearance

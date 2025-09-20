@@ -153,6 +153,7 @@
       - id: ClothingMaskSterile # Goobstation
       - id: BoneGel # Shitmed Change
       - id: MedicalStitches # Shitmed Change
+      - id: ClothingMaskBreath # Goobstation
 
 - type: entity
   parent: ClothingBackpackDuffelSyndicateMedicalBundle
@@ -397,7 +398,7 @@
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateHardsuitBundle
-  name: "набір скафандра синдикату"
+  name: "набір зі скафандром синдикату"
   description: "Містить фірмовий криваво-червоний скафандр Синдикату."
   components:
   - type: StorageFill
@@ -413,7 +414,7 @@
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateEliteHardsuitBundle
   name: "набір елітного скафандра синдикату"
-  description: "Містить елітний скафандр Синдикату, в якому є ще дещо."
+  description: "Містить елітний скафандр Синдикату, в якому є ще деякі речі."
   components:
   - type: StorageFill
     contents:

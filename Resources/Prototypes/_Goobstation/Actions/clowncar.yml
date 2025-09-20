@@ -37,16 +37,15 @@
 - type: entity
   parent: BaseAction
   id: ActionDrivingWithStyle
-  name: "Водіння зі стилем"
-  description: "Покажи всім, як ти водиш"
+  name: "Музичний автомат"
+  description: "Їдьте з музикою"
   components:
   - type: Action
     itemIconStyle: NoItem
     icon:
-      sprite: _Goobstation/Objects/Vehicles/clowncar.rsi
-      state: clowncar
-    useDelay: 60
+      sprite: Structures/Machines/jukebox.rsi
+      state: "on"
+    useDelay: 1
   - type: InstantAction
     event: !type:DrivingWithStyleActionEvent
-
 

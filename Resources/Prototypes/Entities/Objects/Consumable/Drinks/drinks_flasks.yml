@@ -86,7 +86,13 @@
   id: FlaskBase
   abstract: true
   components:
-  - type: Drink
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+  - type: Sprite
+    state: icon
+    sprite: Objects/Consumable/Drinks/flask.rsi
   - type: PhysicalComposition
     materialComposition:
       Steel: 300
@@ -94,7 +100,31 @@
     solution: drink
 
 - type: entity
-  parent: FlaskBase
+  id: DrinkFlaskVisualsOpenable
+  abstract: true
+  components:
+  - type: GenericVisualizer
+    visuals:
+      enum.OpenableVisuals.Opened:
+        enum.OpenableVisuals.Layer:
+          True: {state: "icon_open"}
+          False: {state: "icon"}
+  - type: Appearance
+  - type: Sprite
+    layers:
+    - state: icon
+      map: ["enum.OpenableVisuals.Layer"]
+  - type: Openable
+    sound:
+      collection: flaskOpenSounds
+    closeable: true
+    closeSound:
+      collection: flaskCloseSounds
+
+# Flasks
+
+- type: entity
+  parent: [FlaskBase, DrinkFlaskVisualsOpenable]
   id: DrinkShinyFlask
   name: "блискуча колба"
   description: "Блискуча металева колба. На ній, схоже, викарбуваний грецький символ."
@@ -103,8 +133,9 @@
     sprite: Objects/Consumable/Drinks/shinyflask.rsi
 
 - type: entity
-  parent: FlaskBase
+  parent: [FlaskBase, DrinkFlaskVisualsOpenable]
   id: DrinkMREFlask
+  suffix: Full
   name: "фляга MRE"
   description: "Стара військова фляга, наповнена найкращим вмістом для солдатів."
   components:
@@ -120,7 +151,7 @@
     solution: drink
 
 - type: entity
-  parent: FlaskBase
+  parent: [FlaskBase, DrinkFlaskVisualsOpenable]
   id: DrinkDetFlask
   name: "фляга інспектора"
   description: "Металева фляга зі шкіряним ремінцем та золотим значком, що належить інспектору."
@@ -129,7 +160,7 @@
     sprite: Objects/Consumable/Drinks/detflask.rsi
 
 - type: entity
-  parent: FlaskBase
+  parent: [FlaskBase, DrinkFlaskVisualsOpenable]
   id: DrinkHosFlask
   name: "фляга Хос"
   description: "Металева колба, придатна для працьовитих хот-догів."
@@ -138,7 +169,7 @@
     sprite: Objects/Consumable/Drinks/hosflask.rsi
 
 - type: entity
-  parent: FlaskBase
+  parent: [FlaskBase, DrinkFlaskVisualsOpenable]
   id: DrinkFlask
   name: "капітанська фляга"
   description: "Металева фляга, що належить капітану."
@@ -147,7 +178,7 @@
     sprite: Objects/Consumable/Drinks/flask.rsi
 
 - type: entity
-  parent: FlaskBase
+  parent: [FlaskBase, DrinkFlaskVisualsOpenable]
   id: DrinkFlaskBar
   name: "фляга для бару"
   description: "Металева фляга, яку бармен часто видає напрокат. Не забудьте її повернути!"
@@ -158,14 +189,14 @@
 - type: entity
   parent: FlaskBase
   id: DrinkFlaskOld
-  name: "фляга"
-  description: ''
+  name: "стара фляга"
+  description: "Стара занепала фляга, здається, її кришка відсутня."
   components:
   - type: Sprite
     sprite: Objects/Consumable/Drinks/flask_old.rsi
 
 - type: entity
-  parent: FlaskBase
+  parent: [FlaskBase, DrinkFlaskVisualsOpenable]
   id: DrinkLithiumFlask
   name: "літієва колба"
   description: "Колба з символом атома літію на ній."
@@ -174,32 +205,10 @@
     sprite: Objects/Consumable/Drinks/lithiumflask.rsi
 
 - type: entity
-  parent: FlaskBase
+  parent: [FlaskBase, DrinkFlaskVisualsOpenable]
   id: DrinkVacuumFlask
   name: "вакуумна колба"
   description: "Зберігаємо ваші напої ідеальної температури з 1892 року."
   components:
   - type: Sprite
     sprite: Objects/Consumable/Drinks/vacuumflask.rsi
-
-- type: entity
-  parent: FlaskBase
-  id: Pitcher
-  name: "металевий глечик"
-  description: "Ізольований глечик з нержавіючої сталі. Найкращий друг кожного вранці."
-  components:
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 60
-  - type: Sprite
-    sprite: Objects/Consumable/Drinks/pitcher.rsi
-    layers:
-      - state: icon
-      - state: fill-6
-        map: ["enum.SolutionContainerLayers.Fill"]
-        visible: false
-  - type: Appearance
-  - type: SolutionContainerVisuals
-    maxFillLevels: 6
-    fillBaseName: fill-

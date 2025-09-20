@@ -36,8 +36,8 @@
 - type: entity
   parent: ClothingShoesBase
   id: ClothingModsuitBootsStandard
-  name: "стандартні черевики від скафандру"
-  description: "Спеціальні черевики для модульного костюма, розроблені для компактного складання всередині блоку керування модульним костюмом."
+  name: "стандартні черевики модкостюма"
+  description: "Спеціальні черевики модульного костюма, розроблені для компактного складання всередині блоку керування модульним костюмом."
   categories: [ HideSpawnMenu ]
   components:
   - type: Appearance
@@ -66,7 +66,7 @@
 - type: entity
   parent: ClothingShoesBase
   id: ClothingModsuitBootsSecurity
-  name: "черевики солдата від скафандру"
+  name: "чоботи мод-костюма \"Солдат"
   description: "ЗАЛІЗНІ ЧОБОТИ ЗАКОНУ."
   categories: [ HideSpawnMenu ]
   components:
@@ -112,8 +112,8 @@
 - type: entity
   parent: ClothingShoesBase
   id: ClothingModsuitBootsHeadOfSecurity
-  name: "черевики оплоту від скафандру"
-  description: "Я називаю їх моїми комуняко-топтателями."
+  name: "чоботи мод-костюма \"Бастіон"
+  description: "Я називаю їх своїми комуняко-топтунами."
   categories: [ HideSpawnMenu ]
   components:
   - type: Appearance
@@ -158,8 +158,8 @@
 - type: entity
   parent: ClothingShoesBase
   id: ClothingModsuitBootsParamedic
-  name: "черевики санітара від скафандру"
-  description: "Створені, щоб ставати кривавими."
+  name: "чоботи мод-костюма \"Санітар"
+  description: "Створені для того, щоб бути в крові."
   categories: [ HideSpawnMenu ]
   components:
   - type: Appearance
@@ -188,8 +188,8 @@
 - type: entity
   parent: ClothingShoesBase
   id: ClothingModsuitBootsEngineer
-  name: "черевики сапера від скафандру"
-  description: "Створені, щоб ставати масляними."
+  name: "чоботи мод-костюма \"Сапер"
+  description: "Створені для того, щоб бути в мастилі."
   categories: [ HideSpawnMenu ]
   components:
   - type: Appearance
@@ -229,8 +229,8 @@
 - type: entity
   parent: ClothingShoesBase
   id: ClothingModsuitBootsAtmostech
-  name: "черевики Еола від скафандру"
-  description: "Створені, щоб ставати обгорілими."
+  name: "чоботи мод-костюма \"Еол"
+  description: "Створені для того, щоб бути в вогні."
   categories: [ HideSpawnMenu ]
   components:
   - type: Appearance
@@ -261,8 +261,8 @@
 - type: entity
   parent: ClothingShoesBase
   id: ClothingModsuitBootsResearchDirector
-  name: "черевики Мінерви від скафандру"
-  description: "Не врятують вас від ковзання по власній крові, коли голокарп до вас добереться."
+  name: "чоботи мод-костюма \"Мінерва"
+  description: "Не врятує вас від падіння у власній крові, коли до вас добереться голокарп."
   categories: [ HideSpawnMenu ]
   components:
   - type: Appearance
@@ -291,8 +291,8 @@
 - type: entity
   parent: ClothingShoesBase
   id: ClothingModsuitBootsCaptain
-  name: "черевики магната від скафандру"
-  description: "Ці черевики розробив САМ Майкл Джордан і виготовив з древніх сплавів, чувак."
+  name: "чоботи мод-костюма \"Магнат"
+  description: "Ці чоботи розробив САМ Майкл Джордан і виготовив зі стародавніх сплавів, чуваче."
   categories: [ HideSpawnMenu ]
   components:
   - type: Appearance

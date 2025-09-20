@@ -1,0 +1,10 @@
+- type: entity
+  id: CrateBiomass
+  parent: CrateGenericSteel
+  name: "Ящик з біомасою"
+  description: "Ящик, повний кубів біомаси для використання в клонуванні або інших принтерах."
+  components:
+  - type: StorageFill
+    contents:
+      - id: MaterialBiomass
+        amount: 2

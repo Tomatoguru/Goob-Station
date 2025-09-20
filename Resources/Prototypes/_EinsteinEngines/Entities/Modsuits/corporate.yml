@@ -15,8 +15,8 @@
 - type: entity
   parent: [ ClothingModsuitStandard, BaseCentcommContraband ]
   id: ClothingModsuitCorporate
-  name: "блок керування корпоративним скафандром"  # Goob edit
-  description: "Основний контролер для корпоративного скафандра." # Goob edit
+  name: "Корпоративний блок керування модкостюмом"
+  description: "Головний контролер для корпоративного модкостюма."
   components:
     - type: Sprite
       sprite: _EinsteinEngines/Clothing/NanoTrasen/Modsuits/corporate.rsi
@@ -48,8 +48,8 @@
 - type: entity
   parent: ClothingModsuitGauntletsStandard
   id: ClothingModsuitGauntletsCorporate
-  name: "корпоративні рукавиці від скафандру"
-  description: "Пара рукавиць, створених для корпоративного скафандра." # Goob edit
+  name: "Корпоративні рукавиці модкостюма"
+  description: "Пара рукавиць, створених для корпоративного модкостюма."
   categories: [HideSpawnMenu]
   components:
     - type: Sprite
@@ -65,8 +65,8 @@
 - type: entity
   parent: [ClothingModsuitHelmetStandard, ShowSecurityIcons]
   id: ClothingModsuitHelmetCorporate
-  name: "корпоративний шолом від скафандру" # Goob edit
-  description: "Сучасний шолом, розроблений NanoTrasen для корпоративного скафандра. Має вбудований HUD." # Goob edit
+  name: "Корпоративний шолом модкостюма"
+  description: "Сучасний шолом, розроблений Нанотрейзен для корпоративного модкостюма. Він має вбудований HUD."
   categories: [HideSpawnMenu]
   components:
     - type: Sprite
@@ -112,8 +112,8 @@
 - type: entity
   parent: ClothingModsuitChestplateStandard
   id: ClothingModsuitChestplateCorporate
-  name: "корпоративний нагрудник від скафандру" # Goob edit
-  description: "Сучасний нагрудник, розроблений NanoTrasen для корпоративного скафандра. Він включає силові сервоприводи для зменшення навантаження від обладнання." # Goob edit
+  name: "Корпоративний нагрудник модкостюма"
+  description: "Сучасний нагрудник, розроблений Нанотрейзен для корпоративного модкостюма. Він містить сервоприводи для зменшення навантаження від обладнання."
   categories: [HideSpawnMenu]
   components:
     - type: Sprite
@@ -154,8 +154,8 @@
 - type: entity
   parent: ClothingModsuitBootsStandard
   id: ClothingModsuitBootsCorporate
-  name: "корпоративні черевики від скафандру" # Goob edit
-  description: "Сучасна пара магнітних черевиків для корпоративного скафандра. Поки костюм живиться, вони не сповільнюватимуть власника." # Goob edit
+  name: "Корпоративні черевики модкостюма"
+  description: "Сучасна пара магнітних черевиків для корпоративного модкостюма. Поки костюм живиться, вони не сповільнюватимуть власника."
   categories: [HideSpawnMenu]
   components:
     - type: Appearance

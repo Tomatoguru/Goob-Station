@@ -51,6 +51,24 @@
   - type: Access
     groups:
     - Command
+  - type: DoorRemote
+
+- type: entity
+  parent: [DoorRemoteDefault, BaseCommandContraband]
+  id: DoorRemoteCustom
+  name: "користувацький пульт від дверей"
+  description: "Пристрій, який може дистанційно відкривати та замикати двері. Цей розширений варіант не має вбудованого доступу, натомість успадковує доступ ID користувача."
+  components:
+  - type: Sprite
+    layers:
+    - state: door_remotebase
+    - state: door_remotelightscolour
+      color: "#0077FF"
+    - state: door_remotescreencolour
+      color: "#0033EE"
+  - type: Access
+  - type: DoorRemote
+    includeUserAccess: true
 
 - type: entity
   parent: [DoorRemoteDefault, BaseCommandContraband]
@@ -177,6 +195,8 @@
       color: "#2eba22"
     - state: door_remotescreencolour
       color: "#22871a"
+  - type: DoorRemote
+    includeUserAccess: true
   - type: Access
     groups:
     - AllAccess

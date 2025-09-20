@@ -14,8 +14,8 @@
 - type: entity
   parent: [ ClothingModsuitStandard, BaseCentcommContraband ]
   id: ClothingModsuitApocryphal
-  name: "блок керування апокрифічним скафандром" # Goob edit
-  description: "Основний контролер для апокрифічного скафандра." # Goob edit
+  name: "Апокрифічний блок керування модкостюмом"
+  description: "Головний контролер для апокрифічного модкостюма."
   components:
     - type: Sprite
       sprite: _EinsteinEngines/Clothing/NanoTrasen/Modsuits/apocryphal.rsi
@@ -47,8 +47,8 @@
 - type: entity
   parent: ClothingModsuitGauntletsStandard
   id: ClothingModsuitGauntletsApocryphal
-  name: "апокрифічні рукавиці від скафандру" # Goob edit
-  description: "Пара рукавиць, створених для апокрифічного скафандра." # Goob edit
+  name: "Апокрифічні рукавиці модкостюма"
+  description: "Пара рукавиць, створених для апокрифічного модкостюма."
   categories: [HideSpawnMenu]
   components:
     - type: Sprite
@@ -64,8 +64,8 @@
 - type: entity
   parent: [ClothingModsuitHelmetStandard, ShowSecurityIcons]
   id: ClothingModsuitHelmetApocryphal
-  name: "апокрифічний шолом від скафандру" # Goob edit
-  description: "Сучасний шолом, розроблений NanoTrasen для апокрифічного скафандра. Має вбудований HUD." # Goob edit
+  name: "Апокрифічний шолом модкостюма" # Goob edit
+  description: "Сучасний шолом, розроблений Нанотрейзен для апокрифічного модкостюма. Він має вбудований HUD."
   categories: [HideSpawnMenu]
   components:
     - type: Sprite
@@ -113,8 +113,8 @@
 - type: entity
   parent: ClothingModsuitChestplateStandard
   id: ClothingModsuitChestplateApocryphal
-  name: "апокрифічний нагрудник від скафандру" # Goob edit
-  description: "Сучасний нагрудник, розроблений NanoTrasen для апокрифічного скафандра. Він включає силові сервоприводи для зменшення навантаження від обладнання."
+  name: "Апокрифічний нагрудник модкостюма"
+  description: "Сучасний нагрудник, розроблений Нанотрейзен для апокрифічного модкостюма. Він містить сервоприводи для зменшення навантаження від обладнання."
   categories: [HideSpawnMenu]
   components:
     - type: Sprite
@@ -157,8 +157,8 @@
 - type: entity
   parent: ClothingModsuitBootsStandard
   id: ClothingModsuitBootsApocryphal
-  name: "апокрифічні черевики від скафандру" # Goob edit
-  description: "Сучасна пара магнітних черевиків для апокрифічного модульного костюма. Поки костюм живиться, вони не сповільнюватимуть власника."
+  name: "Апокрифічні черевики модкостюма"
+  description: "Сучасна пара магнітних черевиків для апокрифічного модкостюма. Поки костюм живиться, вони не сповільнюватимуть власника."
   categories: [HideSpawnMenu]
   components:
     - type: Appearance

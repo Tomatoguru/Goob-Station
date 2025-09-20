@@ -124,7 +124,7 @@
     tags: [] # ignore "WhitelistChameleon" tag
 
 - type: entity
-  parent: [ClothingShoesBootsMagBase, BaseMagicalContraband]
+  parent: [ClothingShoesBootsMagBase, BaseMajorContraband]
   id: ClothingShoesRealJordans
   name: "ейр джордани"
   description: "Найсучасніші, офіційні, незім'яті Джордани, які захищають вас від ковзання, коли увімкнені."
@@ -162,7 +162,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingShoesBaseButcherable, BaseMajorContraband]
+  parent: [ClothingShoesBaseButcherable, BaseMinorContraband]
   id: ClothingShoesFakeJordans
   name: "ейр джордани"
   suffix: fake
@@ -205,7 +205,7 @@
       collection: StepHeavyBoots
 
 - type: entity
-  parent: ClothingShoesRealJordans
+  parent: [ClothingShoesBootsMagBase, BaseMajorContraband]
   id: ClothingShoesRealJordansAutographed
   name: "ейр джордани"
   description: "Це не просто Джордани, їх підписав сам Майкл Джордан. Вони, мабуть, коштують ЦІЛЕ СТАТТЯ."

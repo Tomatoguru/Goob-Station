@@ -220,7 +220,7 @@
 - type: entity
   id: ShellTranquilizer
   name: "патрон (12 калібр транквілізатор)" # Goobstation
-  parent: [ BaseShellShotgun, BaseSecurityContraband ]
+  parent: [ BaseShellShotgun, BaseSecurityZookeeperContraband ] # Goobstation
   components:
   - type: Tag
     tags:

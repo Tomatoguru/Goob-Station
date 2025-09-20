@@ -18,7 +18,7 @@
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitChronolegioneer
   name: "футуристичний шолом"
-  description: "Шолом бійців майбутнього, призначений для спеціальних операцій у часопросторі"
+  description: "Шолом бійців майбутнього, розроблений для спеціальних операцій з потоком часу."
   components:
   - type: BreathMask
   - type: Sprite
@@ -61,7 +61,7 @@
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitBlueshield
-  name: "шолом скафандра синього щита"
+  name: "шолом скафандра \"Блакитного Щита"
   description: "Шолом скафандра охоронця капітана."
   components:
   - type: BreathMask
@@ -101,7 +101,7 @@
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitCybersunStealth
   suffix: stealth
-  name: "шолом стелс-скафандра Cybersun"
+  name: "стелс-шолом скафандра \"Сайберсан"
   description: "Шолом з фотореактивним покриттям для стелс-операцій."
   components:
   - type: Sprite
@@ -141,7 +141,7 @@
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitDreadnought
-  name: "шолом костюма \"Дредноут\" від Cybersun"
+  name: "шолом костюма \"Дредноут\" від \"Сайберсан"
   description: "Шолом, дивлячись на який, ви дивуєтеся, чи є хтось живий."
   components:
   - type: Sprite
@@ -177,8 +177,8 @@
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetVoidsuitSecurity
-  name: "шолом космічного костюма служби безпеки"
-  description: "Добре сконструйована лицьова панель, прикріплена до космічного костюма служби безпеки."
+  name: "шолом захисного скафандра"
+  description: "Добре зроблена лицьова панель, прикріплена до скафандра служби безпеки."
   components:
   - type: BreathMask
   - type: Sprite
@@ -214,8 +214,8 @@
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitHeadOfSecurityExperimental
-  name: "покращений шолом космічного костюма голови служби безпеки"
-  description: "Шолом космічного костюма служби безпеки з найновішим секретним програмним забезпеченням NT-HUD. Цей здається міцнішим за стандартні шоломи."
+  name: "покращений шолом скафандра голови служби безпеки"
+  description: "Шолом для скафандра служби безпеки з новітнім цілком таємним програмним забезпеченням NT-HUD. Цей здається міцнішим за стандартні шоломи."
   components:
   - type: Sprite
     sprite: _Goobstation/Clothing/Head/Hardsuits/hos-expi.rsi

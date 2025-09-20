@@ -305,7 +305,6 @@
   - type: MobPrice
     price: 500
 
-
 - type: entity
   name: "космічний короп"
   id: MobCarpSentient

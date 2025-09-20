@@ -26,7 +26,7 @@
   parent: ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitChronolegioneer
   name: "футуристичний скафандр"
-  description: "Скафандр, покритий невідомим матеріалом, що захищає від більшості матеріальних та часових пошкоджень"
+  description: "Скафандр, покритий невідомим матеріалом, що захищає від більшості матеріальних та часових пошкоджень."
   components:
   - type: Sprite
     sprite: _Goobstation/Clothing/OuterClothing/Hardsuits/chronolegioneer.rsi
@@ -83,8 +83,8 @@
 - type: entity
   parent: [ClothingOuterHardsuitBase, BaseCentcommContraband]
   id: ClothingOuterHardsuitBlueshieldLight
-  name: "ескортний космічний костюм \"преторіанець"
-  description: "Космічний костюм, розроблений для елітного охоронця. Цей конкретний виготовлений з легшого металу, що дозволяє більшу маневреність."
+  name: "ескортний скафандр \"Преторіанець"
+  description: "Скафандр, розроблений для елітного охоронця. Цей конкретний виготовлений з легшого металу, що забезпечує більшу маневреність."
   components:
   - type: Sprite
     sprite: _Goobstation/Clothing/OuterClothing/Hardsuits/bsolight.rsi
@@ -129,8 +129,8 @@
   parent: [ ClothingOuterHardsuitBase, BaseSyndicateContraband ]
   id: ClothingOuterHardsuitCybersunStealth
   suffix: stealth
-  name: "стелс-скафандр Cybersun"
-  description: "Скафандр з фотореактивним покриттям для таємних операцій, захисне поле не працює, поки ви рухаєтеся! Потрібно, щоб шолом був надітий для завершення поля невидимості."
+  name: "стелс-скафандр \"Сайберсан"
+  description: "Скафандр з фотореактивним покриттям для таємних операцій, однак екранування не працює, коли ви рухаєтеся! Потрібно надягнути шолом, щоб завершити поле невидимості."
   components:
   - type: Sprite
     sprite: _Goobstation/Clothing/OuterClothing/Hardsuits/cybersunstealth.rsi
@@ -185,7 +185,7 @@
 - type: entity
   parent: [ ClothingOuterHardsuitBase, BaseSyndicateContraband ]
   id: ClothingOuterHardsuitCybersunDreadnought
-  name: "костюм \"Дредноут\" від Cybersun"
+  name: "костюм \"Дредноут\" від \"Сайберсан"
   description: "Синдикат покладає свою славу на ваші плечі, не розчаруйте."
   components:
   - type: Sprite
@@ -246,8 +246,8 @@
 - type: entity
   parent: [ClothingOuterHardsuitBase, BaseSecurityContraband]
   id: ClothingOuterVoidsuitSecurity
-  name: "космічний костюм служби безпеки"
-  description: "Легкий космічний костюм з вбудованим бронежилетом для забезпечення помірного захисту при збереженні мобільності."
+  name: "захисний скафандр"
+  description: "Легкий скафандр з вбудованим бронежилетом для забезпечення помірного захисту при збереженні мобільності."
   components:
   - type: Sprite
     sprite: _Goobstation/Clothing/OuterClothing/Voidsuits/security.rsi
@@ -290,8 +290,8 @@
 - type: entity
   parent: ClothingOuterHardsuitSecurityRed
   id: ClothingOuterHardsuitHeadOfSecurityExperimental
-  name: "парадний космічний костюм \"FI-52 \"\"Почесна варта\"\""
-  description: "Спеціальний космічний костюм, що захищає від небезпечних середовищ з низьким тиском. Має експериментальну вбудовану систему автоін'єкторів стимуляторів."
+  name: "парадний скафандр \"Почесна варта\" FI-52"
+  description: "Спеціальний скафандр, що захищає від небезпечних середовищ з низьким тиском. Має експериментальну вбудовану систему автоін'єкції стимуляторів."
   components:
   - type: Sprite
     sprite: _Goobstation/Clothing/OuterClothing/Hardsuits/hos-expi.rsi

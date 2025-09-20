@@ -37,8 +37,8 @@
 - type: entity
   parent: ClothingHandModsuitBase
   id: ClothingModsuitGauntletsStandard
-  name: "стандартні рукавиці від скафандру"
-  description: "Спеціальні рукавиці для модульного костюма, що захищають власника від ураження електричним струмом."
+  name: "стандартні рукавиці модкостюма"
+  description: "Спеціальні рукавиці модульного костюма, що захищають власника від ураження електричним струмом."
   categories: [ HideSpawnMenu ]
   components:
   - type: Appearance
@@ -73,8 +73,8 @@
 - type: entity
   parent: ClothingHandModsuitBase
   id: ClothingModsuitGauntletsSecurity
-  name: "рукавиці солдата від скафандру"
-  description: "Міцні модульні рукавиці, щоб міцно тримати злочинців та зброю."
+  name: "рукавиці мод-костюма \"Солдат"
+  description: "Міцні модульні рукавиці для міцного утримання злочинців та зброї."
   categories: [ HideSpawnMenu ]
   components:
   - type: Appearance
@@ -109,8 +109,8 @@
 - type: entity
   parent: ClothingHandModsuitBase
   id: ClothingModsuitGauntletsParamedic
-  name: "рукавиці санітара від скафандру"
-  description: "Чорно-білі модульні рукавиці, щоб міцно тримати перкоцет та пацієнтів."
+  name: "рукавиці мод-костюма \"Санітар"
+  description: "Чорно-білі модульні рукавиці для міцного утримання наркотиків та пацієнтів."
   categories: [ HideSpawnMenu ]
   components:
   - type: Appearance
@@ -151,8 +151,8 @@
 - type: entity
   parent: ClothingHandModsuitBase
   id: ClothingModsuitGauntletsHeadOfSecurity
-  name: "рукавиці оплоту від скафандру"
-  description: "Міцні модульні рукавиці, щоб міцно тримати злочинців та зброю. Ізольовані."
+  name: "рукавиці мод-костюма \"Бастіон"
+  description: "Міцні модульні рукавиці для міцного утримання злочинців та зброї. Ізольовані."
   categories: [ HideSpawnMenu ]
   components:
   - type: Appearance
@@ -195,8 +195,8 @@
 - type: entity
   parent: ClothingHandModsuitBase
   id: ClothingModsuitGauntletsEngineer
-  name: "рукавиці сапера від скафандру"
-  description: "Замаслені модульні рукавиці для легкого натискання кнопок на RCD."
+  name: "рукавиці мод-костюма \"Сапер"
+  description: "Забруднені мастилом модульні рукавиці для легкого натискання кнопок на RCD."
   categories: [ HideSpawnMenu ]
   components:
   - type: Appearance
@@ -241,7 +241,7 @@
 - type: entity
   parent: ClothingHandModsuitBase
   id: ClothingModsuitGauntletsAtmostech
-  name: "рукавиці Еола від скафандру"
+  name: "рукавиці мод-костюма \"Еол"
   description: "Азбестові модульні рукавиці для легкого натискання кнопок на RPD."
   categories: [ HideSpawnMenu ]
   components:
@@ -288,8 +288,8 @@
 - type: entity
   parent: ClothingHandModsuitBase
   id: ClothingModsuitGauntletsResearchDirector
-  name: "рукавиці Мінерви від скафандру"
-  description: "Щоб зберегти всі ваші десять пальців після того, як артефакт вибухне термоядерним вибухом."
+  name: "рукавиці мод-костюма \"Мінерва"
+  description: "Щоб зберегти ваші пальці в кількості 10 штук після того, як артефакт вибухне термоядерним зарядом."
   categories: [ HideSpawnMenu ]
   components:
   - type: Appearance
@@ -332,8 +332,8 @@
 - type: entity
   parent: ClothingHandModsuitBase
   id: ClothingModsuitGauntletsCaptain
-  name: "рукавиці магната від скафандру"
-  description: "Мають спеціальні канавки та вирізи, щоб легше тримати цей чортовий диск."
+  name: "рукавиці мод-костюма \"Магнат"
+  description: "Має спеціалізовані пази та вирізи для легшого утримання того клятого диска."
   categories: [ HideSpawnMenu ]
   components:
   - type: Appearance

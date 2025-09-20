@@ -363,6 +363,18 @@
     sprite: _Goobstation/Clothing/Head/Hats/sanabi.rsi
 
 - type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadLehmin
+  name: "головний убір головного лікаря"
+  suffix: ADMIN
+  description: "Хімія. Адміністрування. Ще щось."
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Head/Hats/lehmin.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Head/Hats/lehmin.rsi
+
+- type: entity
   parent: [ ClothingHeadBase, BaseJanitorContraband ]
   id: ClothingHeadHatJanitorCap
   name: "кепка прибиральника"

@@ -317,7 +317,7 @@
     storedSprite: null
 
 - type: entity
-  parent: ClothingHeadHatGreyFlatcap
+  parent: [ClothingHeadHatGreyFlatcap, BaseMinorContraband]
   id: BladedFlatcapGrey
   name: "сірий кашкет"
   description: "Непримітний капелюх із зашитими в поля осколками скла."
@@ -347,7 +347,7 @@
   parent: BladedFlatcapGrey
   id: BladedFlatcapBrown
   name: "коричнева пласка кепка"
-  description: "Дурний клоун! Ти виставив мене в поганому світлі! У козирку заховані уламки скла."
+  description: "\"Дурний клоун! Ти виставив мене в поганому світлі!\" У її козирку заховані уламки скла."
   components:
   - type: Construction
     graph: BladedFlatcapBrown

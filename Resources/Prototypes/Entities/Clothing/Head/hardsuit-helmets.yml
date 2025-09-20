@@ -132,7 +132,7 @@
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitAtmos
-  name: "атмосферний шолом скафандра" # Goob edit
+  name: "шолом атмосферного скафандра" # Goob edit
   description: "Спеціальний шолом для скафандра, призначений для роботи в умовах низького тиску та високих температур." # Goob edit
   components:
   - type: Sprite
@@ -156,6 +156,9 @@
       head-vox:
       - state: equipped-head-light-vox
         shader: unshaded
+      head-dog:
+      - state: equipped-head-light-dog
+        shader: unshaded
   - type: Clothing
     clothingVisuals:
       head:
@@ -165,6 +168,10 @@
       head-vox:
       - state: equipped-head-vox
       - state: equipped-head-unshaded-vox
+        shader: unshaded
+      head-dog:
+      - state: equipped-head-dog
+      - state: equipped-head-unshaded-dog
         shader: unshaded
   - type: PointLight
     color: "#adffe6"
@@ -185,12 +192,16 @@
         Heat: 0.8
         Radiation: 0.15
   - type: EyeProtection # goob - do we even still use this suit
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - WhitelistChameleon
 
 #Engineering Hardsuit
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitEngineering
-  name: "інженерний шолом скафандра" # Goob edit
+  name: "шолом інженерного скафандра" # Goob edit
   description: "Інженерний шолом для скафандра, призначений для роботи в умовах низького тиску та високої радіації." # Goob edit
   components:
   - type: Sprite
@@ -209,6 +220,10 @@
         Caustic: 0.7
         Radiation: 0.05
   - type: EyeProtection # goob
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - WhitelistChameleon
 
 #Spationaut Hardsuit
 - type: entity
@@ -237,6 +252,9 @@
       head-vox:
       - state: equipped-head-light-vox
         shader: unshaded
+      head-dog:
+      - state: equipped-head-light-dog
+        shader: unshaded
   - type: Clothing
     clothingVisuals:
       head:
@@ -246,6 +264,10 @@
       head-vox:
       - state: equipped-head-vox
       - state: equipped-head-unshaded-vox
+        shader: unshaded
+      head-dog:
+      - state: equipped-head-dog
+      - state: equipped-head-unshaded-dog
         shader: unshaded
   - type: PointLight
     radius: 6
@@ -260,13 +282,17 @@
         Piercing: 0.9
         Radiation: 0.1
         Caustic: 0.8
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - WhitelistChameleon
 
 #Salvage Hardsuit
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitSalvage
-  name: "шолом утилізаторського скафандра" # Goob edit
-  description: "Спеціальний шолом, призначений для роботи в небезпечному середовищі з низьким тиском. Має посилену обшивку для зіткнень з дикою природою та подвійні прожектори." # Goob edit
+  name: "шолом скафандра утилізатора" # Goob edit
+  description: "Спеціальний шолом, призначений для роботи в небезпечному середовищі з низьким тиском. Має посилене покриття для зустрічей з дикою природою та подвійні прожектори." # Goob edit
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/salvage.rsi
@@ -287,12 +313,16 @@
         Heat: 0.75
         Radiation: 0.1
         Caustic: 0.7
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitGoliath
-  name: "шолом скафандра голіафа" # Goob edit
-  description: "Міцний шолом для скафандра, посилений шкірою голіафа та моторошним, немиготливим оком, вирізаним з його маси." # Goob edit
+  name: "шолом скафандра \"Голіаф" # Goob edit
+  description: "Міцний шолом для скафандра, посилений шкірою голіафа і моторошним, немиготливим оком, вирізаним з його маси." # Goob edit
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/goliathhelm.rsi
@@ -314,6 +344,9 @@
       head-vox:
       - state: equipped-head-light-vox
         shader: unshaded
+      head-dog:
+      - state: equipped-head-light-dog
+        shader: unshaded
   - type: Clothing
     clothingVisuals:
       head:
@@ -323,6 +356,10 @@
       head-vox:
       - state: equipped-head-vox
       - state: equipped-head-unshaded-vox
+        shader: unshaded
+      head-dog:
+      - state: equipped-head-dog
+      - state: equipped-head-unshaded-dog
         shader: unshaded
   - type: PointLight
     radius: 6
@@ -338,6 +375,10 @@
         Heat: 0.75 #Goliath hide gets grilled instead of you
         Radiation: 0.1
         Caustic: 0.8
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadHardsuitBase
@@ -400,13 +441,17 @@
         Caustic: 0.7
   - type: FlashImmunity # Goobstation
   - type: FlashSoundSuppression # Goobstation
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - WhitelistChameleon
 
 #Brigmedic Hardsuit
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitBrigmedic
-  name: "шолом скафандра тюремного медика" # Goob edit
-  description: "Легкий шолом скафандра тюремного медика. Захищає від вірусів та клоунів."
+  name: "шолом скафандра бригмедика" # Goob edit
+  description: "Легкий шолом скафандра бригмедика. Захищає від вірусів та клоунів."
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/brigmedic.rsi
@@ -433,8 +478,8 @@
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitWarden
-  name: "шолом скафандра начальника охорони" # Goob edit
-  description: "Модифікований шолом для заворушень. На диво зручний."
+  name: "шолом скафандра наглядача" # Goob edit
+  description: "Модифікований штурмовий шолом. Дивно зручний."
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/security-warden.rsi
@@ -493,13 +538,17 @@
         Heat: 0.65
         Radiation: 0.15
         Caustic: 0.65 #Goob - Modsuit Rebalance end
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - WhitelistChameleon
 
 #Chief Engineer's Hardsuit
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitEngineeringWhite
   name: "шолом скафандра головного інженера" # Goob edit
-  description: "Спеціальний шолом для скафандра, виготовлений для головного інженера станції." # Goob edit
+  description: "Спеціальний шолом для скафандра, створений для головного інженера станції." # Goob edit
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/engineering-white.rsi
@@ -522,13 +571,17 @@
         Radiation: 0.0
         Caustic: 0.7
   - type: EyeProtection # goob
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - WhitelistChameleon
 
 #Chief Medical Officer's Hardsuit
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitMedical
   name: "шолом скафандра головного лікаря" # Goob edit
-  description: "Легкий медичний шолом для скафандра, який не обмежує рухів голови." # Goob edit
+  description: "Легкий медичний шолом для скафандра, що не обмежує рухів голови." # Goob edit
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/medical.rsi
@@ -543,13 +596,17 @@
     modifiers:
       coefficients:
         Caustic: 0.1
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - WhitelistChameleon
 
 #Research Director's Hardsuit
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitRd
   name: "експериментальний дослідницький шолом скафандра" # Goob edit
-  description: "Легкий шолом для скафандра, який не обмежує рухів голови." # Goob edit
+  description: "Легкий шолом для скафандра, що не обмежує рухів голови." # Goob edit
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/rd.rsi
@@ -569,13 +626,17 @@
         Heat: 0.45
         Radiation: 0.05
         Caustic: 0.4
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - WhitelistChameleon
 
 #Head of Security's hardsuit
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitSecurityRed
   name: "шолом скафандра голови служби безпеки" # Goob edit
-  description: "Шолом для скафандра служби безпеки з новітнім надсекретним програмним забезпеченням NT-HUD. Належить ГСБ." # Goob edit
+  description: "Шолом скафандра служби безпеки з новітнім надсекретним програмним забезпеченням NT-HUD. Належить ГСБ." # Goob edit
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/security-red.rsi
@@ -608,8 +669,8 @@
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitLuxury #DO NOT MAP - https://github.com/space-wizards/space-station-14/pull/19738#issuecomment-1703486738
-  name: "шолом елітного шахтарського скафандра" # Goob edit
-  description: "Відремонтований шахтарський шолом для скафандра, оснащений атласною підкладкою та додатковою (нефункціональною) антеною, бо ви такий екстравагантний." # Goob edit
+  name: "елітний шахтарський шолом скафандра" # Goob edit
+  description: "Відремонтований шахтарський шолом для скафандра, оснащений атласною підкладкою та додатковою (нефункціональною) антеною, тому що ви такий екстравагантний." # Goob edit
   categories: [ DoNotMap ]
   components:
   - type: Sprite
@@ -637,7 +698,7 @@
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitSyndie
   name: "криваво-червоний шолом скафандра" # Goob edit
-  description: "Важкоброньований шолом, призначений для роботи в спеціальних операціях. Власність рейдерів Горлекс."
+  description: "Важкоброньований шолом, призначений для роботи в спеціальних операціях. Власність Gorlex Marauders."
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/syndicate.rsi
@@ -665,13 +726,17 @@
         Caustic: 0.5
   - type: FlashImmunity # Goobstation
   - type: FlashSoundSuppression # Goobstation
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - WhitelistChameleon
 
 #Blood-red Medic Hardsuit
 - type: entity
   parent: ClothingHeadHelmetHardsuitSyndie # Goob
   id: ClothingHeadHelmetHardsuitSyndieMedic
   name: "криваво-червоний медичний шолом скафандра" # Goob edit
-  description: "Просунутий червоний шолом для скафандра, спеціально розроблений для польових медичних операцій." # Goob edit
+  description: "Удосконалений червоний шолом для скафандра, спеціально розроблений для польових медичних операцій." # Goob edit
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/syndiemedic.rsi
@@ -683,7 +748,7 @@
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitSyndieElite
   name: "елітний шолом скафандра синдикату" # Goob edit
-  description: "Елітна версія шолома криваво-червоного скафандра з покращеною бронею та вогнестійкістю. Власність рейдерів Горлекс." # Goob edit
+  description: "Елітна версія криваво-червоного шолома для скафандра з покращеною бронею та вогнестійкістю. Власність Gorlex Marauders." # Goob edit
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/syndieelite.rsi
@@ -716,13 +781,17 @@
         Caustic: 0.4
   - type: FlashImmunity # Goobstation
   - type: FlashSoundSuppression # Goobstation
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - WhitelistChameleon
 
 #Syndicate Commander Hardsuit
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitSyndieCommander
   name: "шолом скафандра командира синдикату" # Goob edit
-  description: "Посилена версія шолома криваво-червоного скафандра, спеціально створена для командира оперативного загону синдикату. Має значно покращену броню для смертельних перестрілок на передовій." # Goob edit
+  description: "Збільшена версія криваво-червоного шолома для скафандра, спеціально створена для командира оперативного загону синдикату. Має значно покращену броню для смертельних перестрілок на передовій." # Goob edit
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/syndiecommander.rsi
@@ -750,6 +819,10 @@
         Caustic: 0.4
   - type: FlashImmunity # Goobstation
   - type: FlashSoundSuppression # Goobstation
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - WhitelistChameleon
 
 #Cybersun Juggernaut Hardsuit
 - type: entity
@@ -782,13 +855,17 @@
         Caustic: 0.2
   - type: FlashImmunity # Goobstation
   - type: FlashSoundSuppression # Goobstation
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - WhitelistChameleon
 
 #Wizard Hardsuit
 - type: entity
   parent: [ClothingHeadHardsuitWithLightBase, ClothingHeadHatWizardBaseArmor] # Goob edit
   id: ClothingHeadHelmetHardsuitWizard
-  name: "шолом скафандра чарівника" # Goob edit
-  description: "Дивний шолом, інкрустований дорогоцінними каменями, що випромінює магічну енергію."
+  name: "шолом чаклунського скафандра" # Goob edit
+  description: "Дивний, інкрустований дорогоцінним камінням шолом, що випромінює магічну енергію."
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/wizard.rsi
@@ -819,6 +896,10 @@
   - type: FlashImmunity # Goobstation
   - type: FlashSoundSuppression # Goobstation
   - type: WizardClothes # Goobstation
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - WhitelistChameleon
 
 #Organic Space Suit
 - type: entity
@@ -869,7 +950,7 @@
   id: ClothingHeadHelmetHardsuitPirateCap
   name: "шолом скафандра капітана піратів" # Goob edit
   suffix: Pirate
-  description: "Спеціальний шолом для скафандра, виготовлений для капітана піратського корабля." # Goob edit
+  description: "Спеціальний шолом для скафандра, створений для капітана піратського корабля." # Goob edit
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/piratecaptainhelm.rsi
@@ -916,8 +997,8 @@
 - type: entity
   parent: [ BaseCentcommContraband, ClothingHeadHelmetHardsuitSyndieCommander ]
   id: ClothingHeadHelmetHardsuitERTLeader
-  name: "шолом скафандра лідера ШРТ" # Goob edit
-  description: "Спеціальний шолом для скафандра, який носять члени штурмової рятувальної команди." # Goob edit
+  name: "шолом скафандра лідера КОШ" # Goob edit
+  description: "Спеціальний шолом для скафандра, який носять члени команди оперативного швидкого реагування." # Goob edit
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/ERThelmets/ertleader.rsi
@@ -930,8 +1011,8 @@
 - type: entity
   parent: [ BaseCentcommContraband, ClothingHeadHelmetHardsuitSyndie ]
   id: ClothingHeadHelmetHardsuitERTChaplain
-  name: "шолом скафандра капелана ШГР" # Goob edit
-  description: "Спеціальний шолом для скафандра, який носять члени штурмової рятувальної команди." # Goob edit
+  name: "шолом скафандра капелана КШР" # Goob edit
+  description: "Спеціальний шолом для скафандра, який носять члени команди оперативного швидкого реагування." # Goob edit
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/ERThelmets/ertchaplain.rsi
@@ -944,8 +1025,8 @@
 - type: entity
   parent: [ BaseCentcommContraband, ClothingHeadHelmetHardsuitSyndie ]
   id: ClothingHeadHelmetHardsuitERTEngineer
-  name: "шолом скафандра інженера ШРТ" # Goob edit
-  description: "Спеціальний шолом для скафандра, який носять члени штурмової рятувальної команди." # Goob edit
+  name: "шолом скафандра інженера КОШ" # Goob edit
+  description: "Спеціальний шолом для скафандра, який носять члени команди оперативного швидкого реагування." # Goob edit
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/ERThelmets/ertengineer.rsi
@@ -959,8 +1040,8 @@
 - type: entity
   parent: [ BaseCentcommContraband, ClothingHeadHelmetHardsuitSyndieElite ]
   id: ClothingHeadHelmetHardsuitERTMedical
-  name: "шолом скафандра медика ШРТ" # Goob edit
-  description: "Спеціальний шолом для скафандра, який носять члени штурмової рятувальної команди." # Goob edit
+  name: "шолом скафандра медика КОШ" # Goob edit
+  description: "Спеціальний шолом для скафандра, який носять члени команди оперативного швидкого реагування." # Goob edit
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/ERThelmets/ertmedical.rsi
@@ -973,8 +1054,8 @@
 - type: entity
   parent: [ BaseCentcommContraband, ClothingHeadHelmetHardsuitSyndie ]
   id: ClothingHeadHelmetHardsuitERTSecurity
-  name: "шолом скафандра служби безпеки ШРТ" # Goob edit
-  description: "Спеціальний шолом для скафандра, який носять члени штурмової рятувальної команди." # Goob edit
+  name: "шолом скафандра офіцера безпеки КОШ" # Goob edit
+  description: "Спеціальний шолом для скафандра, який носять члени команди оперативного швидкого реагування." # Goob edit
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/ERThelmets/ertsecurity.rsi
@@ -987,8 +1068,8 @@
 - type: entity
   parent: [ BaseCentcommContraband, ClothingHeadHelmetHardsuitSyndie ]
   id: ClothingHeadHelmetHardsuitERTJanitor
-  name: "шолом скафандра прибиральника ШРТ" # Goob edit
-  description: "Спеціальний шолом для скафандра, який носять члени штурмової рятувальної команди." # Goob edit
+  name: "шолом скафандра прибиральника КОШ" # Goob edit
+  description: "Спеціальний шолом для скафандра, який носять члени команди оперативного швидкого реагування." # Goob edit
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/ERThelmets/ertjanitor.rsi
@@ -1048,7 +1129,7 @@
 - type: entity
   parent: [ BaseCentcommContraband, ClothingHeadHardsuitWithLightBase ]
   id: ClothingHeadHelmetHardsuitDeathsquad
-  name: "шолом скафандра карального загону" # Goob edit
+  name: "шолом скафандра ескадрону смерті" # Goob edit
   description: "Міцний шолом для спеціальних операцій."
   components:
   - type: BreathMask
@@ -1101,8 +1182,8 @@
 - type: entity
   parent: ClothingHeadHelmetHardsuitSecurity
   id: ClothingHeadHelmetHardsuitClown
-  name: "шолом скафандра клоуна" # Goob edit
-  description: "Шолом для скафандра клоуна." # Goob edit
+  name: "шолом клоунського скафандра" # Goob edit
+  description: "Шолом клоунського скафандра." # Goob edit
   components:
   - type: BreathMask
   - type: Sprite
@@ -1130,7 +1211,7 @@
   parent: ClothingHeadHelmetHardsuitSecurity
   id: ClothingHeadHelmetHardsuitMime
   name: "шолом скафандра міма" # Goob edit
-  description: "Шолом для скафандра міма." # Goob edit
+  description: "Шолом скафандра міма." # Goob edit
   components:
   - type: BreathMask
   - type: Sprite
@@ -1155,8 +1236,8 @@
 - type: entity
   parent: ClothingHeadHardsuitBase
   id: ClothingHeadHelmetHardsuitSanta
-  name: "шолом скафандра санти" # Goob edit
-  description: "Святковий шолом для скафандра, що забезпечує веселому дарувальнику подарунків захист від середовища з низьким тиском." # Goob edit
+  name: "шолом скафандра Санти" # Goob edit
+  description: "Святковий на вигляд шолом для скафандра, що забезпечує веселому дарувальнику подарунків захист від середовища з низьким тиском." # Goob edit
   components:
   - type: BreathMask
   - type: Sprite

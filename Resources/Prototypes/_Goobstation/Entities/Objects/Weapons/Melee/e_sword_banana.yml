@@ -6,7 +6,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Goobstation
 - type: entity
-  parent: [BaseItem, BaseMinorContraband]
+  parent: [BaseItem, BaseHonkraband]
   id: BananiumSword
   name: "бананієвий енергетичний меч"
   description: "Дуже гучний і слизький меч з променем з чистого, концентрованого бананію. Змушує цілі без галош ковзати, як по маслу."

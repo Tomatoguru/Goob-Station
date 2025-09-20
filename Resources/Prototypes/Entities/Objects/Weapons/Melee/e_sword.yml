@@ -597,6 +597,17 @@
     reflectProb: 1
     spread: 75
 
+# Nukie variant, reduced reflection rate.
+- type: entity
+  parent: HyperEutacticBlade
+  id: HyperEutaticBlade
+  name: "гіперевтатичний клинок"
+  description: "Часто плутають з Гіперевтактичним Клинком. Ця масова, неоригінальна підробка виконує ту саму роботу, але з меншим блиском."
+  components:
+  - type: Reflect
+    reflectProb: 0.75
+    spread: 75
+
 # Borgs
 - type: entity
   suffix: One-Handed, For Borgs

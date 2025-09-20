@@ -33,8 +33,8 @@
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateStealthHardsuitBundle
-  name: "набір стелс-скафандра cybersun"
-  description: "Набір передового стелс-скафандра від cybersun."
+  name: "набір стелс-костюма \"Сайберсан"
+  description: "Покращений набір стелс-скафандра \"Сайберсан\"."
   components:
   - type: StorageFill
     contents:

@@ -35,9 +35,9 @@
         acts: [ "Destruction" ]
 
 - type: entity
-  name: "осколковий заряд" # Goobstation - shrapnel payload
+  name: "шрапнельний заряд" # Goobstation - shrapnel payload
   parent: [ BasePayload, BaseSecurityContraband ]
-  id: ExplosivePayload
+  id: ShrapnelPayload
   components:
   - type: Sprite
     sprite: Objects/Devices/payload.rsi

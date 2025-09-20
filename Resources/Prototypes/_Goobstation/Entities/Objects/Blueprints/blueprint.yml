@@ -1,0 +1,9 @@
+- type: entity
+  parent: BaseBlueprint
+  id: BlueprintExplosivePayload
+  name: "креслення вибухового заряду"
+  description: "Креслення зі схемою сейсмічного заряду. Можна вставити в автолат."
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - ExplosivePayload

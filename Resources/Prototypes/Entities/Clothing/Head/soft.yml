@@ -68,7 +68,7 @@
   parent: ClothingHeadHeadHatBaseFlippable
   id: ClothingHeadHatBluesoft
   name: "синя кепка"
-  description: "Це бейсболка позбавленого смаку синього кольору."
+  description: "Синя бейсболка."
   components:
   - type: Sprite
     sprite: Clothing/Head/Soft/bluesoft.rsi
@@ -83,8 +83,8 @@
 - type: entity
   parent: ClothingHeadHeadHatBaseFlippable
   id: ClothingHeadHatCargosoft
-  name: "вантажна кепка"
-  description: "Це бейсболка, пофарбована в кольори вантажного відділу."
+  name: "кепка карго"
+  description: "Бейсболка в колір уніформи карго."
   components:
   - type: Sprite
     sprite: Clothing/Head/Soft/cargosoft.rsi
@@ -100,7 +100,7 @@
 - type: entity
   parent: [ClothingHeadHeadHatBaseFlipped, ClothingHeadHatCargosoft]
   id: ClothingHeadHatCargosoftFlipped
-  name: "вантажна кепка"
+  name: "кепка карго"
   components:
   - type: Tag
     tags:
@@ -113,7 +113,7 @@
   parent: ClothingHeadHeadHatBaseFlippable
   id: ClothingHeadHatQMsoft
   name: "кепка квартирмейстера"
-  description: "Це бейсболка, пофарбована в кольори квартирмейстера."
+  description: "Бейсболка в колір уніформи Квартирмейстера."
   components:
   - type: Sprite
     sprite: Clothing/Head/Soft/qmsoft.rsi
@@ -129,7 +129,7 @@
   parent: ClothingHeadHeadHatBaseFlippable
   id: ClothingHeadHatCommandSoft
   name: "командна кепка"
-  description: "Це бейсболка, пофарбована в кольори командування."
+  description: "Бейсболка характерного для командування відтінку синього."
   components:
   - type: Sprite
     sprite: Clothing/Head/Soft/commandsoft.rsi
@@ -161,7 +161,7 @@
   parent: ClothingHeadHeadHatBaseFlippable
   id: ClothingHeadHatGreensoft
   name: "зелена кепка"
-  description: "Це бейсболка позбавленого смаку зеленого кольору."
+  description: "Зелена бейсболка."
   components:
   - type: Sprite
     sprite: Clothing/Head/Soft/greensoft.rsi
@@ -177,7 +177,7 @@
   parent: ClothingHeadHeadHatBaseFlippable
   id: ClothingHeadHatBlacksoft
   name: "чорна кепка"
-  description: "Це бейсболка позбавленого смаку чорного кольору."
+  description: "Чорна бейсболка."
   components:
   - type: Sprite
     sprite: Clothing/Head/Soft/blacksoft.rsi
@@ -193,7 +193,7 @@
   parent: ClothingHeadHeadHatBaseFlippable
   id: ClothingHeadHatGreysoft
   name: "сіра кепка"
-  description: "Це бейсболка позбавленого смаку сірого кольору."
+  description: "Сіра бейсболка."
   components:
   - type: Sprite
     sprite: Clothing/Head/Soft/greysoft.rsi
@@ -209,7 +209,7 @@
   parent: ClothingHeadHeadHatBaseFlippable
   id: ClothingHeadHatMimesoft
   name: "біла кепка"
-  description: "Це бейсболка позбавленого смаку білого кольору."
+  description: "Біла бейсболка."
   components:
   - type: Sprite
     sprite: Clothing/Head/Soft/mimesoft.rsi
@@ -225,7 +225,7 @@
   parent: ClothingHeadHeadHatBaseFlippable
   id: ClothingHeadHatOrangesoft
   name: "помаранчева кепка"
-  description: "Це бейсболка приємного помаранчевого кольору."
+  description: "Помаранчева бейсболка."
   components:
   - type: Sprite
     sprite: Clothing/Head/Soft/orangesoft.rsi
@@ -241,7 +241,7 @@
   parent: ClothingHeadHeadHatBaseFlippable
   id: ClothingHeadHatPurplesoft
   name: "фіолетова кепка"
-  description: "Це бейсболка позбавленого смаку фіолетового кольору."
+  description: "Фіолетова бейсболка."
   components:
   - type: Sprite
     sprite: Clothing/Head/Soft/purplesoft.rsi
@@ -270,7 +270,7 @@
   parent: ClothingHeadHeadHatBaseFlippable
   id: ClothingHeadHatRedsoft
   name: "червона кепка"
-  description: "Це бейсболка позбавленого смаку червоного кольору."
+  description: "Червона бейсболка."
   components:
   - type: Sprite
     sprite: Clothing/Head/Soft/redsoft.rsi
@@ -286,7 +286,7 @@
   parent: [ClothingHeadHeadHatBaseFlippable, BaseSecurityContraband] #goobstation - contraband marking
   id: ClothingHeadHatSecsoft
   name: "кепка служби безпеки"
-  description: "Це міцна бейсболка вишуканого червоного кольору."
+  description: "Бейсболка в колір уніформи служби безпеки."
   components:
   - type: Sprite
     sprite: Clothing/Head/Soft/secsoft.rsi
@@ -349,7 +349,7 @@
   parent: ClothingHeadHeadHatBaseFlippable
   id: ClothingHeadHatParamedicsoft
   name: "кепка парамедика"
-  description: "Це бейсболка парамедика з медичним логотипом."
+  description: "Синя бейсболка з хрестом спереду."
   components:
   - type: Sprite
     sprite: Clothing/Head/Soft/paramedicsoft.rsi

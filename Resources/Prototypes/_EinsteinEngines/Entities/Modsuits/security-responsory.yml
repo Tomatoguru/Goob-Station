@@ -13,8 +13,8 @@
 - type: entity
   parent: [ ClothingModsuitStandard, BaseCentcommContraband ]
   id: ClothingModsuitResponsorySecurity
-  name: "блок керування скафандром СБ швидкого реагування" # Goob edit
-  description: "Основний контролер для скафандра СБ швидкого реагування." # Goob edit
+  name: "Блок керування мод-костюмом \"Сек'юріті Респонсорі"
+  description: "Основний контролер для мод-костюма \"Сек'юріті Респонсорі\"."
   components:
     - type: Sprite
       sprite: _EinsteinEngines/Clothing/NanoTrasen/Modsuits/security-responsory.rsi
@@ -44,8 +44,8 @@
 - type: entity
   parent: ClothingModsuitGauntletsStandard
   id: ClothingModsuitGauntletsResponsorySecurity
-  name: "рукавиці від скафандру СБ швидкого реагування" # Goob edit
-  description: "Пара рукавиць, створених для скафандра СБ швидкого реагування." # Goob edit
+  name: "Рукавиці мод-костюма \"Сек'юріті Респонсорі"
+  description: "Пара рукавиць, створених для мод-костюма \"Сек'юріті Респонсорі\"."
   categories: [HideSpawnMenu]
   components:
     - type: Sprite
@@ -61,8 +61,8 @@
 - type: entity
   parent: [ClothingModsuitHelmetStandard, ShowSecurityIcons]
   id: ClothingModsuitHelmetResponsorySecurity
-  name: "шолом від скафандру СБ швидкого реагування" # Goob edit
-  description: "Сучасний шолом, розроблений NanoTrasen для скафандра СБ швидкого реагування. Має вбудований HUD." # Goob edit
+  name: "Шолом мод-костюма \"Сек'юріті Респонсорі"
+  description: "Найсучасніший шолом, розроблений NanoTrasen для мод-костюма \"Сек'юріті Респонсорі\". Він має вбудований HUD."
   categories: [HideSpawnMenu]
   components:
     - type: Sprite
@@ -107,8 +107,8 @@
 - type: entity
   parent: ClothingModsuitChestplateStandard
   id: ClothingModsuitChestplateResponsorySecurity
-  name: "нагрудник від скафандру СБ швидкого реагування" # Goob edit
-  description: "Сучасний нагрудник, розроблений NanoTrasen для скафандра СБ швидкого реагування. Він включає силові сервоприводи для зменшення навантаження від обладнання." # Goob edit
+  name: "Нагрудник мод-костюма \"Сек'юріті Респонсорі"
+  description: "Найсучасніший нагрудник, розроблений NanoTrasen для мод-костюма \"Сек'юріті Респонсорі\". Він містить силові сервоприводи для зменшення навантаження від обладнання."
   categories: [HideSpawnMenu]
   components:
     - type: Sprite
@@ -145,8 +145,8 @@
 - type: entity
   parent: ClothingModsuitBootsStandard
   id: ClothingModsuitBootsResponsorySecurity
-  name: "черевики від скафандру СБ швидкого реагування" # Goob edit
-  description: "Сучасна пара магнітних черевиків для скафандра СБ швидкого реагування." # Goob edit
+  name: "Чоботи мод-костюма \"Сек'юріті Респонсорі"
+  description: "Найсучасніша пара магнітних черевиків для мод-костюма \"Сек'юріті Респонсорі\"."
   categories: [HideSpawnMenu]
   components:
     - type: Appearance

@@ -15,8 +15,8 @@
 - type: entity
   parent: [ ClothingModsuitStandard, BaseCentcommContraband ]
   id: ClothingModsuitPraetorian
-  name: "блок керування преторіанським скафандром" # Goob edit
-  description: "Основний контролер для преторіанського скафандра." # Goob edit
+  name: "Блок керування мод-костюмом \"Преторіанець"
+  description: "Основний контролер для мод-костюма \"Преторіанець\"."
   components:
     - type: Sprite
       sprite: _EinsteinEngines/Clothing/NanoTrasen/Modsuits/praetorian.rsi
@@ -56,8 +56,8 @@
 - type: entity
   parent: ClothingModsuitGauntletsStandard
   id: ClothingModsuitGauntletsPraetorian
-  name: "преторіанські рукавиці від скафандру" # Goob edit
-  description: "Пара рукавиць, створених для преторіанського скафандра." # Goob edit
+  name: "Рукавиці мод-костюма \"Преторіанець"
+  description: "Пара рукавиць, створених для мод-костюма \"Преторіанець\"."
   categories: [HideSpawnMenu]
   components:
     - type: Sprite
@@ -74,8 +74,8 @@
 - type: entity
   parent: ClothingModsuitHelmetStandard
   id: ClothingModsuitHelmetPraetorian
-  name: "преторіанський шолом від скафандру" # Goob edit
-  description: "Сучасний шолом, розроблений NanoTrasen для преторіанського скафандра." # Goob edit
+  name: "Шолом мод-костюма \"Преторіанець"
+  description: "Найсучасніший шолом, розроблений NanoTrasen для мод-костюма \"Преторіанець\"."
   categories: [HideSpawnMenu]
   components:
     - type: Clothing
@@ -121,8 +121,8 @@
 - type: entity
   parent: ClothingModsuitChestplateStandard
   id: ClothingModsuitChestplatePraetorian
-  name: "преторіанський нагрудник від скафандру" # Goob edit
-  description: "Сучасний нагрудник, розроблений NanoTrasen для преторіанського скафандра. Він включає силові сервоприводи для зменшення навантаження від обладнання." # Goob edit
+  name: "Нагрудник мод-костюма \"Преторіанець"
+  description: "Найсучасніший нагрудник, розроблений NanoTrasen для мод-костюма \"Преторіанець\". Він містить силові сервоприводи для зменшення навантаження від обладнання."
   categories: [HideSpawnMenu]
   components:
     - type: Sprite
@@ -164,8 +164,8 @@
 - type: entity
   parent: ClothingModsuitBootsStandard
   id: ClothingModsuitBootsPraetorian
-  name: "преторіанські черевики від скафандру" # Goob edit
-  description: "Сучасна пара магнітних черевиків для преторіанського скафандра." # Goob edit
+  name: "Чоботи мод-костюма \"Преторіанець"
+  description: "Найсучасніша пара магнітних черевиків для мод-костюма \"Преторіанець\"."
   categories: [HideSpawnMenu]
   components:
     - type: Appearance
