@@ -51,5 +51,5 @@ JobConquest = Завойовник
 JobInspector = Аудитор Центрального Командування
 JobMercenaryCaptain = Капітан Найманців
 
-job-name-navy-officer = Морський офіцер
-job-name-navy-captain = Морський капітан
+job-name-navy-officer = Офіцер флоту
+job-name-navy-captain = Капітан флоту
