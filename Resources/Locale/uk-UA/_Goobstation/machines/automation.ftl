@@ -100,4 +100,4 @@ signal-port-name-rad-full = Повний
 signal-port-description-rad-full = Сигнальний порт встановлюється на ВИСОКИЙ, якщо тиск у баку вище 66%, в іншому випадку - НИЗЬКИЙ.
 
 signal-port-name-alt-interact = Режим альтернативної взаємодії
-signal-port-description-alt-interact = Сигнальний порт для перемикання режиму альтернативної взаємодії або встановлення його на значення HIGH/LOW.
+signal-port-description-alt-interact = Сигнальний порт для перемикання режиму альтернативної взаємодії або встановлення його на значення HIGH/LOW
