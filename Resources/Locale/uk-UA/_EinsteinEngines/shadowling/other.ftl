@@ -21,3 +21,18 @@ species-name-shadowling = Тіньовик
 shadowling-examine-self = [color=#D22B2B]Ви отримуєте {$damage} опіків від світла[/color]
 asc-broadcast-title = Трансляція Вознесеного
 asc-broadcast-prompt = Повідомлення
+
+guide-entry-shadowlings = Тіньовики
+reagent-effect-guidebook-blind-non-sling = { $chance ->
+        [1] Осліплює будь-якого
+        *[other] осліпити будь-якого
+    } не-тіньовика
+reagent-effect-guidebook-heal-sling = { $chance ->
+        [1] Лікує будь-якого
+        *[other] лікувати будь-якого
+    } тіньовика та трала
+admin-verb-make-shadowling = Зробити ціль тіньовиком.
+admin-verb-text-make-shadowling = Зробити тіньовиком
+species-name-shadow = Тінь
+
+# Examine Texts

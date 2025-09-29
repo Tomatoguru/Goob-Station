@@ -37,3 +37,4 @@ research-technology-restraint = Технології стримування
 
 research-technology-advanced-power-generation = Просунута генерація енергії
 research-technology-xeno-biology = Ксенобіологія
+research-technology-bluespace-construction-storage = Будівельне Блюспейс-Сховище

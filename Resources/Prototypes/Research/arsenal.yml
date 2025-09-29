@@ -267,6 +267,7 @@
   - PowerCellXrayRevolver # Goobstation
   - PowerCellXraySMG # Goobstation
   - PowerCellXraySniper # Goobstation
+  - AntiMindControlDevice # Goobstation
   # Goobstation R&D Console rework start
   technologyPrerequisites:
   - WeaponizedLaserManipulation

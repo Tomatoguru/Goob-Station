@@ -38,3 +38,6 @@ shadowling-ascendant-broadcast-dialog = Ваше повідомлення бул
 shadowling-nox-imperii-done = Більше не здобич світла, ви крокуєте там, де ваші предки зів'яли.
 
 shadowling-ascendance-fail = Ви не можете побудувати свій кокон на цій плитці.
+
+shadowling-enthrall-cant-be-controlled = Його розум не піддається контролю...
+shadowling-enthrall-no-mind = Це лише порожня оболонка...

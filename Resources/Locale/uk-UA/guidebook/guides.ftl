@@ -136,7 +136,6 @@ guide-entry-blood-cult = Культ крові
 
 guide-entry-Psionic-Mantis = Псіонічний богомол
 guide-entry-vampires = Вампіри
-guide-entry-shadowlings = Тіньовики
 guide-entry-expandingrepairingstation = Розширення та ремонт станції
 guide-entry-wirepanels = Панелі з проводами
 guide-entry-airlocks = Шлюзи
