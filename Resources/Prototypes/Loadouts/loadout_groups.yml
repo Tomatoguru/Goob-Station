@@ -171,20 +171,16 @@
   - FlowerWreath
   - Hairflower
   - Headphones
-# PIRATE PLUSHIES START VVVV
-  - PlushieVulpSusie
-  - PlushieEntony
-  - PlushieIpcCat
-  - PlushieTK
-  - PlushieKateryna
-  - PlushieNicholasGray
-  - PlushieOlia
-  - PlushieSkeleton
-  - PlushieTayler
-  - PlushiePocketAssistant
-# PIRATE PLUSHIES END ^^^^
   - PlushieLizard
   - PlushieSpaceLizard
+  - PlushieEntony # PIRATE
+  - PlushieIpcCat # PIRATE
+  - PlushieTK # PIRATE
+  - PlushieKateryna # PIRATE
+  - PlushieNicholasGray # PIRATE
+  - PlushieOlia # PIRATE
+  - PlushieSkeleton # PIRATE
+  - PlushieVulpSusie # PIRATE
   - PersonalAI # Goobstation
   - GoldenPersonalAI # Goobstation
   - ThreeCandles
@@ -1432,6 +1428,16 @@
   - LoadoutSecurityPistolN1984
   - LoadoutSecurityPistolUniversal
   - LoadoutSecurityPistolUniversalNonLethal
+
+- type: loadoutGroup
+  id: SecurityWeaponAmmo
+  name: loadout-group-security-weapon-ammo
+  loadouts:
+  - MagazinePistol
+  - SpeedLoaderMagnum
+  - MagazineMagnum
+  - MagazineUniversalMagnum
+  - MagazineUniversalMagnumRubber
 
 - type: loadoutGroup
   id: SecuritySecondaryWeapon
