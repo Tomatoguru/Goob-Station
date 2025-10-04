@@ -1426,18 +1426,8 @@
   - LoadoutSecurityWeaponMk58
   - LoadoutSecurityRevolverInspector
   - LoadoutSecurityPistolN1984
-  - LoadoutSecurityPistolUniversal
   - LoadoutSecurityPistolUniversalNonLethal
-
-- type: loadoutGroup
-  id: SecurityWeaponAmmo
-  name: loadout-group-security-weapon-ammo
-  loadouts:
-  - MagazinePistol
-  - SpeedLoaderMagnum
-  - MagazineMagnum
-  - MagazineUniversalMagnum
-  - MagazineUniversalMagnumRubber
+  - LoadoutSecurityPistolUniversal
 
 - type: loadoutGroup
   id: SecuritySecondaryWeapon
