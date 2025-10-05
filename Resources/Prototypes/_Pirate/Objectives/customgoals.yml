@@ -25,7 +25,7 @@
   weights:
     StationGoalCorporate: 1
     StationGoalMedical: 1
-    StationGoalScience: 1
+    StationGoalAtmos: 1
     StationGoalSocial: 1
     StationGoalCultural: 1
 
@@ -44,7 +44,7 @@
 
 
 - type: weightedRandom
-  id: StationGoalScience
+  id: StationGoalAtmos
   weights:
     GasSynthesisProject: 1
 
