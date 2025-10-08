@@ -104,6 +104,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
+using Content.Shared.CCVar; // Pirate
 
 namespace Content.Server.GameTicking
 {
@@ -192,6 +193,10 @@ namespace Content.Server.GameTicking
             if (mainStationMap != null)
             {
                 maps.Add(mainStationMap);
+                // Pirate VVV
+                _gameMapManager.SelectMap(mainStationMap.ID);
+                _cfg.SetCVar(CCVars.GameMap, string.Empty);
+                // Pirate ^^^
             }
             else
             {
@@ -801,6 +806,15 @@ namespace Content.Server.GameTicking
 #if !DEBUG
             RaiseLocalEvent(new LobbyReadyUpEvent()); // Pirate
 #endif
+
+            // Pirate VVV
+            var lastMap = _gameMapManager.GetSelectedMap();
+            if (lastMap != null)
+            {
+                _gameMapManager.MarkMapPlayed(lastMap.ID);
+            }
+            // Pirate ^^^
+
             // So clients' entity systems can clean up too...
             RaiseNetworkEvent(ev);
 
