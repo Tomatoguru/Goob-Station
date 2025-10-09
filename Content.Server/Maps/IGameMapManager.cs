@@ -82,17 +82,4 @@ public interface IGameMapManager
     /// <param name="gameMap">name of the map</param>
     /// <returns>existence</returns>
     bool CheckMapExists(string gameMap);
-
-    // Pirate VVV
-    /// <summary>
-    ///     Returns eligible maps excluding the N most recently played maps.
-    ///     If filtering would exclude all, returns the unfiltered eligible set.
-    /// </summary>
-    IEnumerable<GameMapPrototype> EligibleMapsExcludingRecent(int recentCount);
-
-    /// <summary>
-    ///     Marks the specified map as played, pushing it to the recent history queue.
-    /// </summary>
-    void MarkMapPlayed(string gameMapProtoId);
-    // Pirate ^^^
 }

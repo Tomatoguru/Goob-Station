@@ -295,13 +295,7 @@ namespace Content.Server.Voting.Managers
 
         private void CreateMapVote(ICommonSession? initiator)
         {
-            // Pirate VVV
-            var recentLimit = _cfg.GetCVar(CCVars.VoteMapRecentLimit);
-            var mapSource = recentLimit > 0
-                ? _gameMapManager.EligibleMapsExcludingRecent(recentLimit)
-                : _gameMapManager.CurrentlyEligibleMaps();
-            var maps = mapSource.ToDictionary(map => map, map => map.MapName);
-            // Pirate ^^^
+            var maps = _gameMapManager.CurrentlyEligibleMaps().ToDictionary(map => map, map => map.MapName);
 
             var alone = _playerManager.PlayerCount == 1 && initiator != null;
             var options = new VoteOptions

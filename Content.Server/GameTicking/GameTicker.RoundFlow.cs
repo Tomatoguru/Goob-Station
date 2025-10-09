@@ -806,15 +806,6 @@ namespace Content.Server.GameTicking
 #if !DEBUG
             RaiseLocalEvent(new LobbyReadyUpEvent()); // Pirate
 #endif
-
-            // Pirate VVV
-            var lastMap = _gameMapManager.GetSelectedMap();
-            if (lastMap != null)
-            {
-                _gameMapManager.MarkMapPlayed(lastMap.ID);
-            }
-            // Pirate ^^^
-
             // So clients' entity systems can clean up too...
             RaiseNetworkEvent(ev);
 

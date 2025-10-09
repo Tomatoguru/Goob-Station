@@ -15,15 +15,6 @@ public sealed partial class CCVars
     public static readonly CVarDef<bool> VoteEnabled =
         CVarDef.Create("vote.enabled", true, CVar.SERVERONLY);
 
-    // Pirate VVV
-    /// <summary>
-    ///     How many of the most recently played maps to exclude from map voting.
-    ///     0 disables exclusion, 1 excludes only the last played map, 2 excludes the two most recent, etc.
-    /// </summary>
-    public static readonly CVarDef<int> VoteMapRecentLimit =
-        CVarDef.Create("vote.map_recent_limit", 0, CVar.SERVERONLY);
-    // Pirate ^^^
-
     /// <summary>
     ///     See vote.enabled, but specific to restart votes
     /// </summary>

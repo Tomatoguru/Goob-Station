@@ -119,25 +119,6 @@ public sealed class GameMapManager : IGameMapManager
         return maps.Length == 0 ? AllMaps().Where(x => x.Fallback) : maps;
     }
 
-    // Pirate VVV
-    public IEnumerable<GameMapPrototype> EligibleMapsExcludingRecent(int recentCount)
-    {
-        var eligible = CurrentlyEligibleMaps().ToList();
-        if (recentCount <= 0)
-            return eligible;
-
-        var recentIds = _previousMaps.Reverse().Take(recentCount).ToHashSet();
-        var filtered = eligible.Where(m => !recentIds.Contains(m.ID)).ToArray();
-
-        return filtered.Length == 0 ? eligible : filtered;
-    }
-
-    public void MarkMapPlayed(string gameMapProtoId)
-    {
-        EnqueueMap(gameMapProtoId);
-    }
-    // Pirate ^^^
-
     public IEnumerable<GameMapPrototype> AllVotableMaps()
     {
         var poolPrototype = _entityManager.System<GameTicker>().Preset?.MapPool ??
