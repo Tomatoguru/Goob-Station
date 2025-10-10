@@ -116,7 +116,10 @@ public sealed class SpecialForcesSystem : EntitySystem
                 return false;
             }
 
-            SpawnGhostRole(ev, shuttle.Value);
+            // For ERT and CBURN, the loaded Kokomo maps contain their own role spawners,
+            // so we do not spawn additional entities here. DeathSquad still uses manual spawning.
+            if (ev == SpecialForcesType.DeathSquad)
+                SpawnGhostRole(ev, shuttle.Value);
 
             PlaySound(ev);
 
@@ -335,14 +338,14 @@ public sealed class SpecialForcesSystem : EntitySystem
     }
 
     [ValidatePrototypeId<EntityPrototype>] private const string SpawnMarker = "MarkerSpecialforce";
-    private const string EtrShuttlePath = "Maps/Shuttles/dart.yml";
+    private const string EtrShuttlePath = "Maps/_Pirate/Shuttles/Kokomo/ERT.yml";
     [ValidatePrototypeId<EntityPrototype>] private const string ErtLeader = "RandomHumanoidSpawnerERTLeaderEVA";
     [ValidatePrototypeId<EntityPrototype>] private const string ErtSecurity = "RandomHumanoidSpawnerERTSecurity";
     [ValidatePrototypeId<EntityPrototype>] private const string ErtEngineer = "RandomHumanoidSpawnerERTEngineer";
     [ValidatePrototypeId<EntityPrototype>] private const string ErtJanitor = "RandomHumanoidSpawnerERTJanitor";
     [ValidatePrototypeId<EntityPrototype>] private const string ErtMedical = "RandomHumanoidSpawnerERTMedical";
 
-    private const string CburnShuttlePath = "Maps/Shuttles/dart.yml";
+    private const string CburnShuttlePath = "Maps/_Pirate/Shuttles/Kokomo/CBURN.yml";
     [ValidatePrototypeId<EntityPrototype>] private const string CburnLeader = "RandomHumanoidSpawnerCBURNUnit";
     [ValidatePrototypeId<EntityPrototype>] private const string Cburn = "RandomHumanoidSpawnerCBURNUnit";
     [ValidatePrototypeId<EntityPrototype>] private const string CburnFlamer = "RandomHumanoidSpawnerCBURNUnit";
