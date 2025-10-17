@@ -183,7 +183,6 @@
 - type: loadoutGroup
   id: PiratePassengerShoes
   name: loadout-group-passenger-shoes
-  minLimit: 0
   loadouts:
   - WinterBoots
   - WardrobeBootsPerformer
