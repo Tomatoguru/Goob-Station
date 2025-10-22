@@ -109,5 +109,5 @@ station-beacon-interdyne = Сортувальна Інтердін
 station-beacon-interdyne-front = Рецепція Інтердін
 station-beacon-cybersun-rd = НДВ Сайберсан
 station-beacon-donk = Доставка DONK Co
-station-beacon-donk-front = Приймальня DONK Co
+station-beacon-donk-front = Фасад DONK Co
 station-beacon-shipyard = Верф

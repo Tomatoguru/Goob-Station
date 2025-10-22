@@ -15895,3 +15895,199 @@ Entries:
       message: "Додано реагент «Нечиста вода». Створюється з крові, сірки та води."
   id: 1848
   time: '2025-10-18T00:56:04.0000000+00:00'
+- author: Mehonizer
+  changes:
+    - type: Add
+      message: Plasmamen now spawn with tank harnesses just like voxes do
+  id: 1849
+  time: '2025-10-18T21:47:20.0000000+00:00'
+- author: deltanedas
+  changes:
+    - type: Tweak
+      message: Upgraded lathes can now print recipes via signal.
+  id: 1850
+  time: '2025-10-18T21:50:47.0000000+00:00'
+- author: XWASHERE
+  changes:
+    - type: Fix
+      message: IPCs no longer drop handcuffs when discharged
+    - type: Fix
+      message: >-
+        IPCs can no longer interact with items they shouldn't be able to
+        interact with when discharged
+    - type: Fix
+      message: IPCs can drink from magfed lasers
+    - type: Fix
+      message: IPCs no longer have the borg low power accent at all times
+    - type: Fix
+      message: IPCs can no longer drop equipped items while discharged
+    - type: Fix
+      message: Fix spelling error in recharge text
+  id: 1851
+  time: '2025-10-18T22:00:47.0000000+00:00'
+- author: RadsammyT, Mnemotechnician
+  changes:
+    - type: Add
+      message: >-
+        Interaction Verbs from Einstein Engines. GoobMRP folk: This brings back
+        the 'Interact' dropdown in the context menu. 
+    - type: Tweak
+      message: Interaction Verb 'Look At' changed to 'Stare' for impact
+  id: 1852
+  time: '2025-10-18T23:22:09.0000000+00:00'
+- author: Richard Blonski
+  changes:
+    - type: Tweak
+      message: >-
+        Tweak: Ammonite Mercury now metabolizes more slowly and no longer has
+        damage scaling.
+  id: 1853
+  time: '2025-10-19T02:26:10.0000000+00:00'
+- author: squishy97
+  changes:
+    - type: Add
+      message: >-
+        added back the missing emag items syndicate smokes, cyber sun pen, and
+        chap's cult armor
+  id: 1854
+  time: '2025-10-19T05:08:56.0000000+00:00'
+- author: Rouden
+  changes:
+    - type: Fix
+      message: >-
+        Fixed lavaland not having any weather and being unreachable for the
+        mining shuttle.
+    - type: Fix
+      message: Fixed ruins sometimes layering on top of the mining outpost.
+  id: 1855
+  time: '2025-10-19T11:47:10.0000000+00:00'
+- author: EvaisaDev
+  changes:
+    - type: Fix
+      message: AI vision no longer goes black when outside of the station grid.
+  id: 1856
+  time: '2025-10-19T14:51:20.0000000+00:00'
+- author: Richard Blonski
+  changes:
+    - type: Fix
+      message: Fixed Personal Medical Pop-ups being shared to everyone.
+    - type: Fix
+      message: Fixed sounds when using Medical items being played twice.
+  id: 1857
+  time: '2025-10-19T21:48:59.0000000+00:00'
+- author: 10kee
+  changes:
+    - type: Tweak
+      message: Resprited a bunch of hardsuits, modsuits, and other clothing for Vox
+  id: 1858
+  time: '2025-10-19T21:55:31.0000000+00:00'
+- author: Thesia000
+  changes:
+    - type: Add
+      message: "додано громадську лававлендію до Atlas"
+    - type: Add
+      message: "додано загальну тюрму до Atlas"
+    - type: Add
+      message: "додано PTL до інженерного відділу на Atlas"
+    - type: Add
+      message: "додано ТЕГ до інженерного відділу на Atlas"
+    - type: Add
+      message: "додано сторожові турелі до сховища та зброярні на Atlas"
+    - type: Add
+      message: "додано сторожові турелі ШІ до ядра ШІ на Atlas"
+    - type: Add
+      message: "додано панелі керування сторожовими турелями до сховища, зброярні та ядра ШІ на Atlas"
+    - type: Add
+      message: "додано ксенобіологічний супутник до науки на Atlas"
+    - type: Add
+      message: "додано департаментську економіку до Atlas"
+    - type: Add
+      message: "додано офісні крісла до Atlas"
+    - type: Tweak
+      message: "змінено планування служби безпеки на Atlas"
+    - type: Tweak
+      message: "переміщено силос до карго на Atlas"
+  id: 1859
+  time: '2025-10-19T22:07:32.0000000+00:00'
+- author: Sarahon
+  changes:
+    - type: Tweak
+      message: "Оні більше не можуть користуватися зброєю, отримувати святу шкоду або лікуватися алкоголем."
+    - type: Fix
+      message: "Спливаюче вікно при використанні зброї тепер знову правильно відображає текст"
+  id: 1860
+  time: '2025-10-19T23:32:24.0000000+00:00'
+- author: GNUtopia
+  changes:
+    - type: Fix
+      message: "Оні можуть використовувати засоби зовнішнього застосування, їсти більшість продуктів та знову бути видимими на медичних ГУД"
+  id: 1861
+  time: '2025-10-20T00:23:10.0000000+00:00'
+- author: Fishbait
+  changes:
+    - type: Tweak
+      message: >
+        "Плазмолюди тепер починають з меншим плазмовим балоном, але мають більший у наборі виживання."
+  id: 1862
+  time: '2025-10-20T09:08:26.0000000+00:00'
+- author: Hagvan
+  changes:
+    - type: Fix
+      message: >
+        "Виправлено кілька випадків, які залишали незагойні рани: менше випадків фантомного болю та менше нескінченних операцій."
+    - type: Tweak
+      message: "Вимкнено шрами від лікування ран."
+    - type: Fix
+      message: >
+        "Засоби зовнішнього застосування повинні використовуватися лише тоді, коли немає кровотечі та травм. Засоби для зупинки кровотечі є винятком."
+    - type: Fix
+      message: "Пакети крові іноді не можна було використовувати."
+    - type: Fix
+      message: "Кровотеча знову відображається в аналізаторі здоров'я."
+  id: 1863
+  time: '2025-10-20T12:26:11.0000000+00:00'
+- author: wachte1
+  changes:
+    - type: Add
+      message: "Додано коробку мішків для трупів до шафки бригмедика"
+  id: 1864
+  time: '2025-10-20T23:11:41.0000000+00:00'
+- author: CerberusWolfie
+  changes:
+    - type: Remove
+      message: >
+        "NanoTrasen прибрала пекельних гусей, які переслідували ваші сни. (Їх скасували.)"
+  id: 1865
+  time: '2025-10-21T00:20:28.0000000+00:00'
+- author: Aidenkrz
+  changes:
+    - type: Add
+      message: "Додано акулу"
+  id: 1866
+  time: '2025-10-21T00:50:44.0000000+00:00'
+- author: RadsammyT
+  changes:
+    - type: Fix
+      message: "По вікнах тепер можна стукати знову через випадаюче меню 'Взаємодіяти'. Ой."
+  id: 1867
+  time: '2025-10-21T01:27:07.0000000+00:00'
+- author: CerberusWolfie
+  changes:
+    - type: Fix
+      message: "RCD більше не викликатимуть розривів у просторово-часовому континуумі."
+  id: 1868
+  time: '2025-10-21T01:44:52.0000000+00:00'
+- author: LuciferEOS
+  changes:
+    - type: Add
+      message: >-
+        Додано карго-бінглів, нову роль привида для виклику NTR за 5LP, допомагайте карго
+        та плачте в туалеті.
+  id: 1869
+  time: '2025-10-21T13:39:44.0000000+00:00'
+- author: loltart
+  changes:
+    - type: Fix
+      message: Виправлено неспаунювання Підлогових Гоблінів
+  id: 1870
+  time: '2025-10-22T05:47:13.0000000+00:00'
