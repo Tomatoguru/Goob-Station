@@ -81,7 +81,6 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using Content.Server._Pirate.GameTicking.Rules.Components; //Pirate
 using Content.Server._Goobstation.Wizard.Components;
 using Content.Server._DV.CosmicCult.Components; // DeltaV
 using Content.Server.Antag;
@@ -314,20 +313,5 @@ public sealed partial class AdminVerbSystem
         };
         args.Verbs.Add(cosmiccult);
         // End DeltaV Additions
-        // Pirate VVV
-        Verb vampire = new()
-        {
-            Text = Loc.GetString("admin-verb-text-make-vampire"),
-            Category = VerbCategory.Antag,
-            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_Pirate/Interface/Actions/actions_vampire.rsi"), "unholystrength"),
-            Act = () =>
-            {
-                _antag.ForceMakeAntag<VampireRuleComponent>(targetPlayer, DefaultVampireRule);
-            },
-            Impact = LogImpact.High,
-            Message = Loc.GetString("admin-verb-make-vampire"),
-        };
-        args.Verbs.Add(vampire);
-        // Pirate ^^^
     }
 }
