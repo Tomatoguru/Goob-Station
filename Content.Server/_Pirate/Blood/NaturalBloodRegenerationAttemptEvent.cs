@@ -2,7 +2,7 @@
 
 using Content.Goobstation.Maths.FixedPoint;
 
-namespace Content.Shared.Body.Events;
+namespace Content.Server.Pirate.Blood.Events;
 
 /// <summary>
 ///     Raised on a mob when its bloodstream tries to perform natural blood regeneration.

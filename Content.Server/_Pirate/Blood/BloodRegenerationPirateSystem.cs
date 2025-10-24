@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Goobstation.Maths.FixedPoint;
+using Content.Server.Pirate.Blood.Events;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Systems;
 using Content.Shared.Chemistry.EntitySystems;
@@ -41,14 +42,19 @@ public sealed class BloodRegenerationPirateSystem : EntitySystem
             if (!_solutions.ResolveSolution(uid, blood.BloodSolutionName, ref blood.BloodSolution, out var bloodSolution))
                 continue;
 
-            TryDoNaturalRegeneration((uid, blood), bloodSolution);
+            TryDoNaturalRegeneration((uid, blood), bloodSolution).ToString();
         }
     }
 
     private bool TryDoNaturalRegeneration(Entity<BloodstreamComponent> ent, Solution bloodSolution)
     {
+        // Modify via event
+        var ev = new NaturalBloodRegenerationAttemptEvent { Amount = ent.Comp.BloodRefreshAmount };
+        RaiseLocalEvent(ent, ref ev);
+        if (ev.Cancelled)
+            return false;
         // Amount scaled by component; allows negative for loss if desired.
-        var amount = ent.Comp.BloodRefreshAmount;
+        var amount = ev.Amount;
 
         if (amount > FixedPoint2.Zero && bloodSolution.Volume >= bloodSolution.MaxVolume)
             return false;
@@ -56,7 +62,6 @@ public sealed class BloodRegenerationPirateSystem : EntitySystem
         // Costs
         var usedHunger = amount * ent.Comp.BloodRegenerationHunger;
         var usedThirst = amount * ent.Comp.BloodRegenerationThirst;
-
         // Check resources
         var hungerComp = CompOrNull<HungerComponent>(ent);
         var thirstComp = CompOrNull<ThirstComponent>(ent);
@@ -70,13 +75,16 @@ public sealed class BloodRegenerationPirateSystem : EntitySystem
 
         if (usedThirst > FixedPoint2.Zero && thirstComp is not null)
             _thirst.ModifyThirst(ent, thirstComp, (float)-usedThirst);
-
         if (amount > FixedPoint2.Zero)
             return _bloodstream.TryModifyBloodLevel(ent.AsNullable(), amount);
 
+        // If we do it by _bloodstream.TryModifyBloodLevel, it will create blood puddles, soo we do it manually
         if (amount < FixedPoint2.Zero)
-            return _bloodstream.TryModifyBloodLevel(ent.AsNullable(), amount);
-
+        {
+            if (ent.Comp.BloodSolution == null)
+                return false;
+            return _solutions.RemoveReagent(ent.Comp.BloodSolution.Value, new ReagentId(ent.Comp.BloodReagent, _bloodstream.GetEntityBloodData(ent.Owner)), -amount);
+        }
         return false;
     }
 }
