@@ -108,7 +108,10 @@ namespace Content.Pirate.Server.Vampirism.Systems
             if (args.Cancelled || args.Handled || args.Args.Target == null)
                 return;
 
-            args.Handled = TrySucc(uid, args.Args.Target.Value);
+            var success = TrySucc(uid, args.Args.Target.Value);
+            args.Handled = success;
+            if (success)
+                args.Repeat = true;
         }
 
         public void StartSuccDoAfter(EntityUid bloodsucker, EntityUid victim, BloodSuckerComponent? bloodSuckerComponent = null, BloodstreamComponent? stream = null, bool doChecks = true)
