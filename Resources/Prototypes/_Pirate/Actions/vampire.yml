@@ -202,8 +202,10 @@
       sprite: _Pirate/Interface/Actions/actions_vampire.rsi
       state: sire
     useDelay: 10
+    checkCanInteract: false
   - type: TargetAction
-    range: 1.2
+    range: 3
+    interactOnMiss: false
   - type: EntityTargetAction
     canTargetSelf: false
     whitelist:
@@ -223,8 +225,10 @@
       sprite: _Pirate/Interface/Actions/actions_vampire.rsi
       state: darkgift
     useDelay: 60
+    checkCanInteract: false
   - type: TargetAction
-    range: 1.2
+    range: 2.5
+    interactOnMiss: false
   - type: EntityTargetAction
     canTargetSelf: false
     whitelist:

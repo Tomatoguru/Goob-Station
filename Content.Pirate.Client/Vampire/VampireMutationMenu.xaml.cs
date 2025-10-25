@@ -59,6 +59,7 @@ public sealed partial class VampireMutationMenu : DefaultWindow
                 VampireMutationsType.Gargantua => "/Textures/_Pirate/Interface/Actions/actions_vampire.rsi/gargantua.png",
                 VampireMutationsType.Dantalion => "/Textures/_Pirate/Interface/Actions/actions_vampire.rsi/dantalion.png",
                 VampireMutationsType.Bestia => "/Textures/_Pirate/Interface/Actions/actions_vampire.rsi/bestia.png",
+                VampireMutationsType.Sire => "/Textures/_Pirate/Interface/Actions/actions_vampire.rsi/sire.png",
                 _ => "/Textures/_Pirate/Interface/Actions/actions_vampire.rsi/deathsembrace.png"
             };
 
