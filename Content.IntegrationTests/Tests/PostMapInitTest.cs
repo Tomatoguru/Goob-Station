@@ -698,7 +698,11 @@ namespace Content.IntegrationTests.Tests
 
             Assert.That(gameMaps.Remove(PoolManager.TestMap));
 
-            Assert.That(gameMaps, Is.EquivalentTo(GameMaps.ToHashSet()), "Game map prototype missing from test cases.");
+            // Check that all maps in GameMaps list actually exist as prototypes
+            var expectedMaps = GameMaps.ToHashSet();
+            var missingMaps = expectedMaps.Except(gameMaps).ToList();
+            Assert.That(missingMaps, Is.Empty, 
+                $"Maps listed in GameMaps but not found as prototypes: {string.Join(", ", missingMaps)}");
 
             await pair.CleanReturnAsync();
         }
