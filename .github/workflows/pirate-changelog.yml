@@ -33,7 +33,7 @@ jobs:
 
       - name: Install js-yaml
         run: |
-          npm install -g js-yaml
+          npm install js-yaml
         shell: bash
         continue-on-error: true
 
