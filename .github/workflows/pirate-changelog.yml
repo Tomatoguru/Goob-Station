@@ -33,7 +33,7 @@ jobs:
 
       - name: Generate Pirate Changelog
         run: |
-          node Tools/changelog/generate_pirate_changelog.js
+          node Tools/pirate_changelog/generate_pirate_changelog.js
         shell: bash
 
       - name: Commit Pirate Changelog
