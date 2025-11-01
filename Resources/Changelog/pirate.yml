@@ -1,21 +1,2 @@
 Entries:
-  - author: Test
-    changes:
-      - type: Add
-        message: Test
-  - author: Test 2
-    changes:
-      - type: Remove
-        message: Test2
-  - author: Test3
-    changes:
-      - type: Fix
-        message: Test3
-  - id: .nan
-    author: TestUser
-    time: 2025-11-01T19:10:21.389.0000000+00:00
-    changes:
-      - type: Add
-        message: Додано новий об'єкт
-      - type: Fix
-        message: Виправлено помилку
+
