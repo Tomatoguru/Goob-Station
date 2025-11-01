@@ -7,4 +7,4 @@ revenant-touch-of-evil-end = Дія дотику минає...
 
 wraith-must-be-corporeal = Щоб виконати цю дію, ви маєте бути в тілесній формі.
 collective-mind-wraith = Розум Примар
-wraith-wp-action-needs = [color=Red]{$wp}ОП[/color]
+wraith-wp-action-needs = [color=Red]{$wp}WP[/color]
