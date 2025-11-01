@@ -30,6 +30,7 @@ function main() {
         data = yaml.load(fs.readFileSync(CHANGELOG_PATH, "utf-8"));
     }
 
+    data.Entries = data.Entries || [];
     const newId = data.Entries.length > 0 ? Math.max(...data.Entries.map(e => e.id)) + 1 : 1;
     const time = new Date().toISOString().replace("Z", ".0000000+00:00");
     const entry = { id: newId, author, time, changes };
