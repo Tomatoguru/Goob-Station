@@ -280,7 +280,6 @@
   - MantisTinfoil
   - MantisHelmet
   - MantisFez
-  - MantisBeret
 
 - type: loadoutGroup
   id: MantisJumpsuit
@@ -314,9 +313,9 @@
   id: MantisEyes
   name: loadout-group-mantis-Eyes
   loadouts:
+  - EpiHudGlasses
   - EtherealGlasses
   - EpiHud
-  - EpiHudGlasses
   - Glasses
   - GlassesJamjar
   - GlassesJensen

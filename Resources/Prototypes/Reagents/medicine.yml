@@ -1433,6 +1433,7 @@
             Heat: -0.2
             Shock: -0.2
             Cold: -0.2
+            Holy: 1 # Pirate
 
   reactiveEffects:
     Extinguish:
@@ -1562,7 +1563,7 @@
     Medicine:
       effects:
         - !type:ReduceRotting
-          seconds: 20
+          seconds: 10 # Goob - Reduce effectiveness in exchange for easier recipe
           conditions:
           #Patient must be dead and in a cryo tube (or something cold)
           - !type:Temperature
