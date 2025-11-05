@@ -11,7 +11,8 @@
   - type: Clothing
     sprite: _Pirate/Clothing/Misc/hoodie_white.rsi
   - type: TemperatureProtection
-    coefficient: 0.4
+    heatingCoefficient: 0.2
+    coolingCoefficient: 0.2
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -24,8 +25,9 @@
   - type: Clothing
     sprite: _Pirate/Clothing/Misc/black_top_coat.rsi
   - type: TemperatureProtection
-    coefficient: 0.4
-    
+    heatingCoefficient: 0.2
+    coolingCoefficient: 0.2
+
 - type: entity
   parent: ClothingOuterStorageBase
   id: ClothingOuterCoatMNKBlackJacket
@@ -37,4 +39,5 @@
   - type: Clothing
     sprite: _Pirate/Clothing/Misc/black_jacket.rsi
   - type: TemperatureProtection
-    coefficient: 0.2
+    heatingCoefficient: 0.2
+    coolingCoefficient: 0.2
