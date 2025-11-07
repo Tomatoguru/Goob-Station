@@ -299,7 +299,7 @@
       map: ["enum.GunVisualLayers.MagUnshaded"]
       shader: unshaded
   - type: Clothing
-    sprite: _Pirate/Objects/Weapons/Guns/Battery/multiphase_energygun.rsi
+    sprite: _Pirate/Objects/Weapons/Guns/Battery/energygun_pistol.rsi
   - type: Gun
     soundGunshot:
       path: /Audio/_DV/Weapons/Guns/Gunshots/laser.ogg
