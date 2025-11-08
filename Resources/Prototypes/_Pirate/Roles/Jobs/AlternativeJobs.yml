@@ -221,6 +221,11 @@
   parentJobId: MedicalDoctor
 
 - type: alternativeJob
+  id: AlternativeJobNecrologist
+  jobName: job-alternative-name-necrologist
+  parentJobId: MedicalDoctor
+
+- type: alternativeJob
   id: AlternativeJobCryoSpecialist
   jobName: job-alternative-name-cryo-specialist
   jobIconProtoId: JobIconCryoSpecialist
