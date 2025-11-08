@@ -21,6 +21,24 @@
   parentJobId: Librarian
 
 - type: alternativeJob
+  id: AlternativeJobArchivist
+  jobName: job-alternative-name-archivist
+  jobDescription: job-description-archivist
+  parentJobId: Librarian
+
+- type: alternativeJob
+  id: AlternativeJobBBQMaster
+  jobName: job-alternative-bbq-master
+  jobDescription: job-description-bbq-master
+  parentJobId: Chef
+
+- type: alternativeJob
+  id: AlternativeJobBaker
+  jobName: job-alternative-baker
+  jobDescription: job-description-baker
+  parentJobId: Chef
+
+- type: alternativeJob
   id: AlternativeJobFloraEngineer
   jobName: job-alternative-name-flora-engineer
   jobDescription: job-description-botanist
@@ -233,6 +251,12 @@
   parentJobId: Scientist
 
 - type: alternativeJob
+  id: AlternativeJobRobotics
+  jobName: job-alternative-name-robotics
+  jobDescription: job-description-scientist
+  parentJobId: Scientist
+
+- type: alternativeJob
   id: AlternativeJobXenoarcheologist
   jobName: job-alternative-name-xenoarcheologist
   jobDescription: job-description-scientist
@@ -264,6 +288,12 @@
   id: AlternativeJobPeacekeeper
   jobName: job-alternative-name-peacekeeper
   jobDescription: job-description-security-officer
+  parentJobId: SecurityOfficer
+
+- type: alternativeJob
+  id: AlternativeJobLawenforcer
+  jobName: job-alternative-name-lawenforcer
+  jobDescription: job-description-lawenforcer
   parentJobId: SecurityOfficer
 
 - type: alternativeJob
