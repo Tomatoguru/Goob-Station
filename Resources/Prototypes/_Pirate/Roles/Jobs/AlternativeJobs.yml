@@ -223,6 +223,7 @@
 - type: alternativeJob
   id: AlternativeJobNecrologist
   jobName: job-alternative-name-necrologist
+  jobDescription: job-description-medical-doctor
   parentJobId: MedicalDoctor
 
 - type: alternativeJob
