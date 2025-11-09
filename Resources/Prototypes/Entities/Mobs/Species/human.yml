@@ -134,10 +134,10 @@
   - type: LanguageKnowledge # Einstein Engines - Languages
     speaks:
     - TauCetiBasic
-    - SolCommon
+#    - SolCommon
     understands:
     - TauCetiBasic
-    - SolCommon
+#    - SolCommon
   - type: HumanoidAppearance
     species: Human
     hideLayersOnEquip:

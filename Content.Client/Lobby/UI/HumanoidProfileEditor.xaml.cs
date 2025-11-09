@@ -876,6 +876,18 @@ namespace Content.Client.Lobby.UI
             NationalityButton.Clear();
             _nationalies.Clear();
 
+            var prof = Profile ?? HumanoidCharacterProfile.DefaultWithSpecies();
+
+            if (Profile != null && _prototypeManager.TryIndex(Profile.Nationality, out NationalityPrototype? currentNat))
+            {
+                if (!CheckRequirementsValid(currentNat.Requirements, prof))
+                {
+                    Profile = Profile.WithNationality(SharedHumanoidAppearanceSystem.DefaultNationality);
+                    prof = Profile;
+                    SetDirty();
+                }
+            }
+
             _nationalies.AddRange(_prototypeManager.EnumeratePrototypes<NationalityPrototype>()
                 .Where(o =>
                 {
@@ -914,6 +926,18 @@ namespace Content.Client.Lobby.UI
             EmployerButton.Clear();
             _employers.Clear();
 
+            var prof = Profile ?? HumanoidCharacterProfile.DefaultWithSpecies();
+
+            if (Profile != null && _prototypeManager.TryIndex(Profile.Employer, out EmployerPrototype? currentEmp))
+            {
+                if (!CheckRequirementsValid(currentEmp.Requirements, prof))
+                {
+                    Profile = Profile.WithEmployer(SharedHumanoidAppearanceSystem.DefaultEmployer);
+                    prof = Profile;
+                    SetDirty();
+                }
+            }
+
             _employers.AddRange(_prototypeManager.EnumeratePrototypes<EmployerPrototype>()
                 .Where(o =>
                 {
@@ -951,6 +975,18 @@ namespace Content.Client.Lobby.UI
         {
             LifepathButton.Clear();
             _lifepaths.Clear();
+
+            var prof = Profile ?? HumanoidCharacterProfile.DefaultWithSpecies();
+
+            if (Profile != null && _prototypeManager.TryIndex(Profile.Lifepath, out LifepathPrototype? currentLife))
+            {
+                if (!CheckRequirementsValid(currentLife.Requirements, prof))
+                {
+                    Profile = Profile.WithLifepath(SharedHumanoidAppearanceSystem.DefaultLifepath);
+                    prof = Profile;
+                    SetDirty();
+                }
+            }
 
             _lifepaths.AddRange(_prototypeManager.EnumeratePrototypes<LifepathPrototype>()
                 .Where(o =>
@@ -1667,6 +1703,9 @@ namespace Content.Client.Lobby.UI
             RefreshLoadouts();
             UpdateSexControls(); // update sex for new species
             UpdateSpeciesGuidebookIcon();
+            RefreshNationalities();
+            RefreshEmployers();
+            RefreshLifepaths();
             ReloadPreview();
             // begin Goobstation: port EE height/width sliders
             // Changing species provides inaccurate sliders without these

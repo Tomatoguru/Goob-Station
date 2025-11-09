@@ -16,12 +16,6 @@
     - !type:CharacterSpeciesRequirement
       species:
         - Human
-  functions:
-    - !type:TraitModifyLanguages
-      languagesSpoken:
-        - SolCommon
-      languagesUnderstood:
-        - SolCommon
   passportPrototype: SolPassport
 
 - type: nationality
@@ -32,34 +26,16 @@
     - !type:CharacterSpeciesRequirement
       species:
         - Harpy
-  functions:
-    - !type:TraitModifyLanguages
-      languagesSpoken:
-        - ValyrianStandard
-      languagesUnderstood:
-        - ValyrianStandard
   passportPrototype: ValyrianPassport
 
 - type: nationality
   id: Elyran
   nameKey: nationality_name_elyran
   descriptionKey: nationality_description_elyran
-  functions:
-    - !type:TraitModifyLanguages
-      languagesSpoken:
-        - Elyran
-      languagesUnderstood:
-        - Elyran
   passportPrototype: ElyranPassport
 
 - type: nationality
   id: Nederlandic
   nameKey: nationality_name_nederlandic
   descriptionKey: nationality_description_nederlandic
-  components:
-  - type: LanguageSpeaker
-  languagesSpoken:
-    - NovuNederic
-  languagesUnderstood:
-    - NovuNederic
   passportPrototype: NederlandicPassport

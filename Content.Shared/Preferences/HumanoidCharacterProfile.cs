@@ -226,6 +226,9 @@ namespace Content.Shared.Preferences
             Name = name;
             FlavorText = flavortext;
             Species = species;
+            Nationality = nationality; // Pirate - port EE contractors
+            Employer = employer; // Pirate - port EE contractors
+            Lifepath = lifepath; // Pirate - port EE contractors
             Height = height; // Goobstation: port EE height/width sliders
             Width = width; // Goobstation: port EE height/width sliders
             Age = age;
