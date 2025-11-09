@@ -88,17 +88,11 @@ public sealed class NationalitySystem : EntitySystem
         // Add more as needed.
         switch (nationality)
         {
-            case "Nederlandic":
-                _language.AddLanguage(uid, "NovuNederic");
-                break;
-            case "Elyran":
-                _language.AddLanguage(uid, "Elyran");
-                break;
-            case "Valyrian":
-                _language.AddLanguage(uid, "ValyrianStandard");
-                break;
             case "Solarian":
                 _language.AddLanguage(uid, "SolCommon");
+                break;
+            case "Eridanian":
+                _language.AddLanguage(uid, "Tradeband");
                 break;
         }
     }

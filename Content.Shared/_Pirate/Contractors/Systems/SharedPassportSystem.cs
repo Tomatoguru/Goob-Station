@@ -20,7 +20,7 @@ namespace Content.Shared._Pirate.Contractors.Systems;
 
 public class SharedPassportSystem : EntitySystem
 {
-    public const int CurrentYear = 2450;
+    public const int CurrentYear = 2467;
     const string PIDChars = "ABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
 
     [Dependency] private readonly IGameTiming _timing = default!;
@@ -48,19 +48,21 @@ public class SharedPassportSystem : EntitySystem
 
         var species = _prototypeManager.Index<SpeciesPrototype>(component.OwnerProfile.Species);
 
-        args.PushMarkup($"Registered to: {component.OwnerProfile.Name}", 50);
-        args.PushMarkup($"Species: {Loc.GetString(species.Name)}", 49);
-        args.PushMarkup($"Sex: {component.OwnerProfile.Gender}", 48);
-        args.PushMarkup($"Height: {MathF.Round(component.OwnerProfile.Height * species.AverageHeight)} cm", 47);
-        args.PushMarkup($"Year of Birth: {CurrentYear - component.OwnerProfile.Age}", 46);
+        args.PushMarkup($"ІП: {component.OwnerProfile.Name}", 50);
+        args.PushMarkup($"Раса: {Loc.GetString(species.Name)}", 49);
+        args.PushMarkup($"Стать: {component.OwnerProfile.Gender}", 48);
+        args.PushMarkup($"Зріст: {MathF.Round(component.OwnerProfile.Height * species.AverageHeight)} cm", 47);
+        args.PushMarkup($"Ширина: {MathF.Round(component.OwnerProfile.Width * species.AverageWidth)} cm", 46);
+        args.PushMarkup($"Дата народження: {CurrentYear - component.OwnerProfile.Age}", 45);
 
         args.PushMarkup(
             $"PID: {GenerateIdentityString(component.OwnerProfile.Name
             + component.OwnerProfile.Height
             + component.OwnerProfile.Age
             + component.OwnerProfile.Height
+            + component.OwnerProfile.Width
             + component.OwnerProfile.FlavorText)}",
-            45);
+            44);
     }
 
     private void OnPlayerSpawnComplete(PlayerSpawnCompleteEvent ev)
