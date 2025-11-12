@@ -1,82 +1,74 @@
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Content.Server.Players.PlayTimeTracking;
-using Content.Shared._Pirate.Contractors.Prototypes;
-using Content.Shared.Customization.Systems;
-using Content.Shared.GameTicking;
-using Content.Shared.Humanoid;
-using Content.Shared.Players;
 using Content.Shared.Preferences;
-using Content.Shared.Roles;
-using Robust.Shared.Configuration;
+using Content.Shared._Pirate.Contractors.Prototypes;
+using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Serialization.Manager;
+using Robust.Shared.Localization;
 using Robust.Shared.Utility;
 
-namespace Content.Pirate.Server.Contractors.Systems;
+namespace Content.Shared.Preferences.Loadouts.Effects;
 
-public sealed class LifepathSystem : EntitySystem
+[DataDefinition]
+public sealed partial class CharacterLifepathRequirement : LoadoutEffect
 {
-    [Dependency] private readonly IPrototypeManager _prototype = default!;
-    [Dependency] private readonly ISerializationManager _serialization = default!;
-    [Dependency] private readonly PlayTimeTrackingManager _playTimeTracking = default!;
-    [Dependency] private readonly IConfigurationManager _configuration = default!;
-    [Dependency] private readonly IComponentFactory _componentFactory = default!;
+    [DataField(required: true)]
+    public List<string> Lifepaths = new();
 
-    public override void Initialize()
+    [DataField]
+    public bool Inverted { get; private set; } = false;
+
+    public override bool Validate(
+        HumanoidCharacterProfile profile,
+        RoleLoadout loadout,
+        ICommonSession? session,
+        IDependencyCollection collection,
+        [NotNullWhen(false)] out FormattedMessage? reason)
     {
-        base.Initialize();
+        reason = null;
 
-        SubscribeLocalEvent<PlayerSpawnCompleteEvent>(OnPlayerSpawnComplete);
-    }
+        var isContained = Lifepaths.Contains(profile.Lifepath);
+        var shouldFail = false;
 
-    // When the player is spawned in, add the Lifepath components selected during character creation
-    private void OnPlayerSpawnComplete(PlayerSpawnCompleteEvent args) =>
-        ApplyLifepath(args.Mob, args.JobId, args.Profile,
-            _playTimeTracking.GetTrackerTimes(args.Player));
-
-    /// <summary>
-    ///     Adds the Lifepath selected by a player to an entity.
-    /// </summary>
-    public void ApplyLifepath(EntityUid uid, ProtoId<JobPrototype>? jobId, HumanoidCharacterProfile profile,
-        Dictionary<string, TimeSpan> playTimes)
-    {
-        if (jobId == null || !_prototype.TryIndex(jobId, out _))
-            return;
-
-        var jobPrototypeToUse = _prototype.Index(jobId.Value);
-
-        ProtoId<LifepathPrototype> lifepath = profile.Lifepath != string.Empty? profile.Lifepath : SharedHumanoidAppearanceSystem.DefaultLifepath;
-
-        if(!_prototype.TryIndex<LifepathPrototype>(lifepath, out var lifepathPrototype))
+        if (Inverted)
         {
-            DebugTools.Assert($"Lifepath '{lifepath}' not found!");
-            return;
+            if (isContained)
+                shouldFail = true;
+        }
+        else
+        {
+            if (profile.Lifepath == string.Empty || !isContained)
+                shouldFail = true;
         }
 
-        if (!RequirementsMet(lifepathPrototype.Requirements, profile, playTimes))
-            return;
-
-        AddLifepath(uid, lifepathPrototype);
-    }
-
-    /// <summary>
-    ///     Adds a single Lifepath Prototype to an Entity.
-    /// </summary>
-    public void AddLifepath(EntityUid uid, LifepathPrototype lifepathPrototype)
-    {
-        // Prototype application functions were removed; no-op for now.
-    }
-    private bool RequirementsMet(List<JobRequirement> requirements, HumanoidCharacterProfile profile, IReadOnlyDictionary<string, TimeSpan> playTimes)
-    {
-        if (requirements == null || requirements.Count == 0)
-            return true;
-
-        foreach (var requirement in requirements)
+        if (shouldFail)
         {
-            if (!requirement.Check(EntityManager, _prototype, profile, playTimes, out _))
-                return false;
+            var protoManager = collection.Resolve<IPrototypeManager>();
+
+            var lifepathNames = Lifepaths.Select(id =>
+                protoManager.TryIndex<LifepathPrototype>(id, out var proto)
+                    ? Loc.GetString(proto.NameKey)
+                    : id)
+                .Select(name => $"[color=#ff0000]{name}[/color]");
+
+            var listString = string.Join(", ", lifepathNames);
+            string reasonString;
+
+            if (Inverted)
+            {
+                reasonString = $"Цей життєвий шлях заборонений. Заборонені шляхи: {listString}.";
+            }
+            else
+            {
+                reasonString = $"Вимагається один із життєвих шляхів: {listString}.";
+            }
+
+            reason = FormattedMessage.FromMarkup(reasonString);
+            return false;
         }
 
         return true;
     }
+
+    public override void Apply(RoleLoadout loadout) {}
 }
