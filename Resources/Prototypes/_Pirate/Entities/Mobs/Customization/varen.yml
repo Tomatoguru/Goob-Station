@@ -15,21 +15,56 @@
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [Vulpkanin]
-  playerRestriction: [Vareniko, v0id_]
+#  playerRestriction: [Vareniko, v0id_]
   layering:
-    tail_fan_wag: TailOversuit
-    tail_fan_wag-tip: TailOversuit
     tail_fan_wag_BACK: TailBehind
     tail_fan_wag_BACK-tip: TailBehind
+    tail_fan_wag: TailOversuit
+    tail_fan_wag-tip: TailOversuit
   colorLinks:
     tail_fan_wag_BACK: tail_fan_wag
     tail_fan_wag_BACK-tip: tail_fan_wag-tip
   sprites:
     - sprite: _Pirate/Mobs/Customization/varen/tail_fan.rsi
-      state: tail_fan_wag
-    - sprite: _Pirate/Mobs/Customization/varen/tail_fan.rsi
-      state: tail_fan_wag-tip
-    - sprite: _Pirate/Mobs/Customization/varen/tail_fan.rsi
       state: tail_fan_wag_BACK
     - sprite: _Pirate/Mobs/Customization/varen/tail_fan.rsi
       state: tail_fan_wag_BACK-tip
+    - sprite: _Pirate/Mobs/Customization/varen/tail_fan.rsi
+      state: tail_fan_wag
+    - sprite: _Pirate/Mobs/Customization/varen/tail_fan.rsi
+      state: tail_fan_wag-tip
+
+- type: marking
+  id: VulpQueenTail
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin]
+#  playerRestriction: [Vareniko, v0id_]
+  layering:
+    queen_BACK: TailBehind
+    queen_BACK-tip: TailBehind
+    queen: TailOversuit
+    queen-tip: TailOversuit
+  colorLinks:
+    queen_BACK: queen
+    queen_BACK-tip: queen-tip
+  sprites:
+    - sprite: _Pirate/Mobs/Customization/varen/tail_queen.rsi
+      state: queen_BACK
+    - sprite: _Pirate/Mobs/Customization/varen/tail_queen.rsi
+      state: queen_BACK-tip
+    - sprite: _Pirate/Mobs/Customization/varen/tail_queen.rsi
+      state: queen
+    - sprite: _Pirate/Mobs/Customization/varen/tail_queen.rsi
+      state: queen-tip
+
+# Анімація
+- type: marking
+  id: VulpQueenTailAnimated
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: []
+#  playerRestriction: [Vareniko, v0id_]
+  sprites:
+    - sprite: _Pirate/Mobs/Customization/varen/tail_queen.rsi
+      state: queen_wag
