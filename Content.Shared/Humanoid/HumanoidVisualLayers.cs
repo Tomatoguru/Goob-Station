@@ -47,6 +47,8 @@ namespace Content.Shared.Humanoid
         Snout,
         HeadSide, // side parts (i.e., frills)
         HeadTop,  // top parts (i.e., ears)
+        TailBehind, // Pirate - port Floofstation custom layers
+        TailOversuit, // Pirate - port Floofstation custom layers
         Eyes,
         RArm,
         LArm,
