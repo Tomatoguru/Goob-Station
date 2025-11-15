@@ -314,23 +314,23 @@
   speciesRestriction: [Vulpkanin]
   # Pirate edit start
   layering:
-    vulp: TailOversuit
-    tip: TailOversuit
     vulp_BACK: TailBehind
     tip_BACK: TailBehind
+    vulp: TailOversuit
+    tip: TailOversuit
   colorLinks:
     vulp_BACK: vulp
     vulp-tip_BACK: vulp-tip
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
-      state: vulp
-    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
-      state: vulp-tip
-    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: vulp_BACK
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: vulp-tip_BACK
   # Pirate edit end
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp-tip
 
 - type: marking
   id: VulpTailAlt
@@ -917,22 +917,22 @@
   markingCategory: Tail
   speciesRestriction: []
   layering:
-    vulp_wag: TailOversuit
-    vulp_wag-tip: TailOversuit
     vulp_wag_BACK: TailBehind
     vulp_wag-tip_BACK: TailBehind
+    vulp_wag: TailOversuit
+    vulp_wag-tip: TailOversuit
   colorLinks:
     vulp_wag_BACK: vulp_wag
     vulp_wag-tip_BACK: vulp_wag-tip
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
-      state: vulp_wag
-    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
-      state: vulp_wag-tip
-    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: vulp_wag_BACK
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: vulp_wag-tip_BACK
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp_wag
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp_wag-tip
 
 - type: marking
   id: VulpTailFoxAnimated
