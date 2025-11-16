@@ -6,27 +6,27 @@
         Код
       </Box>
     </ColorBox>
-    <ColorBox Color="#008000">
+    <ColorBox Color="#006400">
       <Box HorizontalAlignment="Center" VerticalAlignment="Stretch">
         1XX Легкі (штраф до 5 хвилин)
       </Box>
     </ColorBox>
-    <ColorBox Color="#b5a642">
+    <ColorBox Color="#d67210">
       <Box HorizontalAlignment="Center" VerticalAlignment="Stretch">
         2XX Середні (штраф до 10 хвилин)
       </Box>
     </ColorBox>
-    <ColorBox Color="#ffa500">
+    <ColorBox Color="#B22222">
       <Box HorizontalAlignment="Center" VerticalAlignment="Stretch">
         3XX Тяжкі (штраф до 15 хвилин)
       </Box>
     </ColorBox>
-    <ColorBox Color="#ff0000">
+    <ColorBox Color="#6E1A1A">
       <Box HorizontalAlignment="Center" VerticalAlignment="Stretch">
         4XX Особливо тяжкі (штраф до 20 хвилин)
       </Box>
     </ColorBox>
-    <ColorBox Color="#000000">
+    <ColorBox Color="#242424">
       <Box HorizontalAlignment="Center" VerticalAlignment="Stretch">
         5XX Критичні (від 30 хвилин до страти)
       </Box>
@@ -128,27 +128,27 @@
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Незаконне зберігання наркотичних речовин
+        Зберігання наркотиків
       </Box>
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Незаконне розповсюдження наркотичних речовин
+        Розповсюдження наркотиків
       </Box>
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Незаконне зберігання піротехніки токсинів
+        Контрабанда (A)
       </Box>
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Незаконний обіг піротехніки токсинів
+        Обіг небезпечних речовин
       </Box>
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Н/Д
+        Контрабанда (S)
       </Box>
     </ColorBox>
     <ColorBox>
@@ -158,27 +158,27 @@
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Незаконне володіння засобами самооборони
+        Зловживання обладнанням
       </Box>
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Незаконне володіння холодною зброєю
+        Володіння бойовими засобами
       </Box>
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Незаконне володіння бойовою зброєю боєприпасами
+        Володіння бойовою зброєю
       </Box>
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Незаконний обіг зброї
+        Обіг зброї
       </Box>
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Незаконний обіг зброї
+        Н/Д
       </Box>
     </ColorBox>
     <ColorBox>
@@ -218,36 +218,6 @@
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Зловживання обладнанням
-      </Box>
-    </ColorBox>
-    <ColorBox>
-      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Зловживання конфіскованими предметами
-      </Box>
-    </ColorBox>
-    <ColorBox>
-      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Володіння контрабандними предметами класу C
-      </Box>
-    </ColorBox>
-    <ColorBox>
-      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Володіння контрабандними предметами класу A
-      </Box>
-    </ColorBox>
-    <ColorBox>
-      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Володіння контрабандними предметами класу S
-      </Box>
-    </ColorBox>
-    <ColorBox>
-      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        7
-      </Box>
-    </ColorBox>
-    <ColorBox>
-      <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
         Мала крадіжка
       </Box>
     </ColorBox>
@@ -268,12 +238,12 @@
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Викрадення секретної документації або ядерного устаткування
+        Викрад. секр. док./яд. обл.
       </Box>
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        8
+        7
       </Box>
     </ColorBox>
     <ColorBox>
@@ -283,22 +253,22 @@
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Проникнення зі зломом
+        Проникнення зі зламом
       </Box>
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Проникнення на територію, що охороняється
+        Проникнення на охоронну територію
       </Box>
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Викрадення космічного транспортного засобу
+        Викрадення шатлу
       </Box>
     </ColorBox>
     <ColorBox>
       <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
-        Викрадення стратегічного космічного транспортного засобу
+        Викрадення стратегічного шатлу
       </Box>
     </ColorBox>
   </Table>
