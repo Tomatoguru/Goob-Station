@@ -7,7 +7,27 @@
   playerRestriction: [Vareniko]
   sprites:
   - sprite: _Pirate/Mobs/Customization/varen/hair.rsi
-    state: susieHair
+    state: susie
+
+- type: marking
+  id: VarenHairSusieTwo
+  bodyPart: Hair
+  markingCategory: Hair
+  speciesRestriction: [Vulpkanin]
+  playerRestriction: [Vareniko]
+  sprites:
+  - sprite: _Pirate/Mobs/Customization/varen/hair.rsi
+    state: susie_two
+
+- type: marking
+  id: VarenHairSusieTwoLong
+  bodyPart: Hair
+  markingCategory: Hair
+  speciesRestriction: [Vulpkanin]
+  playerRestriction: [Vareniko]
+  sprites:
+  - sprite: _Pirate/Mobs/Customization/varen/hair.rsi
+    state: susie_two_long
 
 # Хвостики
 - type: marking
