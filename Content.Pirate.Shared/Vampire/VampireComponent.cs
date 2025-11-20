@@ -84,6 +84,13 @@ public sealed partial class VampireComponent : Component
     public float MouthVolume = 5;
 
     /// <summary>
+    /// Whether this entity already had pressure immunity before becoming a vampire.
+    /// Used to restore its previous state when curing vampirism.
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite)]
+    public bool HadPressureImmunityComponent;
+
+    /// <summary>
     /// All unlocked abilities
     /// </summary>
     [ViewVariables(VVAccess.ReadOnly)]

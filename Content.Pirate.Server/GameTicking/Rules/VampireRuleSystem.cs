@@ -25,6 +25,7 @@ using Content.Shared.Mind;
 using Content.Shared.Atmos;
 using Content.Shared.Atmos.Rotting;
 using Content.Shared.Nutrition.Components;
+using Content.Shared.Chemistry.Reaction;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
@@ -98,6 +99,9 @@ public sealed partial class VampireRuleSystem : GameRuleSystem<VampireRuleCompon
         _npcFaction.RemoveFaction(target, NanotrasenFactionId, false);
         _npcFaction.AddFaction(target, ChangelingFactionId);
 
+        // Remove any existing cure marker so the cure can be triggered again later if needed.
+        RemComp<VampireCureComponent>(target);
+
         // make sure it's initial chems are set to max
         var vampireComponent = EnsureComp<VampireComponent>(target);
         EnsureComp<VampireIconComponent>(target);
@@ -108,10 +112,14 @@ public sealed partial class VampireRuleSystem : GameRuleSystem<VampireRuleCompon
         if (HasComp<UserInterfaceComponent>(target))
             _uiSystem.SetUiState(target, VampireMutationUiKey.Key, new VampireMutationBoundUserInterfaceState(vampireComponent.VampireMutations, vampireComponent.CurrentMutation));
 
+        // Track whether this entity already had pressure immunity before becoming a vampire,
+        // so we can restore its prior state when curing vampirism.
+        vampireComponent.HadPressureImmunityComponent = HasComp<PressureImmunityComponent>(target);
+        EnsureComp<PressureImmunityComponent>(target);
+
         var vampire = new Entity<VampireComponent>(target, vampireComponent);
 
         RemComp<PerishableComponent>(vampire);
-        RemComp<BarotraumaComponent>(vampire);
         RemComp<ThirstComponent>(vampire);
 
         vampireComponent.Balance = new() { { VampireComponent.CurrencyProto, 0 } };
@@ -178,6 +186,9 @@ public sealed partial class VampireRuleSystem : GameRuleSystem<VampireRuleCompon
     {
         var uid = ent.Owner;
 
+        // Clean up any vampire actions so they don't persist or duplicate on re-vamp.
+        _vampire.CleanupVampireActions(uid, ent.Comp);
+
         // Restore factions back to NanoTrasen default.
         _npcFaction.RemoveFaction(uid, ChangelingFactionId, false);
         _npcFaction.AddFaction(uid, NanotrasenFactionId);
@@ -200,6 +211,11 @@ public sealed partial class VampireRuleSystem : GameRuleSystem<VampireRuleCompon
         RemComp<BloodSuckerComponent>(uid);
         RemComp<VampireAlertComponent>(uid);
 
+        // Remove unholy/holy-weakness markers added when becoming a vampire.
+        RemComp<WeakToHolyComponent>(uid);
+        if (TryComp<ReactiveComponent>(uid, out var reactive) && reactive.ReactiveGroups != null)
+            reactive.ReactiveGroups.Remove("WeakToHoly");
+
         // Remove vision overlays granted to antag vampires.
         RemComp<NightVisionComponent>(uid);
         RemComp<ThermalVisionComponent>(uid);
@@ -207,8 +223,11 @@ public sealed partial class VampireRuleSystem : GameRuleSystem<VampireRuleCompon
         // Restore basic biological limitations; if the entity previously lacked these
         // (e.g. synthetic species), EnsureComp will be harmless.
         EnsureComp<PerishableComponent>(uid);
-        EnsureComp<BarotraumaComponent>(uid);
         EnsureComp<ThirstComponent>(uid);
+
+        // Remove pressure immunity only if it was granted by the vampire role.
+        if (!ent.Comp.HadPressureImmunityComponent)
+            RemComp<PressureImmunityComponent>(uid);
 
         // NOTE: Vampire actions are tied to the removed component and will no longer
         // function without it. We intentionally leave any orphaned action entities
