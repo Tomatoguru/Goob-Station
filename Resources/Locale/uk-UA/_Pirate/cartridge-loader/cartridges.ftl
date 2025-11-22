@@ -1,5 +1,5 @@
 crime-assist-main-menu = Натисніть "Старт", щоб почати
-crime-assist-program-name = Кримінальний помічник
+crime-assist-program-name = Асистент злочинів
 crime-assist-yes-button = Так
 crime-assist-no-button = Ні
 crime-assist-back-button = Назад
