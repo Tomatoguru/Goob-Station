@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Server.Hands.Systems;
 using Content.Server.Stack;
 using Content.Server.Store.Components;
 using Content.Shared.Emag.Components;
@@ -24,6 +25,7 @@ public sealed class ATMSystem : SharedATMSystem
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
     [Dependency] private readonly ContainerSystem _container = default!;
+    [Dependency] private readonly HandsSystem _handsSystem = default!;
 
 
     public override void Initialize()
@@ -112,7 +114,13 @@ public sealed class ATMSystem : SharedATMSystem
             return;
         }
 
-        _stackSystem.Spawn(args.Amount, _prototypeManager.Index<StackPrototype>(component.CreditStackPrototype), Transform(uid).Coordinates);
+        var player = args.Actor;
+        var spawnedMoney = _stackSystem.Spawn(args.Amount, _prototypeManager.Index<StackPrototype>(component.CreditStackPrototype), Transform(player).Coordinates);
+
+        if (!_handsSystem.TryPickupAnyHand(player, spawnedMoney))
+        {
+        }
+        
         _audioSystem.PlayPvs(component.SoundWithdrawCurrency, uid);
 
         UpdateUiState(uid, account.Balance, true, Loc.GetString("atm-ui-select-withdraw-amount"));
