@@ -66,16 +66,12 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using Content.Server._Pirate.Banking; // Pirate banking
-using Content.Shared._Pirate.Banking; // Pirate banking
 using System.Linq;
 using System.Numerics;
 using Content.Server.Cargo.Systems;
 using Content.Server.Emp;
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
-using Content.Server.Stack; // Pirate banking
-using Content.Server.Store.Components; // Pirate banking
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Server.Vocalization.Systems;
@@ -84,12 +80,8 @@ using Content.Shared.Damage;
 using Content.Shared.Destructible;
 using Content.Shared.DoAfter;
 using Content.Shared.Emp;
-using Content.Shared.Interaction; // Pirate banking
-using Content.Shared.PDA; // Pirate banking
 using Content.Shared.IdentityManagement;
 using Content.Shared.Popups;
-using Content.Shared.Stacks; // Pirate banking
-using Content.Shared.Tag; // Pirate banking
 using Content.Shared.Power;
 using Content.Shared.Throwing;
 using Content.Shared.UserInterface;
@@ -109,13 +101,6 @@ namespace Content.Server.VendingMachines
         [Dependency] private readonly PricingSystem _pricing = default!;
         [Dependency] private readonly ThrowingSystem _throwingSystem = default!;
         [Dependency] private readonly IGameTiming _timing = default!;
-
-        //Pirate banking Start
-        [Dependency] private readonly BankCardSystem _bankCard = default!;
-        [Dependency] private readonly TagSystem _tag = default!;
-        [Dependency] private readonly StackSystem _stackSystem = default!;
-        private const double GlobalPriceMultiplier = 2.0;
-        //Pirate banking end
 
         private const float WallVendEjectDistanceFromWall = 1f;
 
@@ -137,12 +122,6 @@ namespace Content.Server.VendingMachines
             SubscribeLocalEvent<VendingMachineComponent, RestockDoAfterEvent>(OnDoAfter);
 
             SubscribeLocalEvent<VendingMachineRestockComponent, PriceCalculationEvent>(OnPriceCalculation);
-
-            //Pirate banking Start
-            SubscribeLocalEvent<VendingMachineComponent, InteractUsingEvent>(OnInteractUsing);
-            SubscribeLocalEvent<VendingMachineComponent, VendingMachineWithdrawMessage>(OnWithdrawMessage);
-            //Pirate banking end
-
         }
 
         private void OnVendingPrice(EntityUid uid, VendingMachineComponent component, ref PriceCalculationEvent args)
@@ -392,59 +371,6 @@ namespace Content.Server.VendingMachines
 
             args.Price += priceSets.Max();
         }
-
-        //Pirate banking start
-        private void OnInteractUsing(EntityUid uid, VendingMachineComponent component, InteractUsingEvent args)
-        {
-            if (args.Handled)
-                return;
-
-            if (component.Broken || !this.IsPowered(uid, EntityManager))
-                return;
-
-            if (!TryComp<CurrencyComponent>(args.Used, out var currency) ||
-                !currency.Price.Keys.Contains(component.CurrencyType))
-                return;
-
-            var stack = Comp<StackComponent>(args.Used);
-            component.Credits += stack.Count;
-            Del(args.Used);
-            UpdateVendingMachineInterfaceState(uid, component);
-            Audio.PlayPvs(component.SoundInsertCurrency, uid);
-            args.Handled = true;
-        }
-
-        protected override int GetEntryPrice(EntityPrototype proto)
-        {
-            var price = (int) _pricing.GetEstimatedPrice(proto);
-            return price > 0 ? price : 25;
-        }
-
-        private int GetPrice(VendingMachineInventoryEntry entry, VendingMachineComponent comp)
-        {
-            return (int) (entry.Price * GetPriceMultiplier(comp));
-        }
-
-        private double GetPriceMultiplier(VendingMachineComponent comp)
-        {
-            return comp.PriceMultiplier * GlobalPriceMultiplier;
-        }
-
-        private void OnWithdrawMessage(EntityUid uid, VendingMachineComponent component, VendingMachineWithdrawMessage args)
-        {
-            _stackSystem.Spawn(component.Credits, PrototypeManager.Index(component.CreditStackPrototype),
-                Transform(uid).Coordinates);
-            component.Credits = 0;
-            Audio.PlayPvs(component.SoundWithdrawCurrency, uid);
-
-            Dirty(uid, component);
-        }
-
-        private void UpdateVendingMachineInterfaceState(EntityUid uid, VendingMachineComponent component)
-        {
-            Dirty(uid, component);
-        }
-        //Pirate banking end
 
         private void OnEmpPulse(EntityUid uid, VendingMachineComponent component, ref EmpPulseEvent args)
         {

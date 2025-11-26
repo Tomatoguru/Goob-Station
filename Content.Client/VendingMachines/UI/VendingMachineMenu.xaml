@@ -22,13 +22,6 @@ SPDX-License-Identifier: AGPL-3.0-or-later
     MinHeight="210">
     <BoxContainer Name="MainContainer" Orientation="Vertical">
         <LineEdit Name="SearchBar" PlaceHolder="{Loc 'vending-machine-component-search-filter'}" HorizontalExpand="True"  Margin ="4 4"/>
-        <!-- Pirate banking start -->
-        <Label Name="CreditsLabel" HorizontalExpand="True"/>
-        <Button
-            Name="WithdrawButton"
-            Text="{Loc 'store-ui-default-withdraw-text'}"
-            HorizontalAlignment="Right"/>
-        <!-- Pirate banking end -->
         <co:SearchListContainer Name="VendingContents" VerticalExpand="True" Margin="4 4"/>
          <!-- Footer -->
         <BoxContainer Orientation="Vertical">

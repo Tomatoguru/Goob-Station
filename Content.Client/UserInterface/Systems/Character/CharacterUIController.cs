@@ -156,7 +156,7 @@ public sealed class CharacterUIController : UIController, IOnStateEntered<Gamepl
             return;
         }
 
-        var (entity, job, objectives, briefing, entityName, memories) = data; // Pirate banking
+        var (entity, job, objectives, briefing, entityName) = data;
 
         _window.SpriteView.SetEntity(entity);
 
@@ -166,7 +166,6 @@ public sealed class CharacterUIController : UIController, IOnStateEntered<Gamepl
         _window.SubText.Text = job;
         _window.Objectives.RemoveAllChildren();
         _window.ObjectivesLabel.Visible = objectives.Any();
-        _window.Memories.RemoveAllChildren(); //Pirate banking
 
         foreach (var (groupId, conditions) in objectives)
         {
@@ -206,26 +205,6 @@ public sealed class CharacterUIController : UIController, IOnStateEntered<Gamepl
 
             _window.Objectives.AddChild(objectiveControl);
         }
-
-        //Pirate banking start
-        foreach (var (memoryName, memoryValue) in memories)
-        {
-            var memoryControl = new BoxContainer()
-            {
-                Orientation = BoxContainer.LayoutOrientation.Vertical,
-                Modulate = Color.Gray
-            };
-            var text = Loc.TryGetString(memoryName, out var t, ("value", memoryValue))
-                ? t
-                : $"{memoryName}: {memoryValue}";
-
-            memoryControl.AddChild(new Label
-            {
-                Text = text,
-            });
-            _window.Memories.AddChild(memoryControl);
-        }
-        //Pirate banking end
 
         if (briefing != null)
         {

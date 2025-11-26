@@ -122,7 +122,7 @@ public sealed class VendingInteractionTest : InteractionTest
         Assert.That(IsUiOpen(VendingMachineUiKey.Key), "BUI failed to open.");
 
         // Request an item be dispensed
-        var ev = new VendingMachineEjectMessage(InventoryType.Regular, VendedItemProtoId, 1.0, 1);
+        var ev = new VendingMachineEjectMessage(InventoryType.Regular, VendedItemProtoId);
         await SendBui(VendingMachineUiKey.Key, ev);
 
         // Make sure the stock decreased

@@ -376,7 +376,7 @@ public abstract partial class SharedVendingMachineSystem : EntitySystem
         if (!Resolve(uid, ref component))
             return new();
 
-        return GetAllInventory(uid, component).Where(inventoryEntry  => inventoryEntry.Amount > 0).ToList(); //Pirate banking
+        return GetAllInventory(uid, component).Where(_ => _.Amount > 0).ToList();
     }
 
     private void AddInventoryFromPrototype(EntityUid uid, Dictionary<string, uint>? entries,
@@ -406,7 +406,7 @@ public abstract partial class SharedVendingMachineSystem : EntitySystem
 
         foreach (var (id, amount) in entries)
         {
-            if (PrototypeManager.TryIndex<EntityPrototype>(id, out var proto)) //Pirate banking
+            if (PrototypeManager.HasIndex<EntityPrototype>(id))
             {
                 var restock = amount;
                 var chanceOfMissingStock = 1 - restockQuality;
@@ -424,21 +424,10 @@ public abstract partial class SharedVendingMachineSystem : EntitySystem
                     // restocking a machine who doesn't want to force vend out
                     // all the items just to restock one empty slot without
                     // losing the rest of the restock.
-                //Pirate banking start
-                    entry.Amount = Math.Min(entry.Amount + amount, 3 * amount);
+                    entry.Amount = Math.Min(entry.Amount + amount, 3 * restock);
                 else
-                {
-                    var price = GetEntryPrice(proto);
-                    inventory.Add(id, new VendingMachineInventoryEntry(type, id, amount, price));
-                }
-                //Pirate banking end
+                    inventory.Add(id, new VendingMachineInventoryEntry(type, id, restock));
             }
         }
     }
-    //Pirate banking start
-    protected virtual int GetEntryPrice(EntityPrototype proto)
-    {
-        return 25;
-    }
-    //Pirate banking end
 }

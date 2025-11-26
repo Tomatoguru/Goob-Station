@@ -135,7 +135,6 @@ namespace Content.Client.VendingMachines.UI
         private bool _enabled;
 
         public event Action<GUIBoundKeyEventArgs, ListData>? OnItemSelected;
-        public Action<VendingMachineWithdrawMessage>? OnWithdraw; //Pirate banking
 
         public VendingMachineMenu()
         {
@@ -192,19 +191,8 @@ namespace Content.Client.VendingMachines.UI
         /// Populates the list of available items on the vending machine interface
         /// and sets icons based on their prototypes
         /// </summary>
-        public void Populate(List<VendingMachineInventoryEntry> inventory, double priceMultiplier, int credits, bool enabled) // Pirate banking
+        public void Populate(List<VendingMachineInventoryEntry> inventory, bool enabled)
         {
-            //Pirate banking Start
-            CreditsLabel.Text = Loc.GetString("vending-ui-credits-amount", ("credits", credits));
-            WithdrawButton.Disabled = credits == 0;
-            WithdrawButton.OnPressed += _ =>
-            {
-                if (credits == 0)
-                    return;
-                OnWithdraw?.Invoke(new VendingMachineWithdrawMessage());
-            };
-            //Pirate banking End
-
             _enabled = enabled;
             _listItems.Clear();
             _amounts.Clear();
@@ -236,7 +224,6 @@ namespace Content.Client.VendingMachines.UI
             for (var i = 0; i < inventory.Count; i++)
             {
                 var entry = inventory[i];
-                var price = (int)(entry.Price * priceMultiplier); //Pirate banking
 
                 if (!_prototypeManager.TryIndex(entry.ID, out var prototype))
                 {
@@ -251,7 +238,7 @@ namespace Content.Client.VendingMachines.UI
                 }
 
                 var itemName = Identity.Name(dummy, _entityManager);
-                var itemText = $" [{price}$] {itemName} [{entry.Amount}]"; //Pirate banking
+                var itemText = $"{itemName} [{entry.Amount}]";
                 _amounts[entry.ID] = entry.Amount;
 
                 if (itemText.Length > longestEntry.Length)
