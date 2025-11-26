@@ -6,7 +6,7 @@
 
     <BoxContainer Name="AuthorizationPage" HorizontalExpand="True" VerticalExpand="True">
         <BoxContainer HorizontalAlignment="Center" HorizontalExpand="True" VerticalAlignment="Center" Orientation="Vertical" MinSize="325 160">
-            <Label Text="Банкомат НТ"/>
+            <Label Text="Банкомат Idris Incorporated"/>
             <Label Name="BalanceLabel" Visible="False"/>
             <controls:HighDivider Name="Divider" Visible="False"/>
             <Label Name="StatusLabel"/>

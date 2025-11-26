@@ -1,7 +1,7 @@
 - type: entity
   id: ATM
-  name: ATM
-  description: For all your monetary needs!
+  name: Банкомат
+  description: Для всіх ваших грошових потреб!
   placement:
     mode: SnapgridCenter
     snap:

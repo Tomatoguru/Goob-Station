@@ -156,9 +156,9 @@ public sealed class BankCardSystem : EntitySystem
                 return;
 
             bankAccount.Balance = GetSalary(mind.Mind) + 100;
-            // mindComponent.AddMemory(new Memory("PIN", bankAccount.AccountPin.ToString()));
-            // mindComponent.AddMemory(new Memory(Loc.GetString("character-info-memories-account-number"),
-            //     bankAccount.AccountId.ToString()));
+            mindComponent.AddMemory(new Memory("PIN", bankAccount.AccountPin.ToString()));
+            mindComponent.AddMemory(new Memory(Loc.GetString("character-info-memories-account-number"),
+                bankAccount.AccountId.ToString()));
             bankAccount.Mind = GetNetEntity(mind.Mind.Value);
             bankAccount.Name = Name(ev.Mob);
 
