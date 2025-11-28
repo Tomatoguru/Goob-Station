@@ -169,3 +169,23 @@ crime-assist-sophont-explanation = Софонт описується як буд
                                     • [bold]Сентієнтність[/bold]: сутність здатна відчувати емоції (або їхню відсутність) чи принаймні розпізнавати власний біль.
                                     • [bold]Самосвідомість[/bold]: сутність здатна змінювати свою поведінку розумним чином у відповідь на стимули або принаймні усвідомлює власну сапієнтність і сентієнтність.
                                     Кожен софонт вважається юридичною особою незалежно від походження чи попереднього когнітивного статусу. Подібно до будь-якого іншого розумного органіка, софонт може подавати скарги на членів екіпажу та постати перед судом за злочини.
+
+crime-assist-program-name = Кримінальний Помічник
+crime-assist-yes-button = Так
+crime-assist-no-button = Ні
+mail-metrics-program-name = ПоштоМетрика
+mail-metrics-header = Прибуток від доставки пошти
+mail-metrics-opened = Прибуток (Відкрито)
+mail-metrics-expired = Збитки (Прострочено)
+mail-metrics-damaged = Збитки (Пошкоджено)
+mail-metrics-tampered = Збитки (Підроблено)
+mail-metrics-unopened = Невідкрито
+mail-metrics-count-header = Посилки
+mail-metrics-money-header = Спесо
+mail-metrics-total = Всього
+mail-metrics-progress = {$opened} з {$total} посилок відкрито!
+mail-metrics-progress-percent = Рейтинг успіху: {$successRate}%
+
+## NanoChat
+
+# Загальне

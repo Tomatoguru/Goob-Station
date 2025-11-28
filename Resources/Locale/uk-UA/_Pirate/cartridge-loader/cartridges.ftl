@@ -1,7 +1,4 @@
-crime-assist-main-menu = Натисніть "Старт", щоб почати
-crime-assist-program-name = Асистент злочинів
-crime-assist-yes-button = Так
-crime-assist-no-button = Ні
+crime-assist-main-menu = Натисніть "Cтарт", щоб почати
 crime-assist-back-button = Назад
 
 # --- Severity Levels ---
@@ -190,17 +187,3 @@ crime-assist-punish-506 = Покарання: Довічне / Страта
 crime-assist-punish-507 = Покарання: Довічне / Страта
 crime-assist-punish-innocent = Немає потреби в покаранні.
 crime-assist-punish-error = Необхідне рішення уповноваженої особи
-
-# (Решта файлу ftl залишена без змін, оскільки вона не стосується КЗ)
-mail-metrics-program-name = ПоштоваМетрика
-mail-metrics-header = Дохід від Доставки Пошти
-mail-metrics-opened = Заробітки (відкриті)
-mail-metrics-expired = Збитки (прострочені)
-mail-metrics-damaged = Збитки (пошкоджені)
-mail-metrics-tampered = Збитки (зіпсовані)
-mail-metrics-unopened = Невідкриті
-mail-metrics-count-header = Посилок
-mail-metrics-money-header = Спесо
-mail-metrics-total = Всього
-mail-metrics-progress = {$opened} з {$total} посилок відкрито!
-mail-metrics-progress-percent = Відсоток успіху: {$successRate}%

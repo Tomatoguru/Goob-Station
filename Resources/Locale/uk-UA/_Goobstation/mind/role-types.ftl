@@ -8,3 +8,4 @@ role-subtype-brainwashed = Промиті мізки
 
 role-subtype-slaughter-demon = Демон Різанини
 role-subtype-slasher = Різник
+role-subtype-ghoul = Вурдалак
