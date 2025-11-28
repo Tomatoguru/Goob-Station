@@ -11,14 +11,11 @@
         </BoxContainer>
         <RichTextLabel Name="NoLinkedAccountLabel" Visible="False" />
         <controls:StripeBack>
-            <Button Name="AccountLinkButton" HorizontalExpand="True" HorizontalAlignment="Center"
-                    Text="{Loc 'bank-program-ui-link-account'}" />
-            <BoxContainer Name="AccountLink" Orientation="Vertical" Visible="False" HorizontalExpand="True"
-                          Margin="0 5 0 5">
+            <Button Name="AccountLinkButton" HorizontalExpand="True" HorizontalAlignment="Center" Text="{Loc 'bank-program-ui-link-account'}" />
+            <BoxContainer Name="AccountLink" Orientation="Vertical" Visible="False" HorizontalExpand="True" Margin="0 5 0 5">
                 <RichTextLabel Name="AccountLinkMessageLabel" />
                 <GridContainer HorizontalExpand="True" Columns="2" Rows="2">
-                    <LineEdit Name="AccountLineEdit" HorizontalExpand="True"
-                              PlaceHolder="{Loc 'bank-program-ui-account-number'}" />
+                    <LineEdit Name="AccountLineEdit" HorizontalExpand="True" PlaceHolder="{Loc 'bank-program-ui-account-number'}" />
                     <Button Name="LinkConfirmButton" Text="{Loc 'bank-program-ui-link-confirm'}" />
                     <LineEdit Name="PinLineEdit" HorizontalExpand="True" PlaceHolder="PIN" />
                     <Button Name="LinkCancelButton" Text="{Loc 'bank-program-ui-link-cancel'}" />

@@ -11,10 +11,6 @@
         "name": "icon"
       },
       {
-        "name": "printing",
-        "delays": [[0.25, 0.25, 0.25, 0.25]]
-      },
-      {
         "name": "unshaded"
       }
     ]

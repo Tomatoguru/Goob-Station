@@ -24,10 +24,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
         <LineEdit Name="SearchBar" PlaceHolder="{Loc 'vending-machine-component-search-filter'}" HorizontalExpand="True"  Margin ="4 4"/>
         <BoxContainer Orientation="Horizontal" Margin="4 0">
             <Label Name="CreditsLabel" HorizontalExpand="True"/>
-            <Button
-                Name="WithdrawButton"
-                Text="{Loc 'store-ui-default-withdraw-text'}"
-                HorizontalAlignment="Right"/>
+            <Button Name="WithdrawButton" Text="{Loc 'store-ui-default-withdraw-text'}" HorizontalAlignment="Right"/>
         </BoxContainer>
         <co:SearchListContainer Name="VendingContents" VerticalExpand="True" Margin="4 4"/>
          <!-- Footer -->
