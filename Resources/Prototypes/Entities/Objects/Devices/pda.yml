@@ -349,6 +349,7 @@
     - WantedListCartridge
     - NanoChatCartridge # DeltaV
     - CrimeAssistCartridge # Pirate
+    - WalletCartridge # Pirate banking
 
 - type: entity
   parent: BasePDA
@@ -364,6 +365,7 @@
       - NewsReaderCartridge
       - MedTekCartridge
       - NanoChatCartridge # DeltaV
+      - WalletCartridge # Pirate banking
 
 - type: entity
   parent: BasePDA
@@ -1141,6 +1143,7 @@
     state: pda-centcom
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
+    diskSpace: 12 # DeltaV
     preinstalled:
       - CrewManifestCartridge
       - NotekeeperCartridge
@@ -1153,6 +1156,7 @@
       - NanoChatCartridge # DeltaV
       - GlimmerMonitorCartridge # Einstein Engines
       - PsiWatchCartridge # Einstein Engines
+      - WalletCartridge # Pirate banking
 
 - type: entity
   parent: CentcomPDA
@@ -1170,7 +1174,7 @@
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
     notificationsEnabled: false
-    diskSpace: 10 # DeltaV
+    diskSpace: 12 # DeltaV
     preinstalled:
       - CrewManifestCartridge
       - NotekeeperCartridge
@@ -1540,6 +1544,7 @@
     - MedTekCartridge
     - NanoChatCartridge # DeltaV
     - CrimeAssistCartridge # Pirate
+    - WalletCartridge # Pirate banking
 
 - type: entity
   parent: ClownPDA
