@@ -257,7 +257,7 @@ namespace Content.Client.VendingMachines.UI
 
                 var price = (int)(entry.Price * priceMultiplier); // Pirate banking
                 var itemName = Identity.Name(dummy, _entityManager);
-                var itemText = $"[{price}$] {itemName} [{entry.Amount}]"; // Pirate banking
+                var itemText = $"[{price}¥] {itemName} [{entry.Amount}]"; // Pirate banking
                 _amounts[entry.ID] = entry.Amount;
 
                 if (itemText.Length > longestEntry.Length)

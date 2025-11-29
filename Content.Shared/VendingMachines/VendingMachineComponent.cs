@@ -214,7 +214,7 @@ namespace Content.Shared.VendingMachines
 
         // Pirate banking start
         [DataField, ViewVariables(VVAccess.ReadWrite)]
-        public double PriceMultiplier = 0.25;
+        public double PriceMultiplier = 1;
 
         [DataField]
         public ProtoId<StackPrototype> CreditStackPrototype = "Credit";

@@ -113,8 +113,6 @@ namespace Content.Server.VendingMachines
         [Dependency] private readonly StackSystem _stackSystem = default!;
         [Dependency] private readonly BankCardSystem _bankCard = default!;
         [Dependency] private readonly IdCardSystem _idCard = default!;
-
-        private const double GlobalPriceMultiplier = 2.0;
         // Pirate banking end
 
         private const float WallVendEjectDistanceFromWall = 1f;
@@ -517,7 +515,7 @@ namespace Content.Server.VendingMachines
 
         private double GetPriceMultiplier(VendingMachineComponent comp)
         {
-            return comp.PriceMultiplier * GlobalPriceMultiplier;
+            return comp.PriceMultiplier;
         }
 
         private void OnWithdrawMessage(EntityUid uid, VendingMachineComponent component, VendingMachineWithdrawMessage args)
