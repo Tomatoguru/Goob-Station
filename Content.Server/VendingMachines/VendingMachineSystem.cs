@@ -99,6 +99,7 @@ using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Content.Server.Access.Systems; // Pirate banking
 using Content.Server._Pirate.Banking; // Pirate banking
+using Content.Shared.Tag; // Pirate banking - IgnoreBalanceChecks
 
 namespace Content.Server.VendingMachines
 {
@@ -108,6 +109,7 @@ namespace Content.Server.VendingMachines
         [Dependency] private readonly PricingSystem _pricing = default!;
         [Dependency] private readonly ThrowingSystem _throwingSystem = default!;
         [Dependency] private readonly IGameTiming _timing = default!;
+        [Dependency] private readonly TagSystem _tag = default!; // Pirate banking - IgnoreBalanceChecks
 
         // Pirate banking start
         [Dependency] private readonly StackSystem _stackSystem = default!;
@@ -448,7 +450,8 @@ namespace Content.Server.VendingMachines
             // Pirate banking end
 
             var price = GetPrice(entry, component);
-            if (price > 0)
+            // Pirate banking - IgnoreBalanceChecks tag bypass
+            if (price > 0 && !_tag.HasTag(sender, "IgnoreBalanceChecks"))
             {
                 if (component.Credits >= price)
                 {
