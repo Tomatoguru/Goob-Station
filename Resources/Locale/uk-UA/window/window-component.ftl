@@ -4,9 +4,9 @@
 comp-window-damaged-1 = Виглядає повністю цілим.
 comp-window-damaged-2 = Має декілька подряпин
 comp-window-damaged-3 = Має кілька дрібних тріщин.
-comp-window-damaged-4 = На поверхні видно кілька великих тріщин
-comp-window-damaged-5 = Має глибокі тріщини у кількох шарах
-comp-window-damaged-6 = Воно вкрай потріскане і от-от розсиплеться.
+comp-window-damaged-4 = [color=yellow]На поверхні видно кілька великих тріщин.[/color]
+comp-window-damaged-5 = [color=orange]Має глибокі тріщини у кількох шарах.[/color]
+comp-window-damaged-6 = [color=red]Воно вкрай потріскане і от-от розсиплеться.[/color]
 
 ### Interaction Messages
 
