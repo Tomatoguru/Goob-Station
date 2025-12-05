@@ -468,7 +468,8 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
             }
             else
             {
-                sprite.LayerSetShader(layerId, null, null);
+                if (_sprite.LayerMapTryGet((entity.Owner, sprite), layerId, out var shaderLayerIndex, false)) // Pirate - Floof Station layering
+                    sprite.LayerSetShader(shaderLayerIndex, null, null); // Pirate - Floof Station layering
             }
 
             _sprite.LayerSetVisible((entity.Owner, sprite), layerId, visible);
