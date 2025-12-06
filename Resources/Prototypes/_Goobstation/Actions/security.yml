@@ -1,8 +1,8 @@
 - type: entity
   parent: BaseAction
   id: ActionActivateAutoinjector
-  name: "Активувати автоін'єктор"
-  description: "Активуйте свій автоін'єктор, щоб ввести хімікати у кров."
+  name: Activate Auto-injector
+  description: Activate your auto injector to administer chemicals into your bloodstream.
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
@@ -19,8 +19,8 @@
 - type: entity
   parent: BaseAction
   id: ActionActivateSecondSkin
-  name: "Активувати Другу Шкіру"
-  description: "Покрийте своє тіло броньованою захисною рідиноподібною речовиною"
+  name: Activate Second Skin
+  description: Cover your body with armored protective liquid-like substance
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
