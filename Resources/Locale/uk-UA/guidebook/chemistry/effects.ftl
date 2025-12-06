@@ -231,7 +231,7 @@ reagent-effect-guidebook-make-sentient = { $chance ->
 
 reagent-effect-guidebook-make-polymorph = { $chance ->
         [1] Перетворює
-        *[other] перетворює
+        *[other] перетворення
     } метаболізатор на { $entityname }
 
 reagent-effect-guidebook-modify-bleed-amount = { $chance ->

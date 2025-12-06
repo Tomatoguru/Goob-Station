@@ -67,8 +67,6 @@ nano-task-printed-requester = [bold]Замовник[/bold]: {$requester}
 nano-task-printed-high-priority = [bold]Пріоритет[/bold]: [color=red]Високий[/color]
 nano-task-printed-medium-priority = [bold]Пріоритет[/bold]: Середній
 nano-task-printed-low-priority = [bold]Пріоритет[/bold]: Низький
-
-# Картридж зі списком розшукуваних
 wanted-list-program-name = Список розшукуваних
 wanted-list-label-no-records = Все гаразд, ковбою
 wanted-list-search-placeholder = Пошук за іменем та статусом

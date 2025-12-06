@@ -43,7 +43,7 @@ health-analyzer-window-entity-alive-text = Живий
 health-analyzer-window-entity-dead-text = Мертвий
 health-analyzer-window-entity-critical-text = Крит
 health-analyzer-window-entity-status-text = Статус:
-health-analyzer-window-entity-unrevivable-text = [color=yellow]Виявлено унікальний склад організму! Пацієнт не може бути реанімований звичайними засобами![/color]
+health-analyzer-window-entity-unrevivable-text = [color=yellow]Виявлено унікальний склад тіла! Пацієнта неможливо реанімувати звичайними засобами![/color]
 health-analyzer-popup-scan-target = {CAPITALIZE(THE($user))} намагається вас просканувати!
 
 health-analyzer-window-return-button-text = < Повернути

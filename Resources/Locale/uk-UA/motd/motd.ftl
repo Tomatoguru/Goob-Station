@@ -7,5 +7,5 @@ cmd-set-motd-help = set-motd [ повідомлення... ]
 cmd-set-motd-hint-head = [ повідомлення... ]
 cmd-set-motd-hint-cont = [ ...повідомлення...]
 cmd-set-motd-cleared-motd-message = Очищено Повідомлення Дня.
-cmd-set-motd-set-motd-message = Повідомлення Дня встановлено на "{$motd}".
+cmd-set-motd-set-motd-message = Повідомлення дня встановлено на "{$motd}".
 motd-wrap-message = Повідомлення Дня: {$motd}
