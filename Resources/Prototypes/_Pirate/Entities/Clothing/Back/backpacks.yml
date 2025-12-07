@@ -11,7 +11,7 @@
   parent: ClothingBackpack
   id: ClothingBackpackHOP
   name: Рюкзак ГП
-  description: Вона накінець тут...
+  description: Будьте зі стилем! Тепер у вас є власна сумка яка буде вас виділяти серед звичайного персоналу.
   components:
   - type: Sprite
     sprite: _Pirate/Clothing/Back/Backpacks/hop.rsi

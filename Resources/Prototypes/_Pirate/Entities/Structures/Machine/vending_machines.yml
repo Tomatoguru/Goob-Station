@@ -30,7 +30,7 @@
   parent: VendingMachine
   id: VendingMachineInterdynePtech
   name: Автомат видачі важливого обладнання Інтердайну
-  description: Містить одяг, ключі шифрування, та навушники. З нами вам не тре боятись смерті, дивіться сміло їй в лице!
+  description: Містить одяг, ключі шифрування, та навушники. З нами вам не треба боятись смерті, дивіться сміло їй в обличчя!
   components:
   - type: VendingMachine
     pack: InterdynePtechCardInventory

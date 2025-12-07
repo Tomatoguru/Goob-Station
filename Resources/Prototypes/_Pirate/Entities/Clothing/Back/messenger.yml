@@ -2,7 +2,7 @@
   parent: ClothingBackpackMessengerBase
   id: ClothingBackpackMessengerBaseInterdyne
   name: Рюкзак-мессенджер інтердайна
-  description: Маленька сумочка вміщуючи все необхідне.
+  description: Маленька сумочка, яка вміщує все необхідне.
   components:
   - type: Sprite
     sprite: _Pirate/Clothing/Back/Messenger/interdyne.rsi
@@ -11,7 +11,7 @@
   parent: ClothingBackpackMessengerBase
   id: ClothingBackpackMessengerBaseHOP
   name: Рюкзак-мессенджер ГП
-  description: Вона накінець тут...
+  description: Вмістить у себе все саме важливе, менш помітна чим інші сумки.
   components:
   - type: Sprite
     sprite: _Pirate/Clothing/Back/Messenger/hop.rsi
