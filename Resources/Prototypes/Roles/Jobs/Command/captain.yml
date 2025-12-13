@@ -161,11 +161,6 @@
       #any MRP using our code might eventually want to use it
     # - !type:SaturationRequirement # MisandryBox - no neon hair on captain
     #   hairColorSaturation: 0.30
-  guides: # goobstation
-  - Command
-  - Succession
-  - StandardProcedures SOP
-  - Captain SOP
     # Pirate contractor start
     - !type:CharacterEmployerRequirement
       employers:
@@ -180,6 +175,11 @@
       - Hacker
       - ConArtist
     # Pirate contractor end
+  guides: # goobstation
+  - Command
+  - Succession
+  - StandardProcedures SOP
+  - Captain SOP
   goobcoins: 50 #Goob content
   weight: 20
   startingGear: CaptainGear
