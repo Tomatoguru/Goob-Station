@@ -10,24 +10,25 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 
 <Document>
-  # Оні
+  # Onis
 
   <Box>
     <GuideEntityEmbed Entity="MobOni" Caption=""/>
   </Box>
 
-  Великі, рогаті люди, які бувають різних кольорів. Їхня точність зі зброєю жахлива, але їхня фізична сила дає їм багато переваг як у бою, так і поза ним.
+  Large, horned people that come in a variety of colors. Their accuracy with guns is terrible, but their physical strength brings them a lot of boons both in and out of combat.
 
-  ## Дієта
-  - Практично все. Можуть навіть їсти багато речей сирими.
+  ## Diet
+  - Just about anything. Can even eat many things raw.
 
-  ## Переваги
-  - Завдають більше пошкоджень у ближньому бою; на 10% більше Ударних, Ріжучих, Колючих, пошкоджень Витривалості та Структурних пошкоджень.
-  - Завдяки своєму великому розміру, вони легко можуть нести та тягнути будь-яку іншу расу, а також мають сильніші поштовхи та захвати.
+  ## Benefits
+  - They take [color=#1e90ff]15% less Blunt, Pierce and Slash.[/color].
+  - Does more damage in melee; 25% more Blunt, Slash, Pierce, Stamina, and Structural damage.
+  - Due to their big size, they can easily carry and pull any other species.
 
-  ## Недоліки
-  - Оні не можуть стріляти з будь-якої зброї з точністю, є повідомлення про те, що кулі вилітали навіть позаду них
-  - Їх важче нести та тягнути.
-  - Вони більші за людей, що робить їх легшою мішенню.
+  ## Drawbacks
+  - Oni are unable to fire any weapons with accuracy, with reports of bullets managing to fire even behind them
+  - They are harder to carry and pull.
+  - They are bigger than Humans, making them easier to hit.
 
 </Document>
