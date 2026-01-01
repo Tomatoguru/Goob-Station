@@ -263,7 +263,7 @@
 # Pirate
 
 - type: lobbyBackground
-  id: Bloody-Clown
+  id: bloody-clown
   background: /Textures/LobbyScreens/bloodyclown.jpg
   name: Bloody Clown
   artist: Redmon
@@ -275,25 +275,25 @@
   artist: Redmon
 
 - type: lobbyBackground
-  id: engiborgrecharge
+  id: engiborg-recharge
   background: /Textures/LobbyScreens/engiborgrecharge.jpg
   name: Engi borg
   artist: Redmon
 
 - type: lobbyBackground
-  id: Katana
+  id: katana
   background: /Textures/LobbyScreens/katana.jpg
   name: Katana
   artist: Redmon
 
 - type: lobbyBackground
-  id: Nuclear-operative
+  id: nuclear-operative
   background: /Textures/LobbyScreens/nuclearoperative.jpg
   name: Nuclear Operative
   artist: Redmon
 
 - type: lobbyBackground
-  id: Nuclear-plan
+  id: nuclear-plan
   background: /Textures/LobbyScreens/nuclearplan.jpg
   name: Ideal Nuclear Plan
   artist: Redmon

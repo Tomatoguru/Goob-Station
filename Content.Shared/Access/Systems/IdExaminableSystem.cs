@@ -39,6 +39,7 @@ public sealed class IdExaminableSystem : EntitySystem
     [Dependency] private readonly SharedUserInterfaceSystem _ui = default!; // Goobstation-WantedMenu
     [Dependency] private readonly AccessReaderSystem _accessReader = default!; // Goobstation-WantedMenu
     [Dependency] private readonly SharedIdCardSystem _idCardSystem = default!; // Pirate-PsionicsMenu
+    private const string MantisAccess = "Mantis"; // Pirate-PsionicsMenu
     public override void Initialize()
     {
         base.Initialize();
@@ -165,7 +166,7 @@ public sealed class IdExaminableSystem : EntitySystem
             return false;
 
         // Check if target has an ID card (in inventory, hands, or is itself an ID card)
-        if (!_idCardSystem.TryFindIdCard(target, out var targetIdCard))
+        if (!_idCardSystem.TryFindIdCard(target, out var _))
             return false;
 
         // Check if user has an ID card with Mantis access
@@ -176,7 +177,7 @@ public sealed class IdExaminableSystem : EntitySystem
             return false;
 
         // Check if user has Mantis access
-        if (!userAccess.Tags.Contains("Mantis"))
+        if (!userAccess.Tags.Contains(MantisAccess))
             return false;
 
         return true;

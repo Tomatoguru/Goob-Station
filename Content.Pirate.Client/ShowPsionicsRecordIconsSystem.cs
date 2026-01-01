@@ -4,7 +4,6 @@
 /// </summary>
 
 using Content.Shared.Access.Components;
-using Content.Shared.Access.Systems;
 using Content.Shared.Inventory;
 using Content.Shared.Overlays;
 using Content.Shared.PDA;
@@ -17,7 +16,6 @@ namespace Content.Client.Overlays;
 public sealed class ShowPsionicsRecordIconsSystem : EquipmentHudSystem<ShowPsionicsRecordIconsComponent>
 {
     [Dependency] private readonly IPrototypeManager _prototype = default!;
-    [Dependency] private readonly AccessReaderSystem _accessReader = default!;
     [Dependency] private readonly InventorySystem _inventory = default!;
 
     public override void Initialize()

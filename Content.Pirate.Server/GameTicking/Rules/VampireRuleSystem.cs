@@ -248,7 +248,7 @@ public sealed partial class VampireRuleSystem : GameRuleSystem<VampireRuleCompon
                 if (TryComp<StomachComponent>(organ.Id, out var stomach))
                 {
                     // If the entity has the vampirism trait, restore the trait's diet instead of species diet
-                    if (HasComp<VampirismComponent>(uid) && TryComp<VampirismComponent>(uid, out var vampirismComp))
+                    if (TryComp<VampirismComponent>(uid, out var vampirismComp))
                     {
                         // Restore the vampirism trait's special diet (Pills, Crayons, Paper)
                         if (vampirismComp.SpecialDigestible is {} traitWhitelist)

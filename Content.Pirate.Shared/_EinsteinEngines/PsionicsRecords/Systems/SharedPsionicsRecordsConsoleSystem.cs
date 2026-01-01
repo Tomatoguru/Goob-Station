@@ -32,25 +32,6 @@ public abstract class SharedPsionicsRecordsConsoleSystem : EntitySystem
             else
                 SetPsionicsIcon(name, status, uid);
         }
-
-        // Also check PDAs with ID cards inside
-        var pdaQuery = EntityQueryEnumerator<PdaComponent>();
-        while (pdaQuery.MoveNext(out var pdaUid, out var pda))
-        {
-            if (pda.ContainedId is not { } idUid)
-                continue;
-
-            if (!TryComp<IdCardComponent>(idUid, out var idCard))
-                continue;
-
-            if (!name.Equals(idCard.FullName))
-                continue;
-
-            if (status == PsionicsStatus.None)
-                RemComp<PsionicsRecordComponent>(idUid);
-            else
-                SetPsionicsIcon(name, status, idUid);
-        }
     }
 
     /// <summary>
