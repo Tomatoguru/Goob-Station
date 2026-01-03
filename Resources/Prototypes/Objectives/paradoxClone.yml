@@ -17,8 +17,8 @@
 - type: entity
   parent: [BaseParadoxCloneObjective, BaseLivingObjective]
   id: ParadoxCloneLivingObjective
-  name: "Втекти на шатлі живим і на волі."
-  description: "Поверніться до свого старого життя, через евакуаційний шатл." # Goobstation
+  name: Escape to centcomm alive and unrestrained.
+  description: Return to your old life, via the evacuation shuttle. # Goobstation
   components:
   - type: Objective
     icon:
