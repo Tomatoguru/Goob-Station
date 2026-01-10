@@ -3,9 +3,9 @@
   alias:
     - secret
     - sekrit
-  name: "Секрет"
+  name: "Секерет"
   showInVote: true # Goob - Game Director
-  description: "Більш спокійна, частково експериментальна версія секрету, без антагоністів середині гри."
+  description: Більш спокійна, частково експериментальна версія секрету, без антагоністів середині гри.
   rules:
     - Secret
     - PsionicEventsScheduler # Pirate
