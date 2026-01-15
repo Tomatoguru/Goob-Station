@@ -146,6 +146,13 @@
   - !type:DepartmentTimeRequirement
     department: Science
     time: 36000 #10 hrs
+  - !type:TraitsRequirement # Pirate
+      inverted: true
+      traits:
+      - Blindness
+      - Narcolepsy
+      - Muted
+      - WheelchairBound # Pirate end
   #- !type:SpeciesRequirement # Pirate remove requirement
   #  inverted: true
   #  species:
