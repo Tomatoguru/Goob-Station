@@ -771,6 +771,7 @@
     - SecurityWeaponsStaticGoob
     # Pirate Packs
     - SecurityAmmoStaticPirate
+    - PirateStraightjacketLatheRecipePackStatic # Pirate - tweak recipes | Add straint-jacket to med and sec fabs.
     dynamicPacks:
     - SalvageSecurityBoards
     - SalvageSecurityWeapons
@@ -890,6 +891,7 @@
     - GrenadeTriggersStatic
     # Einstein Engines Packs
     - SyringeCase
+    - PirateStraightjacketLatheRecipePackStatic # Pirate - tweak recipes | Add straint-jacket to med and sec fabs.
     dynamicPacks:
     - Chemistry
     # Goobstation Packs
