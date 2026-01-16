@@ -449,6 +449,7 @@
     - SecurityAmmoStaticGoob
     - SyndicateAmmoLightStatic
     - ScienceExplosives
+    - PowerCells # Pirate - tweak fab recepies | Add advanced power cells to each fab
   - type: BlueprintReceiver
     whitelist:
       tags:
