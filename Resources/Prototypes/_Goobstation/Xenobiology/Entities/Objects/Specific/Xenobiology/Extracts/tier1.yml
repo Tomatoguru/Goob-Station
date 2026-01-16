@@ -1,7 +1,7 @@
 - type: entity
   id: OrangeSlimeExtract
   parent: BaseSlimeExtract
-  name: orange slime extract
+  name: "помаранчевий екстракт слайма"
   components:
   - type: Sprite
     layers:
@@ -63,7 +63,7 @@
 - type: entity
   id: PurpleSlimeExtract
   parent: BaseSlimeExtract
-  name: purple slime extract
+  name: "фіолетовий екстракт слайма"
   components:
   - type: Sprite
     layers:
@@ -116,7 +116,7 @@
 - type: entity
   id: BlueSlimeExtract
   parent: BaseSlimeExtract
-  name: blue slime extract
+  name: "синій екстракт слайма"
   components:
   - type: Sprite
     layers:
@@ -171,7 +171,7 @@
 - type: entity
   id: MetalSlimeExtract
   parent: BaseSlimeExtract
-  name: metal slime extract
+  name: "металевий екстракт слайма"
   components:
   - type: Sprite
     layers:
