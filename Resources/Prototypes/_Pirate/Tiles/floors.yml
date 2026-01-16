@@ -1,0 +1,61 @@
+- type: tile
+  id: FloorMS13MetalIndustrial
+  name: ms13 metal industrial
+  sprite: /Textures/_Pirate/Tiles/ms13/Steel/steel_industrial.png
+  variants: 8
+  placementVariants: [0, 1, 2, 3, 4, 5, 6, 7]
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  itemDrop: FloorTileItemMetalIndustrial
+  footstepSounds:
+    collection: N14FootstepMetalHollow
+  friction: 0.30
+  thermalConductivity: 0.04
+  heatCapacity: 10000
+  weather: true
+
+- type: tile
+  id: FloorMS13TileNavyFull
+  name: ms13 tile navy full
+  sprite: /Textures/_Pirate/Tiles/ms13/Full/tilenavyfull.png
+  variants: 8
+  placementVariants: [0, 1, 2, 3, 4, 5, 6, 7]
+  baseTurf: Plating
+  isSubfloor: false
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 0.30
+  thermalConductivity: 0.04
+  heatCapacity: 10000
+  weather: true
+
+- type: tile
+  id: FloorMS13TileNavyLarge
+  name: ms13 tile navy large
+  sprite: /Textures/_Pirate/Tiles/ms13/Large/tilenavylarge.png
+  variants: 8
+  placementVariants: [0, 1, 2, 3, 4, 5, 6, 7]
+  baseTurf: Plating
+  isSubfloor: false
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 0.30
+  thermalConductivity: 0.04
+  heatCapacity: 10000
+  weather: true
+
+- type: tile
+  id: FloorMS13TileNavy
+  name: ms13 tile navy
+  sprite: /Textures/_Pirate/Tiles/ms13/Small/tilenavy.png
+  variants: 8
+  placementVariants: [0, 1, 2, 3, 4, 5, 6, 7]
+  baseTurf: Plating
+  isSubfloor: false
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 0.30
+  thermalConductivity: 0.04
+  heatCapacity: 10000
+  weather: true
