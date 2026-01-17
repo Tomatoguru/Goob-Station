@@ -154,6 +154,13 @@
     - !type:DepartmentTimeRequirement
       department: Command
       time: 28000 # 8 hours
+    - !type:TraitsRequirement # Pirate
+      inverted: true
+      traits:
+      - Blindness
+      - Narcolepsy
+      - Muted
+      - WheelchairBound # Pirate end
     #- !type:SpeciesRequirement # Pirate remove requireme
     #  inverted: true
     #  species:

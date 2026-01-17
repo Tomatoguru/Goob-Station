@@ -263,6 +263,20 @@
       - SlimeExtract
       
 - type: entity
+  parent: ClothingBeltChemBagXenobiology
+  id: ClothingBeltChemBagXenobiologyHolding
+  name: "ксенобіологічна сумка бездоння"
+  description: "Більша слизостійка сумка, призначена для ксенобіологів. Пахне блюспейс-екстрактом і мавпячою шерстю."
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Belt/xenobag_holding.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Belt/xenobag_holding.rsi
+  - type: Storage
+    grid:
+    - 0,0,19,9
+
+- type: entity
   parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseCentcommContraband]
   id: ClothingBeltMilitaryWebbingBSOFilled
   name: "розгрузка Синього Щита"

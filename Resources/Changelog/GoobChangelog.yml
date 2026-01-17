@@ -19496,3 +19496,146 @@ Entries:
       message: Модкостюм кар'єрного тренера
   id: 2276
   time: '2026-01-09T20:01:15.0000000+00:00'
+- author: Sarahon
+  changes:
+    - type: Remove
+      message: 'Рипост CQC '
+  id: 2277
+  time: '2026-01-09T22:30:50.0000000+00:00'
+- author: Durk, Rouden
+  changes:
+    - type: Tweak
+      message: >-
+        GPS тепер круті й корисні! Вони можуть відстежувати маячки та інші GPS
+        трекери на візуальній мапі у своєму новому інтерфейсі.
+    - type: Tweak
+      message: Ручні мас-сканери повернули до гри.
+  id: 2278
+  time: '2026-01-10T19:21:35.0000000+00:00'
+- author: LuciferEOS
+  changes:
+    - type: Tweak
+      message: >-
+        Емагнутий ксеновак більше не може засмоктувати живих. (Але все ще може
+        засмоктувати тих, хто у криті або мертвий)
+    - type: Tweak
+      message: Ксеновак тепер може засмоктувати мавп.
+  id: 2279
+  time: '2026-01-12T13:22:04.0000000+00:00'
+- author: H2Owe
+  changes:
+    - type: Fix
+      message: Виправлено деякі проблеми мапінгу CC.
+    - type: Fix
+      message: Виправлено захист від температури та додано компонент дихальної маски до модкостюмів CC.
+  id: 2280
+  time: '2026-01-12T19:48:19.0000000+00:00'
+- author: JohnJJohn
+  changes:
+    - type: Add
+      message: Додано «Ephedrine Overdose» від mrjajkes до музики нукерів.
+  id: 2281
+  time: '2026-01-12T19:50:28.0000000+00:00'
+- author: OnsenCapy
+  changes:
+    - type: Remove
+      message: Видалено станцію Prison та повітряні рослини.
+  id: 2282
+  time: '2026-01-12T19:50:55.0000000+00:00'
+- author: gusxyz
+  changes:
+    - type: Tweak
+      message: Візуальні ефекти поранень повернулися, радійте!
+  id: 2283
+  time: '2026-01-12T19:51:52.0000000+00:00'
+- author: doktor-gonz0
+  changes:
+    - type: Fix
+      message: >-
+        Експериментальний лабораторний халат RD тепер має такі самі стійкості, як і
+        звичайний.
+  id: 2284
+  time: '2026-01-12T19:53:13.0000000+00:00'
+- author: Kenkaitos
+  changes:
+    - type: Fix
+      message: >-
+        Виправлено взаємодію Bluespace Extract Slime з кров'ю, через яку як IPC також
+        телепортувався ваш позитронний мозок.
+  id: 2285
+  time: '2026-01-13T02:37:18.0000000+00:00'
+- author: doktor-gonz0
+  changes:
+    - type: Add
+      message: На Cluster тепер є повноцінна ксенобіо-лабораторія.
+  id: 2286
+  time: '2026-01-13T07:29:11.0000000+00:00'
+- author: doktor-gonz0
+  changes:
+    - type: Add
+      message: На станції Loop тепер є повноцінна ксенобіо-лабораторія.
+  id: 2287
+  time: '2026-01-13T07:29:59.0000000+00:00'
+- author: FloatingFeeling
+  changes:
+    - type: Add
+      message: Коробку з кубами синдикатських мавп повернули на планету нукерів.
+  id: 2288
+  time: '2026-01-13T07:30:53.0000000+00:00'
+- author: doktor-gonz0
+  changes:
+    - type: Add
+      message: На Submarine тепер є ксенобіо-лабораторія.
+  id: 2289
+  time: '2026-01-13T07:33:12.0000000+00:00'
+- author: doktor-gonz0
+  changes:
+    - type: Add
+      message: >-
+        Omega, Packed і Saltern тепер справді мають належне ксенобіо-обладнання та
+        слизнів на старті раунду.
+  id: 2290
+  time: '2026-01-13T07:33:40.0000000+00:00'
+- author: Stupid fuck
+  changes:
+    - type: Fix
+      message: Виправлено, що ксеновак не працював.
+    - type: Remove
+      message: Взаємодію емага з ксеноваком.
+  id: 2291
+  time: '2026-01-13T17:47:26.0000000+00:00'
+- author: clinux
+  changes:
+    - type: Fix
+      message: ERT, DS і CBURN знову лише для людей
+  id: 2292
+  time: '2026-01-13T22:59:14.0000000+00:00'
+- author: TheNumberRus
+  changes:
+    - type: Tweak
+      message: Молі тепер кажуть «манго», коли зомбіфіковані.
+  id: 2293
+  time: '2026-01-13T23:07:12.0000000+00:00'
+- author: Androidonator
+  changes:
+    - type: Tweak
+      message: >-
+        Блоб більше не затягуватиме раунд, якщо шатл уже прибув на станцію.
+  id: 2294
+  time: '2026-01-13T23:11:44.0000000+00:00'
+- author: Beanyboi69
+  changes:
+    - type: Add
+      message: Більше винагород для ксенобіології
+    - type: Add
+      message: Сумка без дна для ксенобіології
+    - type: Tweak
+      message: Збільшено кількість очок за деякі винагороди ксенобіології
+  id: 2295
+  time: '2026-01-14T02:59:22.0000000+00:00'
+- author: LuciferEOS
+  changes:
+    - type: Tweak
+      message: Бойовий шприц BSO тепер завдає 1 шкоди замість 5 при ін'єкції.
+  id: 2296
+  time: '2026-01-15T07:04:53.0000000+00:00'

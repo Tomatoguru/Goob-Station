@@ -265,7 +265,7 @@
 - type: lobbyBackground
   id: bloody-clown
   background: /Textures/LobbyScreens/bloodyclown.jpg
-  name: Bloody Clown
+  name: "Кривавий клоун"
   artist: Redmon
 
 - type: lobbyBackground
@@ -277,23 +277,23 @@
 - type: lobbyBackground
   id: engiborg-recharge
   background: /Textures/LobbyScreens/engiborgrecharge.jpg
-  name: Engi borg
+  name: "Інженерний борґ"
   artist: Redmon
 
 - type: lobbyBackground
   id: katana
   background: /Textures/LobbyScreens/katana.jpg
-  name: Katana
+  name: "Катана"
   artist: Redmon
 
 - type: lobbyBackground
   id: nuclear-operative
   background: /Textures/LobbyScreens/nuclearoperative.jpg
-  name: Nuclear Operative
+  name: "Ядерний оперативник"
   artist: Redmon
 
 - type: lobbyBackground
   id: nuclear-plan
   background: /Textures/LobbyScreens/nuclearplan.jpg
-  name: Ideal Nuclear Plan
+  name: "Ідеальний ядерний план"
   artist: Redmon
