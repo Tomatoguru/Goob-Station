@@ -172,16 +172,6 @@
   parent: MobHoloparasiteGuardian
   description: "Заворожуючий вихор жорстких світлових візерунків виплітає дивовижний, але напрочуд знайомий образ. Він стоїть гордо, підлаштовуючись під життя свого власника, щоб підтримувати себе."
   components:
-    - type: GhostRole
-      allowMovement: true
-      allowSpeech: true
-      makeSentient: true
-      name: ghost-role-information-holoparasite-name
-      description: ghost-role-information-holoparasite-description
-      rules: ghost-role-information-familiar-rules
-      raffle:
-        settings: default
-    - type: GhostTakeoverAvailable
     - type: MeleeWeapon
       hidden: false
       altDisarm: false
@@ -200,7 +190,7 @@
       baseWalkSpeed: 8
       baseSprintSpeed: 10
     - type: Guardian
-      DistanceAllowed: 10
+      distanceAllowed: 10
       
 - type: entity
   id: TheWorldStopTimeImplant
@@ -228,7 +218,7 @@
       state: time
   - type: InstantAction
     event: !type:StopTimeEvent
-      Proto: ChronofieldDio
+      proto: ChronofieldDio
   - type: Magic
     requiresClothes: false
     requiresSpeech: true
