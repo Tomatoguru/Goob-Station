@@ -17,8 +17,8 @@ public sealed partial class RandomHumanoidAppearanceComponent : Component
     /// </summary>
     [DataField] public string? Hair = null;
     //Pirate Changes Start Here
-    [DataField] public float? Height;
+    [DataField] public float? Height; // Висота
 
-    [DataField] public float? Width;
+    [DataField] public float? Width; // Ширина
     //Pirate Changes End Here
 }
