@@ -597,6 +597,9 @@
   parent: BaseEmptyAmmoRecipe
   id: MagazineShotgunLeverRifleEmpty
   result: MagazineShotgunLeverRifleEmpty
+  icon: # Pirate start - tweak recipes | Add proper sprite to empty BSO rifle magazine.
+    sprite: _Goobstation/Objects/Weapons/Guns/Ammunition/Magazine/lever_rifle_mags.rsi
+    state: base # Pirate end
   materials:
     Steel: 25
 
