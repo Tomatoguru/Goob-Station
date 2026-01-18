@@ -56,11 +56,6 @@
           Piercing: 0.85
           Heat: 0.85
           Radiation: 0.95
-    - type: SealableClothingVisuals
-      visualLayers:
-        head:
-          - state: equipped-HEAD-sealed
-            shader: unshaded
     - type: ShowHealthBars
       damageContainers:
         - Biological
@@ -97,7 +92,7 @@
           Radiation: 0.40
           Caustic: 0.40
     - type: StaminaResistance
-      coefficient: 0.5
+      damageCoefficient: 0.5
     - type: FireProtection
       reduction: 0.90
 

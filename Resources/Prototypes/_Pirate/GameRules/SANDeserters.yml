@@ -58,8 +58,7 @@
       - SolCommon
       understands:
       - SolCommon
-      mindRoles:
-      - MindRoleDeserter
+    - type: GhostRole
       requirements:
       - !type:OverallPlaytimeRequirement
         time: 180000 #50 hours
