@@ -60,15 +60,6 @@
       employers:
       - NanoTrasen
       - PMCG
-    - !type:CharacterLifepathRequirement
-      inverted: true
-      lifepaths:
-      - Cultist
-      - Smuggler
-      - ExCriminal
-      - Enforcer
-      - Hacker
-      - ConArtist
   # Pirate contractor end
   guides:
   - BlueshieldOfficer SOP
