@@ -972,6 +972,7 @@
   loadouts:
   - ChiefEngineerHead
   - ChiefEngineerBeret
+  - HatAwaria
 
 - type: loadoutGroup
   id: ChiefEngineerJumpsuit
@@ -983,6 +984,7 @@
   - ChiefEngineerTurtleneckSkirt
   - ChiefEngineerMJ # goob
   - CESummerShirt # goob
+  - JumpsuitAwaria # Pirate
 
 - type: loadoutGroup
   id: ChiefEngineerNeck
@@ -998,6 +1000,7 @@
   minLimit: 0
   loadouts:
   - ChiefEngineerWintercoat
+  - CoatAwaria # Pirate
 
 - type: loadoutGroup
   id: ChiefEngineerShoes
@@ -1005,6 +1008,7 @@
   loadouts:
   - BrownShoes
   - EngineeringWinterBoots
+  - BootsAwaria # Pirate
 
 - type: loadoutGroup
   id: TechnicalAssistantJumpsuit
@@ -1023,6 +1027,7 @@
   - StationEngineerHardhatOrange
   - StationEngineerHardhatRed
   - SeniorEngineerBeret
+  - HatAwaria # Pirate
 
 - type: loadoutGroup
   id: StationEngineerJumpsuit
@@ -1034,6 +1039,7 @@
   - SeniorEngineerJumpsuit
   - SeniorEngineerJumpskirt
   - EngiMJ # goob
+  - JumpsuitAwaria # Pirate
 
 - type: loadoutGroup
   id: StationEngineerBackpack
@@ -1051,6 +1057,7 @@
   loadouts:
   - StationEngineerOuterVest
   - StationEngineerWintercoat
+  - CoatAwaria # Pirate
 
 - type: loadoutGroup
   id: StationEngineerShoes
@@ -1058,6 +1065,7 @@
   loadouts:
   - WorkBoots
   - EngineeringWinterBoots
+  - BootsAwaria # Pirate
 
 - type: loadoutGroup
   id: StationEngineerID
@@ -1072,6 +1080,7 @@
   minLimit: 0
   loadouts:
   - SeniorEngineerBeret   # Goobstation
+  - HatAwaria # Pirate
 
 - type: loadoutGroup
   id: AtmosphericTechnicianJumpsuit
@@ -1083,6 +1092,7 @@
   - SeniorEngineerJumpskirt  # Goobstation
   - SeniorEngineerJumpsuit   # Goobstation
   - AtmosMJ # goob
+  - JumpsuitAwaria # Pirate
 
 - type: loadoutGroup
   id: AtmosphericTechnicianOuterClothing
@@ -1090,6 +1100,7 @@
   minLimit: 0
   loadouts:
   - AtmosphericTechnicianWintercoat
+  - CoatAwaria # Pirate
 
 - type: loadoutGroup
   id: AtmosphericTechnicianBackpack
@@ -1106,6 +1117,7 @@
   loadouts:
   - WhiteShoes
   - EngineeringWinterBoots
+  - BootsAwaria # Pirate
 
 - type: loadoutGroup
   id: SurvivalExtended
