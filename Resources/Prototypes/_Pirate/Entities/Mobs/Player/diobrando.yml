@@ -67,8 +67,8 @@
         Toxin: -5
         Airloss: -5
     # Резисти до радіації і отруєння, резисти до усього урона на 50%
-  #- type: Damageable #Прибрати коментарі для повного ефекту!!
-  #  damageModifierSet: DioBrando
+  - type: Damageable
+    damageModifierSet: DioBrando
     # Посилення сили ударів
   - type: MeleeWeapon
     altDisarm: false
