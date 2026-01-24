@@ -128,8 +128,6 @@
   id: WeaponSubMachineGunBRDIR25HoS
   description: Колись цю улюблену гвинтівку тримав невідомий член Іноземного легіону Республіки Бізеля; вона брала участь у боях з Солом в кожних боях Республіки.
   components:
-    - type: StealTarget
-      stealGroup: HoSAntiqueWeapon
     - type: Sprite
       sprite: _Pirate/Objects/Weapons/Guns/SMGs/BRDI_R25_antique.rsi
 
