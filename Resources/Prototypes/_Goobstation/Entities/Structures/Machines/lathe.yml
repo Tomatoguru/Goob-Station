@@ -57,6 +57,11 @@
     - MiscSignallersStatic
     - NailgunStatic
     - NailsStatic
+    - ServiceBoardsStatic # Pirate start - tweak fab recepies | Add more circuits to engi fab
+    - CargoBoardsStatic
+    - MedicalBoardsStaticGoob
+    - SecurityBoardsStaticGoob
+    - ServiceBoardsStaticGoob # Pirate end
     dynamicPacks:
     - ConstructionBagOfHolding
     - AdvancedTools
@@ -74,6 +79,9 @@
     - BluespaceTheory
     - ScienceClothing
     - UpgradeKits
+    - CargoBoards # Pirate start - tweak fab recepies | Add more circuits to engi fab
+    - MedicalBoards
+    - ServiceBoards # Pirate end
   - type: EmagLatheRecipes
     emagStaticPacks:
     - NailgunEvilStatic
@@ -220,6 +228,8 @@
     - MechBoardsScience
     - Pinpointers
     - Genetics
+    - XenobioPack
+    - XenobagHoldingPack
     # Einstein Engines Packs
     - Translators
     - TranslatorImplanters
@@ -261,6 +271,7 @@
     runningState: icon
     staticPacks:
     - ServiceBoardsStatic
+    - ServiceBoardsStaticGoob
     - MaterialsStatic
     - LightsStatic
     - ServiceStatic
@@ -281,6 +292,7 @@
     - SharedBoards
     - CameraBoards
     - ServiceTools
+    - ServiceBoardsGoob # goob
     # Einstein Engines Packs
     - Translators
   - type: EmagLatheRecipes

@@ -36,9 +36,16 @@ public sealed class RandomHumanoidAppearanceSystem : EntitySystem
 
         var profile = HumanoidCharacterProfile.RandomWithSpecies(humanoid.Species);
         //If we have a specified hair style, change it to this
-        if(component.Hair != null)
+        if (component.Hair != null)
             profile = profile.WithCharacterAppearance(profile.Appearance.WithHairStyleName(component.Hair));
 
+        //Pirate Changes Start Here
+        if (component.Height != null)
+            profile = profile.WithHeight(component.Height.Value);
+
+        if (component.Width != null)
+            profile = profile.WithWidth(component.Width.Value);
+        //Pirate Changes End Here
         _humanoid.LoadProfile(uid, profile, humanoid);
 
         if (component.RandomizeName)

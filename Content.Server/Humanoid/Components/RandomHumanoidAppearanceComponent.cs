@@ -16,4 +16,9 @@ public sealed partial class RandomHumanoidAppearanceComponent : Component
     /// After randomizing, sets the hair style to this, if possible
     /// </summary>
     [DataField] public string? Hair = null;
+    //Pirate Changes Start Here
+    [DataField] public float? Height; // Висота
+
+    [DataField] public float? Width; // Ширина
+    //Pirate Changes End Here
 }
