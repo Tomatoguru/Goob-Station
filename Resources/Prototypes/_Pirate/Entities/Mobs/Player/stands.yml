@@ -173,7 +173,7 @@
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
-    soundGunshot: /Audio/Magic/lightningbolt.ogg
+    soundGunshot: /Audio/Effects/Lightning/lightningbolt.ogg
   - type: BallisticAmmoProvider
     proto: ProjectileStandLightning
     capacity: 1000
@@ -412,7 +412,7 @@
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
-    soundGunshot: /Audio/Effects/health_scanner.ogg
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
   - type: BallisticAmmoProvider
     proto: ProjectileStandHeal
     capacity: 1000
