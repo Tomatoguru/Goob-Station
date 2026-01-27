@@ -26,6 +26,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using Content.Shared._DV.Silicons.Laws; // DOWNSTREAM-TPirates: borg wireless access
 using Content.Shared.Actions.Events;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction.Events;
@@ -190,6 +191,7 @@ public abstract partial class SharedStationAiSystem
 
         if (!args.CanComplexInteract
             || !HasComp<StationAiHeldComponent>(args.User)
+            && !HasComp<SlavedBorgComponent>(args.User) // DOWNSTREAM-TPirates: borg wireless access
             || !args.CanInteract)
         {
             return;

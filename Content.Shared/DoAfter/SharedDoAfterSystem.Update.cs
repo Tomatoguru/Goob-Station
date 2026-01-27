@@ -323,6 +323,10 @@ public abstract partial class SharedDoAfterSystem : EntitySystem
         if (args.RequireCanInteract && !_actionBlocker.CanInteract(args.User, args.Target) && hasNoSpecificComponents) // Shitmed Change
             return true;
 
+        #region DOWNSTREAM-TPirates: borg wireless access
+        if (!_actionBlocker.CanInteractUsing(args.User, args.Target, args.Used))
+            return true;
+        #endregion
 
         return false;
     }
