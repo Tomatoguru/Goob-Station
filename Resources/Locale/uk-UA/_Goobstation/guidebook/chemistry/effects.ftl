@@ -34,3 +34,4 @@ reagent-effect-guidebook-mutate-plants-nearby = Випадково мутує р
 reagent-effect-guidebook-dnascramble = Заплутує ДНК людини.
 reagent-effect-guidebook-change-species = Перетворює ціль на {$species}
 reagent-effect-guidebook-sex-change = Змінює гендер людини
+reagent-effect-guidebook-change-species-random = Перетворює ціль на абсолютно випадковий вид.

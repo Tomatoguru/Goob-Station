@@ -103,3 +103,4 @@ changeling-voidadapt-lowpressure-end = Тиск навколо більше не
 changeling-voidadapt-lowtemperature-start = Ми адаптуємося до навколишнього морозу.
 changeling-voidadapt-lowtemperature-end = Температура навколо стала вищою. Ми скасовуємо нашу адаптацію.
 changeling-voidadapt-onfire = Наші адаптації стають занадто болючими для підтримки у вогні! Ми відкидаємо їх!
+changeling-stasis-finished = Наша регенерація завершена. Ми готові прокинутися.
