@@ -581,9 +581,17 @@ public sealed class WiresSystem : SharedWiresSystem
     #region DOWNSTREAM-TPirates: borg wireless access
     private bool IsInNormalRange(EntityUid user, EntityUid target)
     {
-        if (!_entityManager.TryGetComponent<TransformComponent>(user, out var xForm))
+        if (!_entityManager.TryGetComponent<TransformComponent>(user, out var userXForm) ||
+            !_entityManager.TryGetComponent<TransformComponent>(target, out var targetXForm))
+        {
             return false;
-        return _transform.InRange(xForm.Coordinates, target.ToCoordinates(), SharedInteractionSystem.InteractionRange);
+        }
+
+        return _interactionSystem.InRangeUnobstructed(
+            (user, userXForm),
+            (target, targetXForm),
+            targetXForm.Coordinates,
+            targetXForm.LocalRotation);
     }
     #endregion
 
