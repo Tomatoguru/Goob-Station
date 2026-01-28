@@ -38,6 +38,15 @@ public sealed class StationAiBoundUserInterface(EntityUid owner, Enum uiKey) : B
 {
     private SimpleRadialMenu? _menu;
 
+    #region DOWNSTREAM-TPirates: borg wireless access
+    private static readonly ProtoId<AccessLevelPrototype> NuclearOperativeAccess = "NuclearOperative";
+    private static readonly ProtoId<AccessLevelPrototype> SyndicateAgentAccess = "SyndicateAgent";
+    private static readonly ProtoId<AccessGroupPrototype> AllAccessGroup = "AllAccess";
+
+    private IPlayerManager? _cachedPlayerManager;
+    private IPlayerManager CachedPlayerManager => _cachedPlayerManager ??= IoCManager.Resolve<IPlayerManager>();
+    #endregion
+
     protected override void Open()
     {
         base.Open();
@@ -84,8 +93,7 @@ public sealed class StationAiBoundUserInterface(EntityUid owner, Enum uiKey) : B
     #region DOWNSTREAM-TPirates: borg wireless access
     private bool CheckAccess()
     {
-        var playerMgr = IoCManager.Resolve<IPlayerManager>();
-        var controlled = playerMgr.LocalPlayer?.ControlledEntity;
+        var controlled = CachedPlayerManager.LocalPlayer?.ControlledEntity;
 
         if (controlled is null ||
             !EntMan.TryGetComponent<AccessComponent>(controlled.Value, out var access))
@@ -97,11 +105,11 @@ public sealed class StationAiBoundUserInterface(EntityUid owner, Enum uiKey) : B
         var groups = access.Groups;
 
         var isSyndie =
-            tags.Contains("NuclearOperative") ||
-            tags.Contains("SyndicateAgent");
+            tags.Contains(NuclearOperativeAccess) ||
+            tags.Contains(SyndicateAgentAccess);
 
         var hasAllAccessGroup =
-            groups.Contains(new ProtoId<AccessGroupPrototype>("AllAccess"));
+            groups.Contains(AllAccessGroup);
 
         if (!isSyndie || hasAllAccessGroup)
         {
