@@ -52,7 +52,9 @@ public sealed class RemoteInteractionSystem : EntitySystem
                 return;
             }
 
-            if (!TryComp(args.Target, out StationAiWhitelistComponent? whitelistComponent) || whitelistComponent is { Enabled: false })
+            if (!TryComp(args.Target, out StationAiWhitelistComponent? whitelistComponent)) {
+                return;
+            } else if (whitelistComponent is { Enabled: false })
             {
                 ShowDeviceNotRespondingPopup(args.Uid);
                 args.Cancelled = true;
