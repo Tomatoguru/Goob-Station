@@ -52,9 +52,14 @@ public sealed class RemoteInteractionSystem : EntitySystem
                 return;
             }
 
-            if (!TryComp(args.Target, out StationAiWhitelistComponent? whitelistComponent)) {
+            if (!TryComp(args.Target, out StationAiWhitelistComponent? whitelistComponent))
+            {
+                ShowDeviceNotRespondingPopup(args.Uid);
+                args.Cancelled = true;
                 return;
-            } else if (whitelistComponent is { Enabled: false })
+            }
+
+            if (whitelistComponent is { Enabled: false })
             {
                 ShowDeviceNotRespondingPopup(args.Uid);
                 args.Cancelled = true;
@@ -92,20 +97,23 @@ public sealed class RemoteInteractionSystem : EntitySystem
             return;
         }
 
-        if (!TryComp(args.Target, out StationAiWhitelistComponent? whitelistComponent) || whitelistComponent is { Enabled: false } || !_powerReceiver.IsPowered(args.Target))
+        if (!TryComp(args.Target, out StationAiWhitelistComponent? whitelistComponent) ||
+            whitelistComponent is { Enabled: false } ||
+            !_powerReceiver.IsPowered(args.Target))
         {
-            if (!IsInNormalRange(args.User, args.Target ))
-            {
-                return;
-            }
+            return;
         }
 
-        args.Handled = true;
+        if (IsInNormalRange(args.User, args.Target))
+        {
+            return;
+        }
 
         if (!_broadphaseQuery.TryComp(targetXForm.GridUid, out var broadphase) ||
             !_gridQuery.TryComp(targetXForm.GridUid, out var grid))
         {
             args.InRange = false;
+            args.Handled = true;
             return;
         }
 
@@ -115,6 +123,8 @@ public sealed class RemoteInteractionSystem : EntitySystem
         {
             args.InRange = _vision.IsAccessible((targetXForm.GridUid.Value, broadphase, grid), targetTile);
         }
+
+        args.Handled = true;
     }
 
     private void ShowDeviceNotRespondingPopup(EntityUid toEntity)
