@@ -34,7 +34,7 @@ using Content.Shared.Popups;
 using Content.Shared.Verbs;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
-using Content.Shared.Interaction.Components;
+using Content.Shared.Interaction.Components; // DOWNSTREAM-TPirates: borg wireless access
 
 namespace Content.Shared.Silicons.StationAi;
 
@@ -272,6 +272,7 @@ public record struct GetStationAiRadialEvent()
     public List<StationAiRadial> Actions = new();
 }
 
+#region DOWNSTREAM-TPirates: borg wireless access
 /// <summary>
 /// Grab actions for a limited airlock control radial (bolts & electrify only).
 /// </summary>
@@ -281,6 +282,7 @@ public record struct GetStationAiLimitedAirlockRadialEvent()
     public List<StationAiRadial> Actions = new();
 }
 
+#endregion
 [Serializable, NetSerializable]
 public enum AiUi : byte
 {

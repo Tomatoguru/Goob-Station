@@ -21,13 +21,16 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Client.UserInterface.Controls;
+using Content.Shared.Silicons.StationAi;
+using Robust.Client.UserInterface;
+
+#region DOWNSTREAM-TPirates: borg wireless access
 using Content.Shared.Access;
 using Content.Shared.Access.Components;
-using Content.Shared.Silicons.StationAi;
 using Robust.Client.Player;
-using Robust.Client.UserInterface;
 using Robust.Shared.IoC;
 using Robust.Shared.Prototypes;
+#endregion
 
 namespace Content.Client.Silicons.StationAi;
 

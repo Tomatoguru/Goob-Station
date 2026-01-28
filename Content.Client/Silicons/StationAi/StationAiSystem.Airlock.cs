@@ -40,9 +40,10 @@ public sealed partial class StationAiSystem
         SubscribeLocalEvent<AirlockComponent, GetStationAiRadialEvent>(OnEmergencyAccessGetRadial);
         SubscribeLocalEvent<ElectrifiedComponent, GetStationAiRadialEvent>(OnDoorElectrifiedGetRadial);
 
-        // Limited airlock control radial (bolts & electrify only).
+        #region DOWNSTREAM-TPirates: borg wireless access
         SubscribeLocalEvent<DoorBoltComponent, GetStationAiLimitedAirlockRadialEvent>(OnDoorBoltGetLimitedRadial);
         SubscribeLocalEvent<ElectrifiedComponent, GetStationAiLimitedAirlockRadialEvent>(OnDoorElectrifiedGetLimitedRadial);
+        #endregion
     }
 
     private void OnDoorBoltGetRadial(Entity<DoorBoltComponent> ent, ref GetStationAiRadialEvent args)
@@ -102,6 +103,7 @@ public sealed partial class StationAiSystem
         );
     }
 
+    #region DOWNSTREAM-TPirates: borg wireless access
     private void OnDoorBoltGetLimitedRadial(Entity<DoorBoltComponent> ent, ref GetStationAiLimitedAirlockRadialEvent args)
     {
         args.Actions.Add(
@@ -121,6 +123,7 @@ public sealed partial class StationAiSystem
         );
     }
 
+
     private void OnDoorElectrifiedGetLimitedRadial(Entity<ElectrifiedComponent> ent, ref GetStationAiLimitedAirlockRadialEvent args)
     {
         args.Actions.Add(
@@ -139,4 +142,5 @@ public sealed partial class StationAiSystem
             }
         );
     }
+    #endregion
 }
