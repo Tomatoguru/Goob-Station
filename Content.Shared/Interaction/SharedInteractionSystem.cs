@@ -594,6 +594,11 @@ namespace Content.Shared.Interaction
                 return;
             }
 
+            #region DOWNSTREAM-TPirates: borg wireless access
+            if (HasComp<RemoteInteractionComponent>(user) && !_actionBlockerSystem.CanInteractUsing(user, target, used))
+                return;
+            #endregion
+
             if (inRangeUnobstructed && target != null)
             {
                 InteractUsing(
