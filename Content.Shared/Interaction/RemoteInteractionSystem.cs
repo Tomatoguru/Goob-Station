@@ -6,6 +6,7 @@ using Content.Shared.Interaction.Components;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Power.EntitySystems;
 using Content.Shared.Silicons.StationAi;
+using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
@@ -16,12 +17,12 @@ namespace Content.Shared.Interaction;
 
 public sealed class RemoteInteractionSystem : EntitySystem
 {
-    [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly SharedPowerReceiverSystem _powerReceiver = default!;
     [Dependency] private readonly StationAiVisionSystem _vision = default!;
     [Dependency] private readonly SharedMapSystem _maps = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
+    [Dependency] private readonly SharedInteractionSystem _interaction = default!;
 
     private EntityQuery<BroadphaseComponent> _broadphaseQuery;
     private EntityQuery<MapGridComponent> _gridQuery;
@@ -43,28 +44,21 @@ public sealed class RemoteInteractionSystem : EntitySystem
         if (args.Target == null || args.Target == ent.Owner)
             return;
 
-        if (!IsInNormalRange(args.Uid, args.Target.Value))
+        if (!TryComp(args.Target, out StationAiWhitelistComponent? whitelistComponent))
         {
-            if (!_powerReceiver.IsPowered(args.Target.Value))
-            {
-                ShowDeviceNotRespondingPopup(args.Uid);
-                args.Cancelled = true;
-                return;
-            }
+            return;
+        }
 
-            if (!TryComp(args.Target, out StationAiWhitelistComponent? whitelistComponent))
-            {
-                ShowDeviceNotRespondingPopup(args.Uid);
-                args.Cancelled = true;
-                return;
-            }
+        if (IsInNormalRange(args.Uid, args.Target.Value))
+        {
+            return;
+        }
 
-            if (whitelistComponent is { Enabled: false })
-            {
-                ShowDeviceNotRespondingPopup(args.Uid);
-                args.Cancelled = true;
-                return;
-            }
+        if (whitelistComponent is { Enabled: false } || !_powerReceiver.IsPowered(args.Target.Value))
+        {
+            ShowDeviceNotRespondingPopup(args.Uid);
+            args.Cancelled = true;
+            return;
         }
     }
 
@@ -75,6 +69,7 @@ public sealed class RemoteInteractionSystem : EntitySystem
 
         if (!IsInNormalRange(args.Uid, args.Target.Value) && args.Used != null)
         {
+            var test = IsInNormalRange(args.Uid, args.Target.Value);
             ShowDeviceTooFarPopup(args.Uid);
             args.Cancelled = true;
             return;
@@ -83,9 +78,14 @@ public sealed class RemoteInteractionSystem : EntitySystem
 
     private bool IsInNormalRange(EntityUid user, EntityUid target)
     {
-        if (!_entityManager.TryGetComponent<TransformComponent>(user, out var xForm))
+        if (!TryComp(user, out TransformComponent? userXForm) || !TryComp(target, out TransformComponent? targetXForm))
             return false;
-        return _transform.InRange(xForm.Coordinates, target.ToCoordinates(), SharedInteractionSystem.InteractionRange);
+
+        return _interaction.InRangeUnobstructed(
+            (user, userXForm),
+            (target, targetXForm),
+            targetXForm.Coordinates,
+            targetXForm.LocalRotation);
     }
 
     private void OnRemoteInRange(Entity<RemoteInteractionComponent> ent, ref InRangeOverrideEvent args)
