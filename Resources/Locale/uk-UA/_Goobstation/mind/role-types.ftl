@@ -10,3 +10,5 @@ role-subtype-slaughter-demon = Демон Різанини
 role-subtype-slasher = Різник
 role-subtype-ghoul = Вурдалак
 role-subtype-contractor = Контрактор
+role-type-sentient-animal-name = Розумна тварина
+role-type-sentient-animal-color = #ffff00

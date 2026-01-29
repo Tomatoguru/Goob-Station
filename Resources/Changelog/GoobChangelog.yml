@@ -19931,3 +19931,214 @@ Entries:
       message: Виправлено, що Mansus Grasp не працював при взаємодії.
   id: 2322
   time: '2026-01-27T11:53:42.0000000+00:00'
+- author: misandrie
+  changes:
+    - type: Add
+      message: >-
+        Увімкнено лоадаут зрадника — тепер можна вибрати бажане місце розташування
+        аплінку.
+    - type: Add
+      message: >-
+        Аплінк-ручка: прокрутіть ручку правильним чином, щоб відкрити свій магазин!
+        Автоматично блокується, дуже легко загубити.
+    - type: Add
+      message: Тепер можна за замовчуванням використовувати аплінк-імплант.
+  id: 2323
+  time: '2026-01-28T11:05:25.0000000+00:00'
+- author: DeusMaldPr
+  changes:
+    - type: Tweak
+      message: >-
+        Голови (частина тіла) тепер мають більше міцності — відтяти голову буде
+        складніше.
+    - type: Tweak
+      message: Капітанський меч знову відбиває атаки й більше не відрубує кінцівки.
+  id: 2324
+  time: '2026-01-28T13:21:44.0000000+00:00'
+- author: Kenkaitos
+  changes:
+    - type: Add
+      message: Додано газовий конденсатор до інженерного техфабу.
+    - type: Tweak
+      message: >-
+        Змінено ціль Teach A Lesson. Тепер ціль, покладена в кріо, зараховується до
+        прогресу.
+  id: 2325
+  time: '2026-01-28T20:26:35.0000000+00:00'
+- author: Kenkaitos
+  changes:
+    - type: Tweak
+      message: Ксенобіо-слиз більше не може метаболізувати піну.
+  id: 2326
+  time: '2026-01-28T20:27:11.0000000+00:00'
+- author: BeanyBoi69
+  changes:
+    - type: Add
+      message: Ручний мас-сканер додано до шафок утилізаторів і шахтарів.
+  id: 2327
+  time: '2026-01-28T20:34:38.0000000+00:00'
+- author: DeusMaldPr
+  changes:
+    - type: Tweak
+      message: 'Шкоду турелі ШІ зменшено: 28 → 20.'
+  id: 2328
+  time: '2026-01-28T20:39:20.0000000+00:00'
+- author: doktor-gonz0
+  changes:
+    - type: Add
+      message: Тепер до звітів про хвороби можна прикріплювати мазки.
+  id: 2329
+  time: '2026-01-28T20:41:07.0000000+00:00'
+- author: OnsenCapy
+  changes:
+    - type: Tweak
+      message: М’ясна підлога більше не слизька.
+  id: 2330
+  time: '2026-01-28T20:42:16.0000000+00:00'
+- author: bobbble
+  changes:
+    - type: Add
+      message: Своттинг за BSO (Офіцера Синього Щита).
+  id: 2331
+  time: '2026-01-28T20:45:28.0000000+00:00'
+- author: DeusMaldPR porting from Speebro who was porting from TryDed
+  changes:
+    - type: Add
+      message: Додано три нові вибухівки та довгий список хімікатів для їхнього створення!
+    - type: Tweak
+      message: >-
+        Рецепт формальдегіду ускладнено, щоб зробити створення нових вибухівок
+        складнішим.
+    - type: Tweak
+      message: >-
+        Натомість формальдегід діє в трупах приблизно на 60% довше та більше не завдає
+        отруйної шкоди мертвим.
+  id: 2332
+  time: '2026-01-28T21:15:32.0000000+00:00'
+- author: wyvernrer, Crenissis
+  changes:
+    - type: Add
+      message: Повернуто косметику командування «Ensemble».
+  id: 2333
+  time: '2026-01-28T21:18:25.0000000+00:00'
+- author: TytosB
+  changes:
+    - type: Add
+      message: Додано радіоведучого до Serpentcrest.
+    - type: Fix
+      message: Доступи дверей, мапінг ксенобіо.
+  id: 2334
+  time: '2026-01-28T21:19:55.0000000+00:00'
+- author: clinux
+  changes:
+    - type: Remove
+      message: Loop Station повернуто до стандартної орієнтації.
+  id: 2335
+  time: '2026-01-28T21:21:55.0000000+00:00'
+- author: Androidonator
+  changes:
+    - type: Tweak
+      message: Гарпії можуть літати довше.
+  id: 2336
+  time: '2026-01-28T21:23:00.0000000+00:00'
+- author: caoimhan2008
+  changes:
+    - type: Tweak
+      message: Мачете слешера тепер має власний унікальний звук.
+  id: 2337
+  time: '2026-01-28T21:23:37.0000000+00:00'
+- author: DeusMaldPr
+  changes:
+    - type: Tweak
+      message: >-
+        У поясів дзюдо слоти 2×2 зменшено, бо з дзюдо ви не носите
+        електрошокову палицю.
+  id: 2338
+  time: '2026-01-28T21:24:26.0000000+00:00'
+- author: FloatingFeeling
+  changes:
+    - type: Tweak
+      message: Скорострільність Bojevic подвоєно, а розкид зменшено.
+  id: 2339
+  time: '2026-01-28T21:25:07.0000000+00:00'
+- author: FloatingFeeling
+  changes:
+    - type: Tweak
+      message: Змінено звук взведення дробовика.
+  id: 2340
+  time: '2026-01-28T21:25:39.0000000+00:00'
+- author: Aviu
+  changes:
+    - type: Add
+      message: 'Новий ексклюзивний предмет зрадника для міма: посібник з просунутої мімерії.'
+    - type: Fix
+      message: Виправлено, що невидимі стіни міма мали неправильний поворот.
+  id: 2341
+  time: '2026-01-28T21:26:54.0000000+00:00'
+- author: Syoga23
+  changes:
+    - type: Remove
+      message: 'У книзі заклять мага прибрано ліміт запасу для «Apprentice».'
+  id: 2342
+  time: '2026-01-28T21:27:19.0000000+00:00'
+- author: Syoga23
+  changes:
+    - type: Tweak
+      message: Biodegrade тепер дозволяє вибратися зі зварених контейнерів.
+  id: 2343
+  time: '2026-01-28T21:42:38.0000000+00:00'
+- author: DeusMaldPr
+  changes:
+    - type: Tweak
+      message: >-
+        Бінгли знову завдають стамінної шкоди. Тепер її достатньо, щоб ввести вас у
+        стамкрит за три удари, якщо ви без броні; у броні — за 4–5.
+    - type: Remove
+      message: Представник НТР більше не може сканувати прайм-бінглів за очки.
+  id: 2344
+  time: '2026-01-28T21:43:28.0000000+00:00'
+- author: OnsenCapy
+  changes:
+    - type: Remove
+      message: >-
+        Мавпи більше не можуть отримувати свідомість поза випадковими подіями надання
+        свідомості. На кобольдів не впливає.
+  id: 2345
+  time: '2026-01-28T21:45:11.0000000+00:00'
+- author: FloatingFeeling
+  changes:
+    - type: Tweak
+      message: Підсилено Procenyl Lazide та Syriniver.
+    - type: Tweak
+      message: >-
+        Aranesp тепер пасивно лікує всю шкоду, але його стимулювальний ефект трохи
+        зменшено.
+  id: 2346
+  time: '2026-01-28T22:42:39.0000000+00:00'
+- author: zagreastyas
+  changes:
+    - type: Add
+      message: Додано новий тип гоустролі — Розумні тварини.
+    - type: Tweak
+      message: >-
+        Змінено тип гоустролі для мавп, кобольдів, миші (крім чуминої миші),
+        squackroach, космічної золотої рибки, moproach, хом'яка, кенгуру, равлика,
+        snoth, Hamlet, Willow, Smile та Tropico — тепер це Розумна тварина.
+  id: 2347
+  time: '2026-01-28T22:57:38.0000000+00:00'
+- author: 10kee
+  changes:
+    - type: Tweak
+      message: Оновлено спрайти невикористовуваних модсьютів ERT для воксів.
+    - type: Tweak
+      message: Невикористовувані модсьюти ERT тепер справді мають ізоляцію.
+    - type: Fix
+      message: Виправлено незатінений спрайт руки для модсьюту BSO воксів.
+  id: 2348
+  time: '2026-01-28T22:59:47.0000000+00:00'
+- author: clinux
+  changes:
+    - type: Tweak
+      message: Після 15 тайлів радіація переходить у термінальне згасання.
+  id: 2349
+  time: '2026-01-28T23:00:27.0000000+00:00'
