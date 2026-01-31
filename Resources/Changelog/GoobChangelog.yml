@@ -20142,3 +20142,147 @@ Entries:
       message: Після 15 тайлів радіація переходить у термінальне згасання.
   id: 2349
   time: '2026-01-28T23:00:27.0000000+00:00'
+- author: Rouden
+  changes:
+    - type: Add
+      message: >-
+        Додано SOP шахтаря (майже такий самий, як SOP спеціаліста з утилізації).
+    - type: Tweak
+      message: >-
+        SOP спеціаліста з утилізації оновлено — тепер йому заборонено брати спорядження із
+        шафки шахтаря (і навпаки).
+    - type: Tweak
+      message: Шахтарський шатл тепер літає значно швидше.
+    - type: Tweak
+      message: Усі дробарки тепер можуть розбивати каміння.
+    - type: Fix
+      message: >-
+        Виправлено, що під час оброблення спостерігачів Лаваленду випадали неправильні типи
+        крил.
+    - type: Fix
+      message: Виправлено спрайт кінетичного молота у двох руках.
+    - type: Fix
+      message: >-
+        Виправлено, що бонуси від тиску не застосовувалися до шкоди у двох руках. (Це робить
+        дробарки сильнішими за низького тиску)
+  id: 2350
+  time: '2026-01-29T01:15:33.0000000+00:00'
+- author: Androidonator
+  changes:
+    - type: Add
+      message: Ручну консоль суперматерії та плату додано до шафки Головного інженера.
+  id: 2351
+  time: '2026-01-29T06:46:03.0000000+00:00'
+- author: Kenkaitos
+  changes:
+    - type: Tweak
+      message: Тепер органи можна зберігати в SmartFridge
+  id: 2352
+  time: '2026-01-29T06:47:51.0000000+00:00'
+- author: DeusMaldPr
+  changes:
+    - type: Tweak
+      message: >-
+        Ослаблено місткість сумки бездонності більш ніж удвічі. 200 > 90 слотів інвентарю —
+        принаймні тепер вона не займає пів екрана.
+  id: 2353
+  time: '2026-01-29T06:52:57.0000000+00:00'
+- author: Androidonator
+  changes:
+    - type: Tweak
+      message: Перебалансовано magfed-лазери
+    - type: Add
+      message: Додано новий тип боєприпасів для magfed-лазерів
+  id: 2354
+  time: '2026-01-29T09:43:37.0000000+00:00'
+- author: gaiads
+  changes:
+    - type: Tweak
+      message: >-
+        Triclor тепер потребує Aluite та Amatoxin; через це вихід реакції вищий.
+  id: 2355
+  time: '2026-01-29T09:44:27.0000000+00:00'
+- author: DeusMaldPr
+  changes:
+    - type: Remove
+      message: Прибрано мідраундних єретиків та лінгів
+    - type: Remove
+      message: CD радіоведучого «Number» більше не може викликати головних революціонерів.
+  id: 2356
+  time: '2026-01-29T11:58:57.0000000+00:00'
+- author: RedTerrorDark
+  changes:
+    - type: Tweak
+      message: >-
+        Оновлено спрайти Agent Pistol, Annie, Burner, Cell Revolver/SMG/LMG/Sniper, M7S,
+        HE1S-G8.
+  id: 2357
+  time: '2026-01-29T15:49:23.0000000+00:00'
+- author: DeusMaldPr
+  changes:
+    - type: Add
+      message: >-
+        Збільшено кількість борошна, сиру та яєць у Chefvend і додано трохи помідорів,
+        цибулі та часнику.
+    - type: Tweak
+      message: Chefbelt тепер може зберігати більшість їжі, включно з крейдою.
+  id: 2358
+  time: '2026-01-30T02:55:38.0000000+00:00'
+- author: Kenkaitos
+  changes:
+    - type: Fix
+      message: Виправлено, що у щура здібність Mob Call не мала перезарядки
+  id: 2359
+  time: '2026-01-30T03:17:30.0000000+00:00'
+- author: SPCR
+  changes:
+    - type: Tweak
+      message: Void Conduit тепер накладає 0.25 стака за секунду замість 1
+    - type: Tweak
+      message: Void Conduit тепер може накладати лише до 2.5 стаків Void Curse.
+    - type: Tweak
+      message: Void Mark тепер дає 5 стаків Void Curse замість 3
+  id: 2360
+  time: '2026-01-30T03:19:49.0000000+00:00'
+- author: SPCR
+  changes:
+    - type: Tweak
+      message: >-
+        Кіготь руки лінга більше не робить жорсткий захват при влучанні — знову вводить
+        Amatoxin та Mute toxin
+  id: 2361
+  time: '2026-01-30T03:20:53.0000000+00:00'
+- author: '401523941'
+  changes:
+    - type: Add
+      message: Додано новий рівень тривоги, який можна отримати, зламавши (EMAG) консоль зв'язку.
+  id: 2362
+  time: '2026-01-30T03:27:39.0000000+00:00'
+- author: Androidonator
+  changes:
+    - type: Add
+      message: Додано коробку з кубами слайма
+    - type: Remove
+      message: Безкоштовних слаймів з планети нюків більше немає
+  id: 2363
+  time: '2026-01-30T04:59:27.0000000+00:00'
+- author: Beanyboi69
+  changes:
+    - type: Tweak
+      message: Зроблено звук пострілу прото-кінетичної зброї тихішим.
+  id: 2364
+  time: '2026-01-30T05:00:18.0000000+00:00'
+- author: IrisTheAmped, SlopsticeOfTheWinter
+  changes:
+    - type: Add
+      message: >-
+        Енергетичні хімічні диспенсери. Вони використовують енергію станції для видачі реагентів
+        замість того, щоб брати їх із каністри у своєму інвентарі.
+    - type: Tweak
+      message: >-
+        Енергетичні хімдиспенсери замінюють звичайні диспенсери на старті зміни на всіх мапах.
+        Jug Dispensers усе ще можна зібрати з машинної плати.
+    - type: Remove
+      message: Wizden E Chem 1984!
+  id: 2365
+  time: '2026-01-30T05:04:35.0000000+00:00'
