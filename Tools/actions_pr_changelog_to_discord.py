@@ -18,9 +18,9 @@ from __future__ import annotations
 
 import os
 import time
-from collections import OrderedDict
+from collections import Counter, OrderedDict
 from dataclasses import dataclass
-from typing import Any, Iterable, Optional
+from typing import Any, Optional
 from urllib.parse import quote
 
 import requests
@@ -231,45 +231,66 @@ def diff_entries(
 ) -> tuple[list[ChangelogEntry], list[ChangelogEntry], list[ChangelogEntry]]:
     """Compute (added, modified, removed) entries by `id`.
 
-    - added: IDs present in new but not old
-    - removed: IDs present in old but not new
-    - modified: IDs present in both but content differs
+    Notes:
+    - Some changelog files contain duplicate `id` values. We treat `id` as a primary key
+      only when it is unique in BOTH the old and new file; otherwise we skip "modified"
+      detection for that `id` to avoid false positives.
 
     Ordering:
     - added/modified follow the order in `new_entries`
     - removed follows the order in `old_entries`
     """
 
-    old_by_id: dict[Any, ChangelogEntry] = {}
-    for entry in old_entries:
-        if "id" in entry:
-            old_by_id[entry["id"]] = entry
+    old_ids = [e.get("id") for e in old_entries if e.get("id") is not None]
+    new_ids = [e.get("id") for e in new_entries if e.get("id") is not None]
 
-    new_by_id: dict[Any, ChangelogEntry] = {}
-    for entry in new_entries:
-        if "id" in entry:
-            new_by_id[entry["id"]] = entry
+    old_id_set = set(old_ids)
+    new_id_set = set(new_ids)
 
+    # Added: any new entry whose id did not exist in the base version.
     added: list[ChangelogEntry] = []
+    for entry in new_entries:
+        entry_id = entry.get("id")
+        if entry_id is None:
+            continue
+        if entry_id not in old_id_set:
+            added.append(entry)
+
+    # Modified: only for IDs that are unique in BOTH old and new.
+    old_counts = Counter(old_ids)
+    new_counts = Counter(new_ids)
+
+    old_unique_by_id: dict[Any, ChangelogEntry] = {}
+    for entry in old_entries:
+        entry_id = entry.get("id")
+        if entry_id is None:
+            continue
+        if old_counts.get(entry_id, 0) == 1:
+            old_unique_by_id[entry_id] = entry
+
     modified: list[ChangelogEntry] = []
     for entry in new_entries:
         entry_id = entry.get("id")
         if entry_id is None:
             continue
+        if old_counts.get(entry_id, 0) != 1 or new_counts.get(entry_id, 0) != 1:
+            continue
 
-        old = old_by_id.get(entry_id)
-        if old is None:
-            added.append(entry)
-        elif old != entry:
+        old_entry = old_unique_by_id.get(entry_id)
+        if old_entry is None:
+            continue
+
+        if old_entry != entry:
             modified.append(entry)
 
+    # Removed: any id that existed before but not after.
     removed: list[ChangelogEntry] = []
     for entry in old_entries:
         entry_id = entry.get("id")
         if entry_id is None:
             continue
 
-        if entry_id not in new_by_id:
+        if entry_id not in new_id_set:
             removed.append(entry)
 
     return added, modified, removed
@@ -326,7 +347,8 @@ def build_message_lines(*, pr_number: int, pr_title: str, pr_url: str, deltas: l
     for delta in deltas:
         entries_to_report = delta.added + delta.modified
 
-        lines.append(f"📄 `{delta.path}`\n")
+        file_name = delta.path.rsplit("/", 1)[-1]
+        lines.append(f"📄 **{file_name}** (`{delta.path}`)\n")
 
         # Short per-file summary by change type (Add/Fix/Remove/Tweak)
         summary = render_change_type_summary(entries_to_report)
@@ -358,7 +380,12 @@ def changelog_entries_to_message_lines(entries: list[ChangelogEntry]) -> list[st
 
     message_lines: list[str] = []
 
+    first = True
     for author, author_entries in by_author.items():
+        if not first:
+            message_lines.append("\n")
+        first = False
+
         message_lines.append(f"**{author}**:\n")
 
         for entry in author_entries:
@@ -382,7 +409,7 @@ def changelog_entries_to_message_lines(entries: list[ChangelogEntry]) -> list[st
                 if len(message) > DISCORD_SPLIT_LIMIT:
                     message = message[: DISCORD_SPLIT_LIMIT - 100].rstrip() + " [...]"
 
-                message_lines.append(f"{emoji} {label}: {message}\n")
+                message_lines.append(f"• {emoji} {label}: {message}\n")
 
     return message_lines
 
