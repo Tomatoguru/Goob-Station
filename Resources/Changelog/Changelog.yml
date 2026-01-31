@@ -3724,26 +3724,3 @@ Entries:
   id: 8794
   time: '2025-07-19T22:10:38.0000000+00:00'
   url: https://github.com/space-wizards/space-station-14/pull/30645
-- author: TestBot
-  changes:
-  - message: "[TEST] Додано тестову зміну (Add)"
-    type: Add
-  id: 8795
-  time: '2026-01-31T01:35:00.0000000+00:00'
-  url: https://github.com/Goob-Station/Goob-Station/pull/0
-- author: TestBot
-  changes:
-  - message: "[TEST] Виправлено тестову проблему (Fix)"
-    type: Fix
-  id: 8796
-  time: '2026-01-31T01:35:10.0000000+00:00'
-  url: https://github.com/Goob-Station/Goob-Station/pull/0
-- author: TestBot
-  changes:
-  - message: "[TEST] Підкручено тестове значення (Tweak)"
-    type: Tweak
-  - message: "[TEST] Прибрано тестовий елемент (Remove)"
-    type: Remove
-  id: 8797
-  time: '2026-01-31T01:35:20.0000000+00:00'
-  url: https://github.com/Goob-Station/Goob-Station/pull/0
