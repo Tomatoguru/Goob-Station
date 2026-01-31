@@ -20142,23 +20142,3 @@ Entries:
       message: Після 15 тайлів радіація переходить у термінальне згасання.
   id: 2349
   time: '2026-01-28T23:00:27.0000000+00:00'
-- author: TestBot
-  changes:
-    - type: Add
-      message: "[TEST] Додано тестову зміну (Add)"
-  id: 2350
-  time: '2026-01-31T01:35:00.0000000+00:00'
-- author: TestBot
-  changes:
-    - type: Fix
-      message: "[TEST] Виправлено тестову проблему (Fix)"
-  id: 2351
-  time: '2026-01-31T01:35:10.0000000+00:00'
-- author: TestBot
-  changes:
-    - type: Tweak
-      message: "[TEST] Підкручено тестове значення (Tweak)"
-    - type: Remove
-      message: "[TEST] Прибрано тестовий елемент (Remove)"
-  id: 2352
-  time: '2026-01-31T01:35:20.0000000+00:00'
