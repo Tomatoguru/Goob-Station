@@ -18,7 +18,7 @@ from __future__ import annotations
 
 import os
 import time
-from collections import Counter, OrderedDict
+from collections import Counter
 from dataclasses import dataclass
 from typing import Any, Optional
 from urllib.parse import quote
@@ -370,46 +370,45 @@ def build_message_lines(*, pr_number: int, pr_title: str, pr_url: str, deltas: l
 def changelog_entries_to_message_lines(entries: list[ChangelogEntry]) -> list[str]:
     """Format changelog entries into message lines.
 
-    Groups entries by author (in order of first appearance).
+    Each entry is rendered as a separate block with its author.
     """
-
-    by_author: "OrderedDict[str, list[ChangelogEntry]]" = OrderedDict()
-    for entry in entries:
-        author = str(entry.get("author") or "Невідомо")
-        by_author.setdefault(author, []).append(entry)
 
     message_lines: list[str] = []
 
-    first = True
-    for author, author_entries in by_author.items():
-        if not first:
-            message_lines.append("\n")
-        first = False
+    for i, entry in enumerate(entries):
+        author = str(entry.get("author") or "Невідомо")
+        changes = entry.get("changes")
+        if not isinstance(changes, list):
+            continue
 
-        message_lines.append(f"**{author}**:\n")
-
-        for entry in author_entries:
-            changes = entry.get("changes")
-            if not isinstance(changes, list):
+        # Collect valid change lines for this entry.
+        change_lines: list[str] = []
+        for change in changes:
+            if not isinstance(change, dict):
                 continue
 
-            for change in changes:
-                if not isinstance(change, dict):
-                    continue
+            change_type = str(change.get("type") or "")
+            emoji = TYPES_TO_EMOJI.get(change_type, "❓")
+            label = TYPES_TO_UA.get(change_type, change_type or "Невідомо")
 
-                change_type = str(change.get("type") or "")
-                emoji = TYPES_TO_EMOJI.get(change_type, "❓")
-                label = TYPES_TO_UA.get(change_type, change_type or "Невідомо")
+            message = str(change.get("message") or "").strip()
+            if not message:
+                continue
 
-                message = str(change.get("message") or "").strip()
-                if not message:
-                    continue
+            # If a single line is longer than the limit, it needs to be truncated.
+            if len(message) > DISCORD_SPLIT_LIMIT:
+                message = message[: DISCORD_SPLIT_LIMIT - 100].rstrip() + " [...]"
 
-                # If a single line is longer than the limit, it needs to be truncated.
-                if len(message) > DISCORD_SPLIT_LIMIT:
-                    message = message[: DISCORD_SPLIT_LIMIT - 100].rstrip() + " [...]"
+            change_lines.append(f"• {emoji} {label}: {message}\n")
 
-                message_lines.append(f"• {emoji} {label}: {message}\n")
+        if not change_lines:
+            continue
+
+        if i > 0:
+            message_lines.append("\n")
+
+        message_lines.append(f"**{author}**:\n")
+        message_lines.extend(change_lines)
 
     return message_lines
 
